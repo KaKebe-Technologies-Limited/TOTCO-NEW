@@ -143,7 +143,7 @@
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
 												fa-bell"></i>
-                  </span> <span class="dropdown-item-desc"> Welcome to Movit
+                  </span> <span class="dropdown-item-desc"> Welcome to Tot
                     template! <span class="time">Yesterday</span>
                   </span>
                 </a>
@@ -181,8 +181,8 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"> <img alt="image" src="assets/img/movit_logo.png" class="header-logo" /> <span
-                class="logo-name">Movit</span>
+            <a href="index.html"> <img alt="image" src="assets/img/logo_final.jpg" class="header-logo" /> <span
+                class="logo-name"></span>
             </a>
           </div>
           <ul class="sidebar-menu">
