@@ -19,13 +19,7 @@
             <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-header py-4">
-                <div class="bulk-action mx-3">
-                        <select class="form-select" aria-label=".form-select-sm example">
-                            <option selected>Sort By</option>
-                            <option value="1">Quantity</option>
-                        </select>
-                    </div>
+              <div class="card-header py-4">
                     <div class="bulk-action mx-3">
                         <select class="form-select" aria-label=".form-select-sm example">
                             <option selected>Bulk Action</option>
@@ -35,15 +29,15 @@
                     </div>
                     <form class="search-form mx-3">
                         <div class="">
-                            <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                            <input type="search" class="form-control rounded" id="exampleFormControlInput1" placeholder="Search">
                         </div>
                     </form>
                     <div class="form-export d-flex ml-3">
-                        <div>
-                            <button><span><i class="fa fa-print"></i></span></button>
+                        <div class="mx-2">
+                            <button class="btn btn-outline-primary rounded"><i class="fa fa-print"></i></button>
                         </div>
-                        <div>
-                            <button>Export</button>
+                        <div class="mx-2">
+                            <button class="btn btn-outline-primary rounded">Export</button>
                         </div>
                     </div>
                 </div>

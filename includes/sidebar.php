@@ -11,19 +11,7 @@
             <li class="dropdown active">
               <a href="index.php" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
-            <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i>
-                <span>HRM</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="email-inbox.html">All Astuff</a></li>
-                <li><a class="nav-link" href="email-compose.html">Add Staff</a></li>
-                <li><a class="nav-link" href="email-read.html">Roles</a></li>
-                <li><a class="nav-link" href="email-read.html">Payroll</a></li>
-                <li><a class="nav-link" href="email-read.html">Leave</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
+            <!--<li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="file-minus"></i>
                 <span>Contacts</span></a>
               <ul class="dropdown-menu">
@@ -54,6 +42,13 @@
                 <li><a class="nav-link" href="dropdown.html">Stock History</a></li>
 
               </ul>
+            </li> -->
+            <li class="dropdown">
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                  data-feather="shopping-bag"></i><span>Sales Management</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
+              </ul>
             </li>
             <li class="menu-header">Agent Management</li>
             <li class="dropdown">
@@ -61,13 +56,6 @@
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="agents.php">All Agents</a></li>
                 <li><a class="nav-link" href="badge.html">Add New</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="shopping-bag"></i><span>Sales Management</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
               </ul>
             </li>
 

@@ -30,15 +30,15 @@
                     </div>
                     <form class="search-form mx-3">
                         <div class="">
-                            <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                            <input type="search" class="form-control rounded" id="exampleFormControlInput1" placeholder="Search">
                         </div>
                     </form>
                     <div class="form-export d-flex ml-3">
-                        <div>
-                            <button><span><i class="fa fa-print"></i></span></button>
+                        <div class="mx-2">
+                            <button class="btn btn-outline-primary rounded"><i class="fa fa-print"></i></button>
                         </div>
-                        <div>
-                            <button>Export</button>
+                        <div class="mx-2">
+                            <button class="btn btn-outline-primary rounded">Export</button>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <th class="text-center">
                           <div class="custom-checkbox custom-checkbox-table custom-control">
                             <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                              class="custom-control-input" id="checkbox-all">
+                              class="custom-control-input" id="checkbox-all" name="checkbox">
                             <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                           </div>
                         </th>
@@ -75,11 +75,11 @@
                             holmark5@gmail.com
                         </td>
                         <td>
-                          <div class="badge badge-success">Low</div>
+                          <div class="badge badge-success">Active</div>
                         </td>
                         <td>
                         <div class="d-flex flex-row">
-                            <div class="p-2 mx-1 bg-primary"><a href><i class="fas fa-eye text-white"></i></a></div>
+                            <div class="p-2 mx-1 bg-primary"><a href="single-agent.php"><i class="fas fa-eye text-white"></i></a></div>
                             <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-edit text-white"></i></span></a></div>
                             <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
                         </div
