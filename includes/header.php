@@ -54,7 +54,7 @@
               class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
               <span class="badge headerBadge1">
                 6 </span> </a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown end-0">
               <div class="dropdown-header">
                 Messages
                 <div class="float-right">
@@ -114,7 +114,7 @@
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
               class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
             </a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+            <div class="dropdown-menu dropdown-list dropdown-menu-right end-0 pullDown">
               <div class="dropdown-header">
                 Notifications
                 <div class="float-right">
@@ -163,8 +163,10 @@
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/avata.png"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
-            <div class="dropdown-menu dropdown-menu-right pullDown">
-              <div class="dropdown-title">Hello Sarah Smith</div>
+            <div class="dropdown-menu dropdown-menu-right end-0 pullDown">
+                <div class="dropdown-title">Hello
+                  <?php echo $user_data->firstname . ' '. $user_data->lastname; ?>
+              </div>
               <a href="profile.html" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
               </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>

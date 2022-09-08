@@ -13,7 +13,7 @@
 <main class="main-content pt-5 mt-3">
             <div class="row">
                 <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h4>Sales Orders</h4>
+                    <h4>Sales Orders by <?php echo $user_data->firstname . " " . $user_data->lastname; ?></h4>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@
                           </td>
                           <td>
                           <div class="d-flex flex-row">
-                              <div class="p-2 mx-1 bg-primary"><a href="single-sales-order.php"><i class="fas fa-eye text-white"></i></a></div>
+                              <div class="p-2 mx-1 bg-primary"><a href="sales-order.php"><i class="fas fa-eye text-white"></i></a></div>
                               <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-download text-white"></i></span></a></div>
                               <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
                           </div

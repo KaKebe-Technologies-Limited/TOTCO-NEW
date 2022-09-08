@@ -1,4 +1,5 @@
 
+<?php include 'includes/load_user.php'; ?>
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 <!-- end Header -->
@@ -11,22 +12,40 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
+          <div class="row">
+            <div class="page-title col-12 mb-2">
+              <h6 class="">Dashboard</h6>
+              <p class="font-12 text-aqua">Overview of relevant statistics</p>
+            </div>
+          </div>
+        </section>
+        <section class="section">
           <div class="row ">
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="card">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Deliveries</h5>
-                          <h2 class="mb-3 font-18">258</h2>
-                          <p class="mb-0"><span class="col-green">10%</span> Increase</p>
+                          <h5 class="font-10 text-aqua text-upper">Total Payments</h5>
+                          <h2 class="mb-3 font-18">UGX 200,000,000</h2>
                         </div>
                       </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/delivery.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-10 text-aqua text-upper">Fulllfilled Orders</h5>
+                          <h2 class="mb-3 font-18">45</h2>
                         </div>
                       </div>
                     </div>
@@ -41,14 +60,8 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15"> Returns</h5>
-                          <h2 class="mb-3 font-18">1,287</h2>
-                          <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/return.png" alt="">
+                          <h5 class="font-10 text-aqua text-upper">Pending Orders</h5>
+                          <h2 class="mb-3 font-18">0</h2>
                         </div>
                       </div>
                     </div>
@@ -61,17 +74,10 @@
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Stock</h5>
-                          <h2 class="mb-3 font-18">128</h2>
-                          <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/stock.png" alt="">
+                          <h5 class="font-10 text-aqua text-upper">No. of agents</h5>
+                          <h2 class="mb-3 font-18">100</h2>
                         </div>
                       </div>
                     </div>
@@ -79,25 +85,40 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-4">
               <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">Revenue</h5>
-                          <h2 class="mb-3 font-18">UGX 10,000,000</h2>
-                          <p class="mb-0"><span class="col-green">42%</span> Increase</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/4.png" alt="">
-                        </div>
-                      </div>
+                <div class="card-header">
+                  <h4>chart</h4>
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Chart</h4>
+                </div>
+                <div class="card-body">
+                  <div class="summary">
+                    <div class="summary-chart active" data-tab-group="summary-tab" id="summary-chart">
+                      <div id="chart3" class="chartsh"></div>
+                    </div>
+                    <div data-tab-group="summary-tab" id="summary-text">
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Chart</h4>
+                </div>
+                <div class="card-body">
+                  <div id="chart2" class="chartsh"></div>
                 </div>
               </div>
             </div>
@@ -190,62 +211,17 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-sm-12 col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Chart</h4>
-                </div>
-                <div class="card-body">
-                  <div id="chart4" class="chartsh"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Chart</h4>
-                </div>
-                <div class="card-body">
-                  <div class="summary">
-                    <div class="summary-chart active" data-tab-group="summary-tab" id="summary-chart">
-                      <div id="chart3" class="chartsh"></div>
-                    </div>
-                    <div data-tab-group="summary-tab" id="summary-text">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Chart</h4>
-                </div>
-                <div class="card-body">
-                  <div id="chart2" class="chartsh"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Assign Task Table</h4>
+                  <h4>Recent Fullfilled Sales Orders</h4>
                   <div class="card-header-form">
-                    <form>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-btn">
-                          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>
-                    </form>
+                  <button class="btn btn-primary">SEE ALL</button>
                   </div>
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive">
-                    <table class="table table-striped">
+                  <table class="table table-striped">
                       <tr>
                         <th class="text-center">
                           <div class="custom-checkbox custom-checkbox-table custom-control">
@@ -254,12 +230,12 @@
                             <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                           </div>
                         </th>
-                        <th>Task Name</th>
-                        <th>Members</th>
-                        <th>Task Status</th>
-                        <th>Assigh Date</th>
-                        <th>Due Date</th>
-                        <th>Priority</th>
+                        <th>Order #</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Created</th>
+                        <th>Agent Name</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                       <tr>
@@ -270,130 +246,31 @@
                             <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                           </div>
                         </td>
-                        <td>Create a mobile app</td>
+                        <td>T001</td>
                         <td class="text-truncate">
-
+                            Maize
                         </td>
                         <td class="align-middle">
-
+                            1 Tonne
                         </td>
-                        <td>2018-01-20</td>
-                        <td>2019-05-28</td>
                         <td>
-                          <div class="badge badge-success">Low</div>
+                          <div class="">28 Aug 2022</div>
                         </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-2">
-                            <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
-                        <td>Redesign homepage</td>
-                        <td class="text-truncate">
-
-                        </td>
-                        <td class="align-middle">
-
-                        </td>
-                        <td>2017-07-14</td>
-                        <td>2018-07-21</td>
                         <td>
-                          <div class="badge badge-danger">High</div>
+                          <div class="">Oluk Mark</div>
                         </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-3">
-                            <label for="checkbox-3" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
-                        <td>Backup database</td>
-                        <td class="text-truncate">
-
-                        </td>
-                        <td class="align-middle">
-
-                        </td>
-                        <td>2019-07-25</td>
-                        <td>2019-08-17</td>
                         <td>
-                          <div class="badge badge-info">Average</div>
+                          <div class="badge badge-success">CONFIRMED</div>
                         </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-4">
-                            <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
-                        <td>Android App</td>
-                        <td class="text-truncate">
-
-                        </td>
-                        <td class="align-middle">
-
-                        </td>
-                        <td>2018-04-15</td>
-                        <td>2019-07-19</td>
                         <td>
-                          <div class="badge badge-success">Low</div>
+                        <div class="d-flex flex-row">
+                            <div class="p-2 mx-1 bg-primary"><a href="sales-order.php"><i class="fas fa-eye text-white"></i></a></div>
+                            <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-download text-white"></i></span></a></div>
+                            <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
+                        </div
                         </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
                       </tr>
-                      <tr>
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-5">
-                            <label for="checkbox-5" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
-                        <td>Logo Design</td>
-                        <td class="text-truncate">
 
-                        </td>
-                        <td class="align-middle">
-
-                        </td>
-                        <td>2017-02-24</td>
-                        <td>2018-09-06</td>
-                        <td>
-                          <div class="badge badge-danger">High</div>
-                        </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-6">
-                            <label for="checkbox-6" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
-                        <td>Ecommerce website</td>
-                        <td class="text-truncate">
-
-                        </td>
-                        <td class="align-middle">
-
-                        </td>
-                        <td>2018-01-20</td>
-                        <td>2019-05-28</td>
-                        <td>
-                          <div class="badge badge-info">Average</div>
-                        </td>
-                        <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
-                      </tr>
                     </table>
                   </div>
                 </div>

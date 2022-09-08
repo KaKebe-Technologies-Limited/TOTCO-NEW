@@ -1,6 +1,6 @@
 <?php
 $host = localhost:3306";
-$db = "movitdb";
+$db = "totcodb";
 $user = "stv";
 $pwd = "12345678";
 

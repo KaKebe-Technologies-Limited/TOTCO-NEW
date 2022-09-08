@@ -1,4 +1,5 @@
-
+<!-- session -->
+<?php include 'includes/load_user.php'; ?>
 
 <!-- Header -->
 <?php include('includes/header.php'); ?>
@@ -11,17 +12,30 @@
  <!-- Main Content -->
  <div class="main-content">
         <section class="section">
-          <div class="row ">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="row">
+            <div class="page-title col-12 mb-2">
+              <h6 class="">Agent</h6>
+              <p class="font-12 text-aqua">Overview of an agent</p>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="row d-flex flex-wrap-reverse">
+            <div class="row col-md-9 col-xs-12 d-flex gx-3">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="card">
-                <div class="card-statistic-4">
+                <div class="card-statistic-4 bg-primary">
                   <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                    <div class="row">
+                      <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Total Sales</h5>
-                          <h2 class="mb-3 font-18">UGX 10000000</h2>
-                          <a class="btn" href"#">View All</a>
+                          <h5 class="font-12 text-aqua">Total Sales</h5>
+                          <h2 class="mb-3 font-24 text-white">UGX 10,000,000</h2>
+                          <h5 class="font-12 text-aqua">Pending Payments</h5>
+                          <h2 class="mb-3 font-18 text-white">UGX 0</h2>
+                          <h5 class="font-12 text-aqua">Rejected Sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">0</h2>
+                          <a class="btn font-12 text-aqua text-upper" href"">View All</a>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -34,12 +48,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="row col">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="card">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15">Pending Payments</h5>
                           <h2 class="mb-3 font-18">UGX 0</h2>
@@ -55,16 +70,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="card">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15">Farm Input Orders</h5>
                           <h2 class="mb-3 font-18">12</h2>
-                          <a class="btn" href="">View All</a>
+                          <!--<a class="btn font-12 text-aqua text-upper" href="">View All</a> -->
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -77,39 +92,51 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-12 col-sm-6 col-xs-12">
               <div class="card">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Products</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Beans
-                                    <span class="badge bg-primary rounded-pill ms-5">14</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Maize
-                                    <span class="badge bg-primary rounded-pill ms-5">2</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Soybeans
-                                    <span class="badge bg-primary rounded-pill ms-5">1</span>
-                                </li>
-                            </ul>
+                          <h5 class="font-15">Pending Payments</h5>
+                          <h2 class="mb-3 font-18">UGX 0</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!-- <div class="banner-img">
-                          <img src="assets/img/banner/4.png" alt="">
+                        <!--<div class="banner-img">
+                          <img src="assets/img/banner/return.png" alt="">
                         </div> -->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+            <div class="col">
+              <div class="card bg-agri">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div class="pr-0 pt-3">
+                        <div class="card-content">
+                          <div class="d-flex justify-content-center">
+                            <img style="height: 80px; width: 80px" src="./assets/img/63475.jpg" class="card-img-top rounded-circle">
+                          </div>
+                          <div class="card-body text-center">
+                            <h6 class="text-white"><span class="me-2"><i class="fas fa-user"></i></span>Oluk Mark</h6>
+                            <p class="font-12 text-white"><span class="me-2"><i class="fas fa-phone"></i></span>0771404884</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
           <div class="row">
@@ -128,7 +155,7 @@
                           Delete</a>
                       </div>
                     </div>
-                    <a href="#" class="btn btn-primary">View All</a>
+                    <a href="agent_sales_order.php" class="btn btn-primary">View All</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -203,16 +230,9 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Sales Orders</h4>
+                  <h4>Recent Sales Orders</h4>
                   <div class="card-header-form">
-                    <form>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-btn">
-                          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>
-                    </form>
+                    <a href="agent_sales_orders.php" class="btn btn-primary">View All</a>
                   </div>
                 </div>
                 <div class="card-body p-0">
@@ -256,6 +276,37 @@
                         <div class="d-flex flex-row">
                             <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-eye text-white"></i></span></a></div>
                         </div</td>
+                      </tr>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Recent Transactions</h4>
+                  <div class="card-header-form">
+                    <a href="sales.php" class="btn btn-primary">View All</a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <tr>
+                        <th>Date</th>
+                        <th>Transaction</th>
+                        <th>Name</th>
+                      </tr>
+                      <tr>
+                        <td>28 Aug 2022</td>
+                        <td class="text-truncate">
+                            Sales order of maize
+                        </td>
+                        <td class="align-middle">
+                            Oluk Mark
+                        </td>
                       </tr>
 
                     </table>

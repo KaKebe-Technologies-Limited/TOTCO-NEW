@@ -58,19 +58,6 @@
                 <li><a class="nav-link" href="badge.html">Add New</a></li>
               </ul>
             </li>
-
-            <li class="menu-header">Accounting</li>
-            <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="shopping-bag"></i><span>Accounts</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="avatar.html">All Accounts</a></li>
-                <li><a class="nav-link" href="card.html">Expense</a></li>
-                <li><a class="nav-link" href="modal.html">Income</a></li>
-
-              </ul>
-            </li>
-
             <li class="menu-header">System</li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i

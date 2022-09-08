@@ -1,0 +1,25 @@
+:root {
+    --aqua: #808ca1;
+    --agri: #293462;
+}
+
+.bg-aqua {
+    background-color: var(--aqua) !important;
+}
+
+.bg-agri {
+    background-color: var(--agri) !important;
+}
+
+.text-aqua {
+    color: var(--aqua);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.text-upper {
+    text-transform: uppercase !important;
+}
+

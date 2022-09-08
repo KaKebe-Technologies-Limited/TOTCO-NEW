@@ -1,5 +1,6 @@
 
-
+<!-- session -->
+<?php include 'includes/load_user.php'; ?>
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 <!-- end Header -->
@@ -12,8 +13,8 @@
 <main class="main-content pt-5 mt-3">
             <div class="row">
                 <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h4>All Vendors</h4>
-                    <button class="btn btn-primary">Add vendor</button>
+                    <h4>All Agents</h4>
+                    <button class="btn btn-primary">Add agent</button>
                 </div>
             </div>
 
@@ -53,6 +54,7 @@
                             <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                           </div>
                         </th>
+                        <th>Name</th>
                         <th>Location</th>
                         <th>Contact</th>
                         <th>Email</th>
@@ -68,6 +70,7 @@
                           </div>
                         </td>
                         <td>Oluk Mark</td>
+                        <td>Odokomit, Lira City</td>
                         <td class="text-truncate">
                             0771404884
                         </td>
@@ -75,7 +78,7 @@
                             holmark5@gmail.com
                         </td>
                         <td>
-                          <div class="badge badge-success">Active</div>
+                          <div class="badge badge-success rounded">Active</div>
                         </td>
                         <td>
                         <div class="d-flex flex-row">
@@ -89,6 +92,21 @@
                     </table>
                   </div>
                 </div>
+                <nav aria-label="...">
+                    <ul class="pagination pagination-sm justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
               </div>
             </div>
           </div>
