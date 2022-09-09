@@ -1,21 +1,21 @@
 
 <!-- session -->
-<?php include 'includes/load_user.php'; ?>
+<?php include '../includes/load_user.php'; ?>
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('../includes/header.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('../includes/sidebar.php'); ?>
 <!-- End Sidebar -->
 
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
             <div class="row">
-                <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h4>All Agents</h4>
-                    <button class="btn btn-primary">Add agent</button>
-                </div>
+              <div class="page-title col-12 my-4">
+                <h6 class="">Agents</h6>
+                <p class="font-12 text-aqua">List of agents</p>
+              </div>
             </div>
 
             <div class="row">
@@ -82,7 +82,7 @@
                         </td>
                         <td>
                         <div class="d-flex flex-row">
-                            <div class="p-2 mx-1 bg-primary"><a href="single-agent.php"><i class="fas fa-eye text-white"></i></a></div>
+                            <div class="p-2 mx-1 bg-primary"><a href="../totco/single-agent.php"><i class="fas fa-eye text-white"></i></a></div>
                             <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-edit text-white"></i></span></a></div>
                             <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
                         </div
@@ -112,9 +112,9 @@
           </div>
         </main>
         <!-- footer -->
-      <?php include 'includes/footer.php'; ?>
+      <?php include '../includes/footer.php'; ?>
 
         <!-- END MAIN AREA -->
         <!-- Scripts -->
-        <?php include('includes/scripts.php'); ?>
+        <?php include('../includes/scripts.php'); ?>
         <!-- End Scripts -->

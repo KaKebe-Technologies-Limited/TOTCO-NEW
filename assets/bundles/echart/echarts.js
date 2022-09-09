@@ -11814,12 +11814,12 @@
                 properties[i][1] = properties[i][0];
             }
         }
-        return function (model, excludes, includes) {
+        return function (model, excludes, ../includes) {
             var style = {};
             for (var i = 0; i < properties.length; i++) {
                 var propName = properties[i][1];
                 if ((excludes && indexOf(excludes, propName) >= 0)
-                    || (includes && indexOf(includes, propName) < 0)
+                    || (../includes && indexOf(../includes, propName) < 0)
                 ) {
                     continue;
                 }
@@ -11914,8 +11914,8 @@
     );
 
     var areaStyleMixin = {
-        getAreaStyle: function (excludes, includes) {
-            return getAreaStyle(this, excludes, includes);
+        getAreaStyle: function (excludes, ../includes) {
+            return getAreaStyle(this, excludes, ../includes);
         }
     };
 
@@ -17125,8 +17125,8 @@
     );
 
     var itemStyleMixin = {
-        getItemStyle: function (excludes, includes) {
-            var style = getItemStyle(this, excludes, includes);
+        getItemStyle: function (excludes, ../includes) {
+            var style = getItemStyle(this, excludes, ../includes);
             var lineDash = this.getBorderLineDash();
             lineDash && (style.lineDash = lineDash);
             return style;
@@ -45591,12 +45591,12 @@
         },
 
         /**
-         * @param {boolean} includeSelf Default false.
+         * @param {boolean} ../includeself Default false.
          * @return {Array.<module:echarts/data/Tree~TreeNode>} order: [root, child, grandchild, ...]
          */
-        getAncestors: function (includeSelf) {
+        getAncestors: function (../includeself) {
             var ancestors = [];
-            var node = includeSelf ? this : this.parentNode;
+            var node = ../includeself ? this : this.parentNode;
             while (node) {
                 ancestors.push(node);
                 node = node.parentNode;
@@ -47002,7 +47002,7 @@
         }
     }
 
-    // Not includes the given node at the last item.
+    // Not ../includes the given node at the last item.
     function getPathToRoot(node) {
         var path = [];
         while (node) {
@@ -57966,7 +57966,7 @@
 
     /**
      * Compute the x-position for each node.
-     * 
+     *
      * Here we use Kahn algorithm to detect cycle when we traverse
      * the node to computer the initial x position.
      *
@@ -64802,11 +64802,11 @@
             updateMandatoryProps(handle, axisPointerModel, false);
 
             // update style
-            var includeStyles = [
+            var ../includestyles = [
                 'color', 'borderColor', 'borderWidth', 'opacity',
                 'shadowColor', 'shadowBlur', 'shadowOffsetX', 'shadowOffsetY'
             ];
-            handle.setStyle(handleModel.getItemStyle(null, includeStyles));
+            handle.setStyle(handleModel.getItemStyle(null, ../includestyles));
 
             // update position
             var handleSize = handleModel.get('size');
@@ -79951,7 +79951,7 @@
                     return textValue[0] + ' - ' + textValue[1];
                 }
             }
-            else { // Format single value (includes category case).
+            else { // Format single value (../includes category case).
                 return textValue;
             }
 
@@ -80204,7 +80204,7 @@
          *        params: value, valueState
          *        return: color
          * @return {Object} visualMeta
-         *        should includes {stops, outerColors}
+         *        should ../includes {stops, outerColors}
          *        outerColor means [colorBeyondMinValue, colorBeyondMaxValue]
          */
         getVisualMeta: noop$2

@@ -47,14 +47,14 @@
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
                   data-feather="shopping-bag"></i><span>Sales Management</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
+                <li><a class="nav-link" href="../totco/sales.php">Sales Orders</a></li>
               </ul>
             </li>
             <li class="menu-header">Agent Management</li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Agents</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="agents.php">All Agents</a></li>
+                <li><a class="nav-link" href="../totco/agents.php">All Agents</a></li>
                 <li><a class="nav-link" href="badge.html">Add New</a></li>
               </ul>
             </li>

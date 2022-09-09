@@ -1,11 +1,11 @@
 
-<?php include 'includes/load_user.php'; ?>
+<?php include '../includes/load_user.php'; ?>
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('../includes/header.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('../includes/sidebar.php'); ?>
 <!-- End Sidebar -->
 
 
@@ -379,11 +379,11 @@
         </div>
       </div>
       <!-- footer -->
-      <?php include 'includes/footer.php'; ?>
+      <?php include '../includes/footer.php'; ?>
     </div>
   </div>
   <!-- scripts -->
-  <?php include ('includes/scripts.php'); ?>
+  <?php include ('../includes/scripts.php'); ?>
   <!-- end scripts -->
 </body>
 
