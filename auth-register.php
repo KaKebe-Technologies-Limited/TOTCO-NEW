@@ -1,12 +1,15 @@
+<?php include('controllers/signupValidation.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- auth-register.html  21 Nov 2019 04:05:01 GMT -->
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>MPDS</title>
+  <title>Sign Up - TOTCO</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/jquery-selectric/selectric.css">
@@ -17,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/movit_logo.png' />
 </head>
+
 
 <body>
   <div class="loader"></div>
@@ -29,16 +33,12 @@
               <div class="card-header">
                 <h4>Register</h4>
               </div>
-
-
-
-
               <div class="card-body">
-                <form method="POST">
+                <form method="POST" class="needs-validation" novalidate="">
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="frist_name">First Name</label>
-                      <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
+                      <input id="frist_name" type="text" class="form-control" name="first_name" autofocus>
                     </div>
                     <div class="form-group col-6">
                       <label for="last_name">Last Name</label>
@@ -46,9 +46,29 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email">
-                    <div class="invalid-feedback">
+                      <label for="username">User Name</label>
+                      <input id="username" type="text" class="form-control" name="user_name">
+                    </div>
+                  <div class="row">
+                    <div class="col">
+                      <label for="date-of-birth">Date of Birth</label>
+                      <input id="date-of-birth" type="date" class="form-control" name="date_of_birth">
+                    </div>
+                    <div class="col">
+                      <label for="sex">Sex</label>
+                      <input id="sex" type="text" class="form-control" name="sex">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                        <label for="phone-number">Phone Number</label>
+                        <input id="phone-number" type="text" class="form-control" name="phone_number">
+                      </div>
+                    <div class="col">
+                      <label for="email">Email</label>
+                      <input id="email" type="email" class="form-control" name="email">
+                      <div class="invalid-feedback">
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -63,7 +83,7 @@
                     </div>
                     <div class="form-group col-6">
                       <label for="password2" class="d-block">Password Confirmation</label>
-                      <input id="password2" type="password" class="form-control" name="password-confirm">
+                      <input id="password2" type="password" class="form-control" name="passwordConfirm">
                     </div>
                   </div>
                   <div class="form-group">
@@ -73,7 +93,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <button name="register_btn" type="submit" class="btn btn-primary btn-lg btn-block">
                       Register
                     </button>
                   </div>
@@ -83,9 +103,9 @@
 
 
 
-              
+
               <div class="mb-4 text-muted text-center">
-                Already Registered? <a href="auth-login.html">Login</a>
+                Already Registered? <a href="auth-login.php">Login</a>
               </div>
             </div>
           </div>

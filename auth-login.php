@@ -1,10 +1,8 @@
-<?php include('loginValidation.php'); ?>
+<?php include('controllers/loginValidation.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -86,7 +84,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="auth-register.html">Create One</a>
+              Don't have an account? <a href="auth-register.php">Create One</a>
             </div>
           </div>
         </div>

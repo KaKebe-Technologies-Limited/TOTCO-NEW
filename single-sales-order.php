@@ -1,13 +1,15 @@
 <!-- session -->
-<?php include 'includes/load_user.php'; ?>
+<?php include ('includes/load_user.inc.php'); ?>
 
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.inc.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
+
+
 
  <!-- Main Content -->
  <div class="main-content">
@@ -60,41 +62,81 @@
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">Stock</h5>
-                          <h2 class="mb-3 font-18">128</h2>
-                          <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
+              <a href="single-agent.php">
+                <div class="card">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-12 text-aqua">Agent Name</h5>
+                            <p class="font-15 mb-0">Oluk Mark</p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/stock.png" alt="">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                          <div class="banner-img">
+                          <img src="assets/img/63475.jpg">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
           <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Order Details</h4>
+                  <h4>Proforma Invoice</h4>
                   <div class="card-header-form">
 
                   </div>
                 </div>
-                <div class="card-body p-0">
-
-
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="">
+                      <h2 class="font-15">Oluk Mark</h5>
+                      <h5 class="font-12 text-aqua">0771404884</h5>
+                    </div>
+                    <div class="">
+                      <h5 class="font-12 text-aqua">Odokomit, Lira City</h5>
+                    </div>
+                  </div>
+                  <div class="bg-primary rounded p-4 d-flex justify-content-between mb-4">
+                    <div>
+                      <h5 class="font-12 text-white">Invoice Number</h5>
+                      <p class="font-12 text-white m-0 p-0">INV-2022-010</p>
+                      <p class="font-12 text-white m-0 p-0">Issued Date: 28 Aug 2022</p>
+                      <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
+                    </div>
+                    <div>
+                      <h5 class="font-12 text-white">Billed to</h5>
+                      <p class="font-12 text-white">TOTCO Uganda LTD</p>
+                    </div>
+                  </div>
+                  <div class="row py-4">
+                    <h5 class="font-15">Order Detail</h5>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                      <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Price/kg</th>
+                      </tr>
+                      <tr>
+                        <td>Maize</td>
+                        <td class="text-truncate">
+                            1 Tonne
+                        </td>
+                        <td class="align-middle">
+                            3500
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,10 +242,10 @@
           </div>
         </div>
       </div>
-
-      <!-- footer -->
-
-
-<!-- Scripts -->
-<?php include('includes/scripts.php'); ?>
-<!-- End Scripts -->
+<!-- footer -->
+<?php include 'includes/footer.inc.php'; ?>
+    </div>
+  </div>
+  <!-- scripts -->
+  <?php include ('includes/scripts.inc.php'); ?>
+  <!-- end scripts -->

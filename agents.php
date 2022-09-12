@@ -1,12 +1,12 @@
-
 <!-- session -->
-<?php include 'includes/load_user.php'; ?>
+<?php include ('includes/load_user.inc.php'); ?>
+
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.inc.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
 <!-- Main Content -->
@@ -112,9 +112,9 @@
           </div>
         </main>
         <!-- footer -->
-      <?php include 'includes/footer.php'; ?>
-
-        <!-- END MAIN AREA -->
-        <!-- Scripts -->
-        <?php include('includes/scripts.php'); ?>
-        <!-- End Scripts -->
+      <?php include 'includes/footer.inc.php'; ?>
+    </div>
+  </div>
+  <!-- scripts -->
+  <?php include ('includes/scripts.inc.php'); ?>
+  <!-- end scripts -->

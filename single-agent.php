@@ -1,13 +1,15 @@
 <!-- session -->
-<?php include 'includes/load_user.php'; ?>
+<?php include ('includes/load_user.inc.php'); ?>
 
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.inc.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
+
+
 
  <!-- Main Content -->
  <div class="main-content">
@@ -24,17 +26,17 @@
             <div class="row col-md-9 col-xs-12 d-flex gx-3">
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="card">
-                <div class="card-statistic-4 bg-primary">
+                <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua">Total Sales</h5>
-                          <h2 class="mb-3 font-24 text-white">UGX 10,000,000</h2>
+                          <h2 class="mb-3 font-24">UGX 10,000,000</h2>
                           <h5 class="font-12 text-aqua">Pending Payments</h5>
-                          <h2 class="mb-3 font-18 text-white">UGX 0</h2>
+                          <h2 class="mb-3 font-18">UGX 0</h2>
                           <h5 class="font-12 text-aqua">Rejected Sales Orders</h5>
-                          <h2 class="mb-3 font-18 text-white">0</h2>
+                          <h2 class="mb-3 font-18">0</h2>
                           <a class="btn font-12 text-aqua text-upper" href"">View All</a>
                         </div>
                       </div>
@@ -56,7 +58,7 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Pending Payments</h5>
+                          <h5 class="font-12 text-aqua">Pending Payments</h5>
                           <h2 class="mb-3 font-18">UGX 0</h2>
                         </div>
                       </div>
@@ -77,7 +79,7 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Farm Input Orders</h5>
+                          <h5 class="font-12 text-aqua">Farm Input Orders</h5>
                           <h2 class="mb-3 font-18">12</h2>
                           <!--<a class="btn font-12 text-aqua text-upper" href="">View All</a> -->
                         </div>
@@ -99,7 +101,7 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Pending Payments</h5>
+                          <h5 class="font-12 text-aqua">Pending Payments</h5>
                           <h2 class="mb-3 font-18">UGX 0</h2>
                         </div>
                       </div>
@@ -128,7 +130,7 @@
                           </div>
                           <div class="card-body text-center">
                             <h6 class="text-white"><span class="me-2"><i class="fas fa-user"></i></span>Oluk Mark</h6>
-                            <p class="font-12 text-white"><span class="me-2"><i class="fas fa-phone"></i></span>0771404884</p>
+                            <a href="tel:0771404884" class="font-12 text-white"><span class="me-2"><i class="fas fa-phone"></i></span>0771404884</a>
                           </div>
                         </div>
                       </div>
@@ -417,9 +419,10 @@
         </div>
       </div>
 
-      <!-- footer -->
-
-
-<!-- Scripts -->
-<?php include('includes/scripts.php'); ?>
-<!-- End Scripts -->
+     <!-- footer -->
+     <?php include 'includes/footer.inc.php'; ?>
+    </div>
+  </div>
+  <!-- scripts -->
+  <?php include ('includes/scripts.inc.php'); ?>
+  <!-- end scripts -->

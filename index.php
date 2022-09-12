@@ -1,12 +1,13 @@
-
-<?php include 'includes/load_user.php'; ?>
+<!-- session -->
+<?php include ('includes/load_user.inc.php'); ?>
 <!-- Header -->
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.inc.php'); ?>
 <!-- end Header -->
 
 <!-- Main-Sidebar -->
-<?php include('includes/sidebar.php'); ?>
+<?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
+
 
 
       <!-- Main Content -->
@@ -260,7 +261,7 @@
                           <div class="">Oluk Mark</div>
                         </td>
                         <td>
-                          <div class="badge badge-success">CONFIRMED</div>
+                          <div class="badge badge-success">PAID</div>
                         </td>
                         <td>
                         <div class="d-flex flex-row">
@@ -379,11 +380,11 @@
         </div>
       </div>
       <!-- footer -->
-      <?php include 'includes/footer.php'; ?>
+      <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
   <!-- scripts -->
-  <?php include ('includes/scripts.php'); ?>
+  <?php include ('includes/scripts.inc.php'); ?>
   <!-- end scripts -->
 </body>
 
