@@ -27,7 +27,7 @@ function loadProducts()
             <td class="align-middle">
                 1 Tonne
             </td>
-            <td>UGX 3500</td>
+            <td>UGX 3500<span class="font-12 ps-1 text-muted">UGX</span></td>
             <td>
               <div class="">28 Aug 2022</div>
             </td>

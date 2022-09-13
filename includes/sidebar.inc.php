@@ -43,18 +43,28 @@
 
               </ul>
             </li> -->
-            <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="shopping-bag"></i><span>Sales Management</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
-              </ul>
+            <li class="menu-header">Sales Management</li>
+              <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                    data-feather="shopping-bag"></i><span>Sales</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
+                </ul>
+              </li>
             </li>
             <li class="menu-header">Agent Management</li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Agents</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="agents.php">All Agents</a></li>
+                <li><a class="nav-link" href="add-new-user.php">Add New</a></li>
+              </ul>
+            </li>
+            <li class="menu-header">Inventory Management</li>
+            <li class="dropdown">
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Store</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="agents.php">Stores</a></li>
                 <li><a class="nav-link" href="add-new-user.php">Add New</a></li>
               </ul>
             </li>

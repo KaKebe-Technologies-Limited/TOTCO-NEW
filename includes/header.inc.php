@@ -23,6 +23,12 @@
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/movit_logo.png' />
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
   <div class="loader"></div>
@@ -36,16 +42,7 @@
 									collapse-btn"> <i data-feather="align-justify"></i></a></li>
             <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                 <i data-feather="maximize"></i>
-              </a></li>
-            <li>
-              <form class="form-inline mr-auto">
-                <div class="search-element d-flex">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
-                  <button class="btn" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-              </form>
+              </a>
             </li>
           </ul>
         </div>

@@ -30,7 +30,7 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Order #</h5>
+                          <h5 class="font-12 text-aqua text-upper">Order #</h5>
                           <h2 class="mb-3 font-18">T001</h2>
                           <div class="badge badge-success">CONFIRMED</div>
                         </div>
@@ -47,7 +47,7 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Order Date</h5>
+                          <h5 class="font-12 text-aqua text-upper">Order Date</h5>
                           <h2 class="mb-3 font-18">28 Aug 2022</h2>
                         </div>
                       </div>
@@ -69,7 +69,7 @@
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-12 text-aqua">Agent Name</h5>
+                            <h5 class="font-12 text-aqua text-upper">Agent Name</h5>
                             <p class="font-15 mb-0">Oluk Mark</p>
                           </div>
                         </div>
@@ -85,8 +85,8 @@
               </a>
             </div>
 
-          <div class="row">
-            <div class="col-12">
+          <div class="row d-flex">
+            <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
                   <h4>Proforma Invoice</h4>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="d-flex justify-content-between mb-3">
+                  <div class="mb-3">
                     <div class="">
                       <h2 class="font-15">Oluk Mark</h5>
                       <h5 class="font-12 text-aqua">0771404884</h5>
@@ -112,8 +112,9 @@
                       <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
                     </div>
                     <div>
-                      <h5 class="font-12 text-white">Billed to</h5>
-                      <p class="font-12 text-white">TOTCO Uganda LTD</p>
+                      <h5 class="font-12 text-white">Billed To</h5>
+                      <p class="font-12 text-white m-0 p-0">TOTCO Uganda LTD</p>
+                      <p class="font-12 text-white m-0 p-0">Odokomit, Lira City</p>
                     </div>
                   </div>
                   <div class="row py-4">
@@ -125,6 +126,7 @@
                         <th>Item Name</th>
                         <th>Quantity</th>
                         <th>Price/kg</th>
+                        <th>Total</th>
                       </tr>
                       <tr>
                         <td>Maize</td>
@@ -132,10 +134,83 @@
                             1 Tonne
                         </td>
                         <td class="align-middle">
-                            3500
+                            3500<span class="font-12 ps-1 text-muted">UGX</span>
+                        </td>
+                        <td class="fw-bold">
+                          3,500,000<span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                       </tr>
                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex flex-column">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="font-12 text-upper">Amount Due</h4>
+                  </div>
+                  <div class="card-body">
+                    <h4>3,500,000<span class="font-12 text-muted ms-1">UGX</span></h4>
+                    <div class="border border-info rounded p-2 w-50"><h5 class="font-10 text-warning">Due on <span>28 Sept 2022</span></h5></div>
+                  </div>
+                  <div class="card-footer">
+                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Approve</button>
+                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Reject</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="approval-modal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <form action="#" method="post">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Confirm sales order</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Are you sure you want to approve this sales order?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                          <button id="confirm-order-btn" type="button" class="btn btn-primary" data-bs-dismiss="modal" name="confirm-order-btn">Confirm</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Approval snackbars messages -->
+              <div id="toast-notification">
+                <div id="success-alert" class="alert alert-success d-flex align-items-center" role="alert">
+                  <div>
+                    An example success alert with an icon
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <img style="height: 24px; width: 24px"src="./assets/fonts/fonts/webfonts/icons8-chat-48.png">
+                  </div>
+                  <div class="card-body bg-agri">
+                    <ul class="nav">
+                      <li class="">
+                        <a class="card" href="#">
+                          <div class="d-flex p-2">
+                            <img class="rounded-circle" style="width:23px; height:23px;" src="assets/img/63475.jpg">
+                            <p class="px-3 font-10">Hello Oluk Mark</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <input type="text" class="form-control rounded" placeholder="Message">
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
