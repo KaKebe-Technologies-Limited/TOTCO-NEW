@@ -1,17 +1,18 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
-
-
-
-
+<?php
+    include ('includes/load_user.inc.php');
+?>
+<!-- header -->
+    include ('includes/header.php');
+?>
+<!-- end header -->
+<!-- Body -->
 <div>
     Sorry, the page was not found
 </div>
-
+<!-- end body -->
 <!-- footer -->
-<?php include 'app/views/includes/footer.inc.php'; ?>
-    </div>
-  </div>
-  <!-- scripts -->
-  <?php include ('app/views/includes/scripts.inc.php'); ?>
-  <!-- end scripts -->
+<?php
+include ('includes/footer.php');
+?>
+<!-- end footer -->
