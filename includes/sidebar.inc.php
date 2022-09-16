@@ -48,7 +48,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                     data-feather="shopping-bag"></i><span>Sales</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="stores.php">Sales Orders</a></li>
+                  <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
                 </ul>
               </li>
             </li>
