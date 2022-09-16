@@ -11,6 +11,13 @@
 
 <?php include('salesFunction.php'); ?>
 
+<?php
+use Totcoclass\Order;
+
+require_once __DIR__ . '/Model/Order.php';
+$orderModel = new Order();
+$orderResult = $orderModel->getAllOrders();
+?>
 
 
 <!-- Main Content -->
@@ -22,9 +29,6 @@
                 <h6 class="">Sales Orders</h6>
                 <p class="font-12 text-aqua">All sales order request by agents</p>
               </div>
-            </div>
-            <div class="">
-              <a href="create-sales-order.php" class="btn btn-primary btn-lg" role="button">Add New</a>
             </div>
           </div>
             <section class="section">
@@ -99,11 +103,11 @@
                 <div class="card">
                   <div class="card-header py-4 d-flex justify-content-between">
                     <div class="bulk-action col-md-3 mx-3 d-flex">
-                        <select class="form-select form-control rounded" aria-label=".form-select-sm example">
+                        <select id="bulk-action"" class="form-select form-control rounded" aria-label=".form-select-sm example">
                             <option selected>Bulk Action</option>
                             <option value="2">Delete</option>
                         </select>
-                        <button class="btn btn-primary rounded mx-2" type="submit">Apply</button>
+                        <button id="apply-btn" class="btn btn-primary rounded mx-2" type="submit" data-id="<?=$orderResult[0]['id'];?>">Apply</button>
                     </div>
                     <div class="bulk-action col-md-4 mx-3 d-flex">
                         <div id="sort-status" class="col-md-6 ms-2">
@@ -138,7 +142,7 @@
                           <th class="text-center">
                             <div class="custom-checkbox custom-checkbox-table custom-control">
                               <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                class="custom-control-input" id="checkbox-all">
+                                class="custom-control-input emp_checkbox" data-emp-id="<?php echo  $orderResult[0]["id"]; ?>" id="checkbox-all">
                               <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                             </div>
                           </th>
@@ -151,8 +155,8 @@
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
-                        <?php loadProducts(); ?>
-                        <tr>
+                        <?php foreach ($orderResult as $k => $v): ?>
+                          <tr id = "<?php echo $orderResult[$k]["id"]; ?>">
                           <td class="p-0 text-center">
                             <div class="custom-checkbox custom-control">
                               <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
@@ -160,31 +164,33 @@
                               <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                             </div>
                           </td>
-                          <td>T001</td>
+                          <td><?php echo $orderResult[$k]["order_ref"];?></td>
                           <td class="text-truncate">
-                              Maize
+                          <?php echo $orderResult[$k]["order_ref"];?>
                           </td>
                           <td class="align-middle">
-                              1 Tonne
+                          <?php echo $orderResult[$k]["order_ref"];?>
                           </td>
-                          <td>UGX 3500</td>
+                          <td><?php echo $orderResult[$k]["order_ref"];?></td>
                           <td>
-                            <div class="">28 Aug 2022</div>
-                          </td>
-                          <td>
-                            <div class="">Oluk Mark</div>
+                            <div class=""><?php echo $orderResult[$k]["order_ref"];?></div>
                           </td>
                           <td>
-                            <div class="badge badge-success">CONFIRMED</div>
+                            <div class=""><?php echo $orderResult[$k]["order_ref"];?></div>
+                          </td>
+                          <td>
+                            <div class="badge badge-success"><?php echo $orderResult[$k]["order_ref"];?></div>
                           </td>
                           <td>
                           <div class="d-flex flex-row">
-                              <div class="p-2 mx-1 bg-primary"><a href="single-sales-order.php"><i class="fas fa-eye text-white"></i></a></div>
+                              <div class="p-2 mx-1 bg-primary"><a href="./single-order.php?id=<?php echo $orderResult[$k]["id"];?>"><i class="fas fa-eye text-white"></i></a></div>
                               <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-download text-white"></i></span></a></div>
                               <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
                           </div
                           </td>
                         </tr>
+                          <?php endforeach; ?>
+
 
                       </table>
                     </div>

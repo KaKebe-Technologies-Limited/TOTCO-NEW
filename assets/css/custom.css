@@ -11,6 +11,10 @@
     background-color: var(--agri) !important;
 }
 
+.bg-darkblue {
+    background-color: darkblue;
+}
+
 .text-aqua {
     color: var(--aqua);
 }
@@ -41,12 +45,25 @@ Toast Notificaton
     top: 50vh !important;
     right: 0 !important;
     z-index: 1070 !important;
+    width: 200px;
+    height: 100px;
+    background: #70c48f;
+    color: white;
+    border-radius: 3px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    display: none;
 
   }
 
+.d-block {
+    display: block;
+}
+
 .visible {
     animation: slideInRight 0.5s ease forwards, slideOutRight 0.5s 3s ease forwards;
-    
+
   }
 
 

@@ -13,7 +13,7 @@ if (isset($_POST['register_btn'])) {
         $password = $_POST['password'];
         $password = $_POST['passwordConfirm'];
 
-        $jsonobj = file_get_contents("http://localhost/totco/controllers/api_TotcoOffline/api/users/createUser.php");
+        $jsonobj = file_get_contents("https://totco.kakebe.com/api/users/createUser.php");
         $PHPobj = json_decode($jsonobj);
 
         if ($PHPobj->success == 0) {

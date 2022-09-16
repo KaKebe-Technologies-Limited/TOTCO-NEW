@@ -9,6 +9,15 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
+<?php
+use Totcoclass\Order;
+
+require_once __DIR__ . '/Model/Order.php';
+$orderModel = new Order();
+$orderResult = $orderModel->getSalesOrderValues($_GET["id"]);
+$productResult = $orderModel->getProduct($_GET["id"]);
+$quantityResult = $orderModel->getQuantity($_GET["order_id"]);
+?>
 
 
  <!-- Main Content -->
@@ -31,7 +40,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order #</h5>
-                          <h2 class="mb-3 font-18">T001</h2>
+                          <h2 class="mb-3 font-18"><?php echo $orderResult[0]['order_invoice']; ?></h2>
                           <div class="badge badge-success">CONFIRMED</div>
                         </div>
                       </div>
@@ -48,13 +57,13 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order Date</h5>
-                          <h2 class="mb-3 font-18">28 Aug 2022</h2>
+                          <h2 class="mb-3 font-18"><?php echo $orderResult[0]['order_at']; ?></h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
+                        <!--<div class="banner-img">
                           <img src="assets/fonts/icons/icons8-calendar-80.png" alt="">
-                        </div>
+                        </div>-->
                       </div>
                     </div>
                   </div>
@@ -70,7 +79,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
                             <h5 class="font-12 text-aqua text-upper">Agent Name</h5>
-                            <p class="font-15 mb-0">Oluk Mark</p>
+                            <p class="font-15 mb-0"><?php echo $orderResult[0]['customer_first_name']; ?></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -89,25 +98,18 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
-                  <h4>Proforma Invoice</h4>
+                  <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
 
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="mb-3">
-                    <div class="">
-                      <h2 class="font-15">Oluk Mark</h5>
-                      <h5 class="font-12 text-aqua">0771404884</h5>
-                    </div>
-                    <div class="">
-                      <h5 class="font-12 text-aqua">Odokomit, Lira City</h5>
-                    </div>
-                  </div>
                   <div class="bg-primary rounded p-4 d-flex justify-content-between mb-4">
                     <div>
                       <h5 class="font-12 text-white">Invoice Number</h5>
-                      <p class="font-12 text-white m-0 p-0">INV-2022-010</p>
+
+                      <p class="font-12 text-white m-0 p-0"><?php echo $orderResult[0]['order_ref']; ?></p>
+
                       <p class="font-12 text-white m-0 p-0">Issued Date: 28 Aug 2022</p>
                       <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
                     </div>
@@ -118,7 +120,7 @@
                     </div>
                   </div>
                   <div class="row py-4">
-                    <h5 class="font-15">Order Detail</h5>
+                    <h5 class="font-12 text-upper">Order Detail</h5>
                   </div>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover">
@@ -129,15 +131,15 @@
                         <th>Total</th>
                       </tr>
                       <tr>
-                        <td>Maize</td>
-                        <td class="text-truncate">
-                            1 Tonne
+                        <td><?php echo $productResult[0]['product_title']; ?></td>
+                        <td class="">
+                          <?php echo $quantityResult[0]['quantity']; ?>
                         </td>
                         <td class="align-middle">
-                            3500<span class="font-12 ps-1 text-muted">UGX</span>
+                            <?php echo $productResult[0]['price']; ?><span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                         <td class="fw-bold">
-                          3,500,000<span class="font-12 ps-1 text-muted">UGX</span>
+                          <?php echo $productResult[0]['price'] * 2000; ?> <span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                       </tr>
                     </table>
@@ -151,44 +153,26 @@
                   <div class="card-header">
                     <h4 class="font-12 text-upper">Amount Due</h4>
                   </div>
-                  <div class="card-body">
-                    <h4>3,500,000<span class="font-12 text-muted ms-1">UGX</span></h4>
-                    <div class="border border-info rounded p-2 w-50"><h5 class="font-10 text-warning">Due on <span>28 Sept 2022</span></h5></div>
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="font-28 text-center">3,500,000<span class="font-12 text-muted ms-1">UGX</span></h4>
+                    <div class="border border-info rounded w-50 text-center">
+                      <h5 class="font-10 text-info mt-2">Due on <span>28 Sept 2022</span></h5>
+                    </div>
                   </div>
-                  <div class="card-footer">
+                  <div class="card-footer d-flex justify-content-center">
                     <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Approve</button>
-                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Reject</a>
+                    <button id="reject-btn" class="btn btn-outline-primary data-bs-toggle="modal" data-bs-target="#reject-modal" mx-1" style="width: 120px;">Reject</button>
                   </div>
                 </div>
               </div>
-
-              <div id="approval-modal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <form action="#" method="post">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Confirm sales order</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        Are you sure you want to approve this sales order?
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                          <button id="confirm-order-btn" type="button" class="btn btn-primary" data-bs-dismiss="modal" name="confirm-order-btn">Confirm</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-              <!-- Approval snackbars messages -->
-              <div id="toast-notification">
-                <div id="success-alert" class="alert alert-success d-flex align-items-center" role="alert">
-                  <div>
-                    An example success alert with an icon
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="font-12 text-upper">Proforma Invoice</h4>
+                </div>
+                <div class="card-body">
+                  <div class="card-footer d-flex justify-content-content">
+                    <a class="btn btn-outline-primary mx-1" style="width: 120px;" target="_blank" title="Generate Invoice" href="./invoice.php?id=<?php echo $orderResult[0]["id"];?>">Download</a>
+                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
               </div>

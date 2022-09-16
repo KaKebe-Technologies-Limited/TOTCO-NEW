@@ -3,7 +3,7 @@
 function loadProducts()
 {
     // $jsonobj =  file_get_contents("https://www.clavicar.com/campusweekly/api/inv/api/9r0DUctS/lIStaIIpr0dnctz.php");
-    $jsonobj =  file_get_contents("https://newsdata.io/api/1/news?apikey=pub_11155a9087e7e56fbb11883175b7df815fa22&q=iphone");
+    $jsonobj =  file_get_contents("https://totco.kakebe.com/api/users/createUser.php");
 
     $PHPpdtsObj = json_decode($jsonobj);
 

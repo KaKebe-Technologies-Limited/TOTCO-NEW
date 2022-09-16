@@ -26,17 +26,17 @@
             <div class="row col-md-9 col-xs-12 d-flex gx-3">
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="card">
-                <div class="card-statistic-4">
+                <div class="card-statistic-4 bg-darkblue">
                   <div class="align-items-center justify-content-between">
                     <div class="row">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua">Total Sales</h5>
-                          <h2 class="mb-3 font-24">10,000,000<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <h5 class="font-12 text-aqua">Pending Payments</h5>
-                          <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <h5 class="font-12 text-aqua">Rejected Sales Orders</h5>
-                          <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
+                          <h2 class="mb-3 font-24 text-white">10,000,000<span class="font-12 text-muted ms-1">UGX</span></h2>
+                          <h5 class="font-12 text-aqua text-white">Pending Sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">0</h2>
+                          <h5 class="font-12 text-aqua text-white">Rejected Sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">0<span class="font-12 text-muted ms-1">UGX</span></h2>
                           <a class="btn font-12 text-aqua text-upper" href"">View All</a>
                         </div>
                       </div>

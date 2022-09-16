@@ -94,6 +94,13 @@
                   <h4>chart</h4>
                 </div>
                 <div class="card-body">
+                  <ul class="nav">
+                    <li class="nav-item d-flex justify-content-between">
+                      <div>T001</div>
+                      <div>Maize</div>
+                      <div>3500</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -217,7 +224,7 @@
                 <div class="card-header">
                   <h4>Recent Fullfilled Sales Orders</h4>
                   <div class="card-header-form">
-                  <button class="btn btn-primary">SEE ALL</button>
+                  <a href="sales.php" class="btn btn-primary">SEE ALL</a>
                   </div>
                 </div>
                 <div class="card-body p-0">
