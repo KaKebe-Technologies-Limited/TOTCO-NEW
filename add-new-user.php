@@ -116,8 +116,8 @@
               </td>
               <td>
                 <div class="d-flex flex-row">
-                    <button type="button" class="btn btn-primary mx-1">Approve</button>
-                    <button type="button" class="btn btn-danger mx-1">Reject</button>
+                    <button id="approve-user-btn" type="button" class="btn btn-primary mx-1">Approve</button>
+                    <button id="reject-user-btn" type="button" class="btn btn-danger mx-1">Reject</button>
                 </div
               </td>
             </tr>
@@ -132,6 +132,3 @@
 <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('includes/scripts.inc.php'); ?>
-  <!-- end scripts -->

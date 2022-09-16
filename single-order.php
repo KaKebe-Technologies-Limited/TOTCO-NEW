@@ -9,17 +9,6 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
-<?php
-use Totcoclass\Order;
-
-require_once __DIR__ . '/Model/Order.php';
-$orderModel = new Order();
-$orderResult = $orderModel->getSalesOrderValues($_GET["id"]);
-$productResult = $orderModel->getProduct($_GET["id"]);
-$quantityResult = $orderModel->getQuantity($_GET["order_id"]);
-?>
-
-
  <!-- Main Content -->
  <div class="main-content">
         <section class="section">
@@ -40,7 +29,7 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order #</h5>
-                          <h2 class="mb-3 font-18"><?php echo $orderResult[0]['order_invoice']; ?></h2>
+                          <h2 class="mb-3 font-18">T001</h2>
                           <div class="badge badge-success">CONFIRMED</div>
                         </div>
                       </div>
@@ -57,7 +46,7 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order Date</h5>
-                          <h2 class="mb-3 font-18"><?php echo $orderResult[0]['order_at']; ?></h2>
+                          <h2 class="mb-3 font-18">28 AUG 2022</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -79,7 +68,7 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
                             <h5 class="font-12 text-aqua text-upper">Agent Name</h5>
-                            <p class="font-15 mb-0"><?php echo $orderResult[0]['customer_first_name']; ?></p>
+                            <p class="font-15 mb-0">Oluk Mark</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -104,11 +93,11 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="bg-primary rounded p-4 d-flex justify-content-between mb-4">
+                  <div class="bg-darkblue rounded p-4 d-flex justify-content-between mb-4">
                     <div>
                       <h5 class="font-12 text-white">Invoice Number</h5>
 
-                      <p class="font-12 text-white m-0 p-0"><?php echo $orderResult[0]['order_ref']; ?></p>
+                      <p class="font-12 text-white m-0 p-0">AG001</p>
 
                       <p class="font-12 text-white m-0 p-0">Issued Date: 28 Aug 2022</p>
                       <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
@@ -131,15 +120,15 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                         <th>Total</th>
                       </tr>
                       <tr>
-                        <td><?php echo $productResult[0]['product_title']; ?></td>
+                        <td>Maize</td>
                         <td class="">
-                          <?php echo $quantityResult[0]['quantity']; ?>
+                          10000
                         </td>
                         <td class="align-middle">
-                            <?php echo $productResult[0]['price']; ?><span class="font-12 ps-1 text-muted">UGX</span>
+                            3500<span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                         <td class="fw-bold">
-                          <?php echo $productResult[0]['price'] * 2000; ?> <span class="font-12 ps-1 text-muted">UGX</span>
+                          35000000<span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                       </tr>
                     </table>
@@ -154,9 +143,9 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                     <h4 class="font-12 text-upper">Amount Due</h4>
                   </div>
                   <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="font-28 text-center">3,500,000<span class="font-12 text-muted ms-1">UGX</span></h4>
-                    <div class="border border-info rounded w-50 text-center">
-                      <h5 class="font-10 text-info mt-2">Due on <span>28 Sept 2022</span></h5>
+                    <h4 class="font-28 text-center">35,000,000<span class="font-12 text-muted ms-1">UGX</span></h4>
+                    <div class="border border-info rounded w-50 text-center bg-info">
+                      <h5 class="font-10 text-info mt-2 text-white">Due on <span>28 Sept 2022</span></h5>
                     </div>
                   </div>
                   <div class="card-footer d-flex justify-content-center">
@@ -171,7 +160,7 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
                 </div>
                 <div class="card-body">
                   <div class="card-footer d-flex justify-content-content">
-                    <a class="btn btn-outline-primary mx-1" style="width: 120px;" target="_blank" title="Generate Invoice" href="./invoice.php?id=<?php echo $orderResult[0]["id"];?>">Download</a>
+                    <a class="btn btn-outline-primary mx-1" style="width: 120px;" target="_blank" title="">Download</a>
                     <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
@@ -305,6 +294,3 @@ $quantityResult = $orderModel->getQuantity($_GET["order_id"]);
 <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('includes/scripts.inc.php'); ?>
-  <!-- end scripts -->

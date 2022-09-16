@@ -18,8 +18,6 @@ if (isset($_POST['submit'])) {
             $_SESSION['user_data'] = $PHPobj->data;
             header("Location: index.php");
         }
-
-
     }
 }
 

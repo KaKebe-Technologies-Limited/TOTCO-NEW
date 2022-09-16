@@ -390,9 +390,7 @@
       <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('includes/scripts.inc.php'); ?>
-  <!-- end scripts -->
+ 
 </body>
 
 

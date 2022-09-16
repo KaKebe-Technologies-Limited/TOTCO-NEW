@@ -53,6 +53,49 @@ $('#reject-btn').click(function() {
         })
     });
 
+	// User registration approval
+
+	$('#approve-user-btn').click(function() {
+		swal({
+			title: 'Confirm User Registration',
+			text: 'Are you sure you want to approve this user?',
+			buttons: ['Cancel', 'Confirm'],
+			icon: 'warning'
+		})
+		.then((willSubmit) => {
+			if(willSubmit) {
+				swal({
+					title: "Success",
+					text: "New user approval successful",
+					icon: "success",
+					button: false,
+					timer: 2000
+				})
+			}
+		})
+	});
+
+	//user registration Rejection
+	$('#reject-user-btn').click(function() {
+			swal({
+				title: 'Confirm User Rejection',
+				text: 'Are you sure you want to reject this new user?',
+				buttons: ['Cancel', 'Confirm'],
+				icon: 'warning'
+			})
+			.then((willDelete) => {
+				if(willDelete) {
+					swal({
+						title: "Success",
+						text: "You have rejected this user",
+						icon: "success",
+						button: false,
+						timer: 2000
+					})
+				}
+			})
+		});
+
 
 /* --------------------------------
     form action dialog boxes

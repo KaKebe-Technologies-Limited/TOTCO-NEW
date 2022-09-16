@@ -11,15 +11,6 @@
 
 <?php include('salesFunction.php'); ?>
 
-<?php
-use Totcoclass\Order;
-
-require_once __DIR__ . '/Model/Order.php';
-$orderModel = new Order();
-$orderResult = $orderModel->getAllOrders();
-?>
-
-
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
 
@@ -142,7 +133,7 @@ $orderResult = $orderModel->getAllOrders();
                           <th class="text-center">
                             <div class="custom-checkbox custom-checkbox-table custom-control">
                               <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                class="custom-control-input emp_checkbox" data-emp-id="<?php echo  $orderResult[0]["id"]; ?>" id="checkbox-all">
+                                class="custom-control-input emp_checkbox" data-emp-id="" id="checkbox-all">
                               <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                             </div>
                           </th>
@@ -155,8 +146,6 @@ $orderResult = $orderModel->getAllOrders();
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
-                        <?php foreach ($orderResult as $k => $v): ?>
-                          <tr id = "<?php echo $orderResult[$k]["id"]; ?>">
                           <td class="p-0 text-center">
                             <div class="custom-checkbox custom-control">
                               <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
@@ -164,34 +153,31 @@ $orderResult = $orderModel->getAllOrders();
                               <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                             </div>
                           </td>
-                          <td><?php echo $orderResult[$k]["order_ref"];?></td>
+                          <td>T001</td>
                           <td class="text-truncate">
-                          <?php echo $orderResult[$k]["order_ref"];?>
+                          Maize
                           </td>
                           <td class="align-middle">
-                          <?php echo $orderResult[$k]["order_ref"];?>
-                          </td>
-                          <td><?php echo $orderResult[$k]["order_ref"];?></td>
-                          <td>
-                            <div class=""><?php echo $orderResult[$k]["order_ref"];?></div>
+                          10000
                           </td>
                           <td>
-                            <div class=""><?php echo $orderResult[$k]["order_ref"];?></div>
+                            <div class="">3500</div>
                           </td>
                           <td>
-                            <div class="badge badge-success"><?php echo $orderResult[$k]["order_ref"];?></div>
+                            <div class="">28 AUG 2022</div>
+                          </td>
+                          <td>Oluk Mark</td>
+                          <td>
+                            <div class="badge badge-success">CONFIRMED</div>
                           </td>
                           <td>
                           <div class="d-flex flex-row">
-                              <div class="p-2 mx-1 bg-primary"><a href="./single-order.php?id=<?php echo $orderResult[$k]["id"];?>"><i class="fas fa-eye text-white"></i></a></div>
+                              <div class="p-2 mx-1 bg-primary"><a href="single-order.php"><i class="fas fa-eye text-white"></i></a></div>
                               <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-download text-white"></i></span></a></div>
                               <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
                           </div
                           </td>
                         </tr>
-                          <?php endforeach; ?>
-
-
                       </table>
                     </div>
                   </div>
@@ -219,6 +205,3 @@ $orderResult = $orderModel->getAllOrders();
       <?php include './includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('./includes/scripts.inc.php'); ?>
-  <!-- end scripts -->

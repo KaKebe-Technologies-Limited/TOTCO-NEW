@@ -22,12 +22,13 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header py-4">
-                    <div class="bulk-action mx-3">
+                    <div class="bulk-action d-flex mx-3">
                         <select class="form-select" aria-label=".form-select-sm example">
                             <option selected>Bulk Action</option>
                             <option value="1">Edit</option>
                             <option value="2">Delete</option>
                         </select>
+                        <button type="submit" class="btn btn-primary rounded mx-2">Apply</button>
                     </div>
                     <form class="search-form mx-3">
                         <div class="">
@@ -36,7 +37,7 @@
                     </form>
                     <div class="form-export d-flex ml-3">
                         <div class="mx-2">
-                            <button class="btn btn-outline-primary rounded"><i class="fa fa-print"></i></button>
+                            <button class="btn btn-outline-primary rounded">Download</i></button>
                         </div>
                         <div class="mx-2">
                             <button class="btn btn-outline-primary rounded">Export</button>
@@ -115,6 +116,3 @@
       <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('includes/scripts.inc.php'); ?>
-  <!-- end scripts -->

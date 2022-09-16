@@ -31,11 +31,11 @@
                     <div class="row">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Total Sales</h5>
+                          <h5 class="font-12 text-muted">Total Sales</h5>
                           <h2 class="mb-3 font-24 text-white">10,000,000<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <h5 class="font-12 text-aqua text-white">Pending Sales Orders</h5>
+                          <h5 class="font-12 text-aqua text-muted">Pending Sales Orders</h5>
                           <h2 class="mb-3 font-18 text-white">0</h2>
-                          <h5 class="font-12 text-aqua text-white">Rejected Sales Orders</h5>
+                          <h5 class="font-12 text-aqua text-muted">Rejected Sales Orders</h5>
                           <h2 class="mb-3 font-18 text-white">0<span class="font-12 text-muted ms-1">UGX</span></h2>
                           <a class="btn font-12 text-aqua text-upper" href"">View All</a>
                         </div>
@@ -336,6 +336,4 @@
      <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
-  <!-- scripts -->
-  <?php include ('includes/scripts.inc.php'); ?>
-  <!-- end scripts -->
+ 
