@@ -1,5 +1,5 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
+<?php include ('controllers/load_user.php'); ?>
 
 <!-- Header -->
 <?php include('includes/header.inc.php'); ?>
@@ -30,7 +30,22 @@
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order #</h5>
                           <h2 class="mb-3 font-18">T001</h2>
-                          <div class="badge badge-success">CONFIRMED</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-aqua text-upper">Order Date</h5>
+                          <h2 class="mb-3 font-18">28 AUG 2022</h2>
                         </div>
                       </div>
                     </div>
@@ -45,14 +60,9 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Order Date</h5>
-                          <h2 class="mb-3 font-18">28 AUG 2022</h2>
+                          <h5 class="font-12 text-aqua text-upper">Order Status</h5>
+                          <div class="badge badge-success">CONFIRMED</div>
                         </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!--<div class="banner-img">
-                          <img src="assets/fonts/icons/icons8-calendar-80.png" alt="">
-                        </div>-->
                       </div>
                     </div>
                   </div>
@@ -93,9 +103,9 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="bg-darkblue rounded p-4 d-flex justify-content-between mb-4">
+                  <div class="bg-prussian-blue rounded p-4 d-flex justify-content-between mb-4">
                     <div>
-                      <h5 class="font-12 text-white">Invoice Number</h5>
+                      <h5 class="font-14 text-white">Invoice Number</h5>
 
                       <p class="font-12 text-white m-0 p-0">AG001</p>
 
@@ -103,7 +113,7 @@
                       <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
                     </div>
                     <div>
-                      <h5 class="font-12 text-white">Billed To</h5>
+                      <h5 class="font-14 text-white">Billed To</h5>
                       <p class="font-12 text-white m-0 p-0">TOTCO Uganda LTD</p>
                       <p class="font-12 text-white m-0 p-0">Odokomit, Lira City</p>
                     </div>
@@ -115,9 +125,9 @@
                     <table class="table table-striped table-hover">
                       <tr>
                         <th>Item Name</th>
-                        <th>Quantity</th>
-                        <th>Price/kg</th>
-                        <th>Total</th>
+                        <th>Quantity<span class="font-12 text-muted ms-1">(Tonnes)</span></th>
+                        <th>Price<span class="font-12 text-muted ms-1">(/kg)</span></th>
+                        <th>Total<span class="font-12 text-muted ms-1">(UGX)</span></th>
                       </tr>
                       <tr>
                         <td>Maize</td>
@@ -153,17 +163,17 @@
                     <button id="reject-btn" class="btn btn-outline-primary data-bs-toggle="modal" data-bs-target="#reject-modal" mx-1" style="width: 120px;">Reject</button>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="font-12 text-upper">Proforma Invoice</h4>
-                </div>
-                <div class="card-body">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="font-12 text-upper">Proforma Invoice</h4>
+                  </div>
+                  <div class="card-body">
                   <div class="card-footer d-flex justify-content-content">
                     <a class="btn btn-outline-primary mx-1" style="width: 120px;" target="_blank" title="">Download</a>
                     <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
+              </div>
               </div>
               <div class="">
                 <div class="card">
@@ -171,19 +181,7 @@
                     <img style="height: 24px; width: 24px"src="./assets/fonts/fonts/webfonts/icons8-chat-48.png">
                   </div>
                   <div class="card-body bg-agri">
-                    <ul class="nav">
-                      <li class="">
-                        <a class="card" href="#">
-                          <div class="d-flex p-2">
-                            <img class="rounded-circle" style="width:23px; height:23px;" src="assets/img/63475.jpg">
-                            <p class="px-3 font-10">Hello Oluk Mark</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <input type="text" class="form-control rounded" placeholder="Message">
-                      </li>
-                    </ul>
+
                   </div>
                 </div>
               </div>

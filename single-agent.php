@@ -1,5 +1,5 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
+<?php include ('controllers/load_user.php'); ?>
 
 <!-- Header -->
 <?php include('includes/header.inc.php'); ?>
@@ -31,13 +31,12 @@
                     <div class="row">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted">Total Sales</h5>
+                          <h5 class="font-12 text-muted text-upper">Total Sales</h5>
                           <h2 class="mb-3 font-24 text-white">10,000,000<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <h5 class="font-12 text-aqua text-muted">Pending Sales Orders</h5>
+                          <h5 class="font-12 text-aqua text-muted text-upper">Pending Sales Orders</h5>
                           <h2 class="mb-3 font-18 text-white">0</h2>
-                          <h5 class="font-12 text-aqua text-muted">Rejected Sales Orders</h5>
-                          <h2 class="mb-3 font-18 text-white">0<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <a class="btn font-12 text-aqua text-upper" href"">View All</a>
+                          <h5 class="font-12 text-aqua text-muted text-upper">Rejected Sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">0</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -58,7 +57,7 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Pending Payments</h5>
+                          <h5 class="font-12 text-aqua text-upper">Current Balance</h5>
                           <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
                         </div>
                       </div>
@@ -79,8 +78,8 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Farm Input Orders</h5>
-                          <h2 class="mb-3 font-18">12<span class="font-12 text-muted ms-1">UGX</span></h2>
+                          <h5 class="font-12 text-aqua text-upper">Farm Input Orders</h5>
+                          <h2 class="mb-3 font-18">12</h2>
                           <!--<a class="btn font-12 text-aqua text-upper" href="">View All</a> -->
                         </div>
                       </div>
@@ -101,7 +100,7 @@
                     <div class="row ">
                       <div class="pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua">Pending Payments</h5>
+                          <h5 class="font-12 text-aqua text-upper">Pending Payments</h5>
                           <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
                         </div>
                       </div>
@@ -185,7 +184,7 @@
                         </td>
                         <td>2018-01-20</td>
                         <td>
-                          <div class="badge badge-success">FULFILLED</div>
+                          <div class="badge badge-success">PAID</div>
                         </td>
                         <td>
                         <div class="d-flex flex-row">
@@ -336,4 +335,3 @@
      <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
- 

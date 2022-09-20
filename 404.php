@@ -1,6 +1,6 @@
 <!-- session -->
 <?php
-    include ('includes/load_user.inc.php');
+    include ('controllers/load_user.php');
 ?>
 <!-- header -->
     include ('includes/header.php');

@@ -1,5 +1,5 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
+<?php include ('controllers/load_user.php'); ?>
 
 <!-- Header -->
 <?php include('includes/header.inc.php'); ?>
@@ -9,7 +9,6 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
-<?php include('salesFunction.php'); ?>
 
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
@@ -45,10 +44,10 @@
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Stock</hh5>
-                          <h2 class="mb-3 font-18">100<span class="font-10 text-muted text-upper mx-1">tonnes</span></h2>
+                          <h2 class="mb-3 font-18">100000<span class="font-10 text-muted text-upper mx-1">tonnes</span></h2>
                         </div>
                       </div>
                     </div>

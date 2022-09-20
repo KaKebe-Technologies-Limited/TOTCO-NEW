@@ -1,5 +1,5 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
+<?php include ('controllers/load_user.php'); ?>
 
 <!-- Header -->
 <?php include('includes/header.inc.php'); ?>
@@ -8,8 +8,6 @@
 <!-- Main-Sidebar -->
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
-
-<?php include('salesFunction.php'); ?>
 
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
@@ -24,15 +22,15 @@
           </div>
             <section class="section">
             <div class="row ">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">All Sales Orders</h5>
-                          <h2 class="mb-3 font-18">100</h2>
+                          <h5 class="font-12 text-muted text-upper">Total sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">100</h2>
                         </div>
                       </div>
                     </div>
@@ -40,15 +38,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
-                    <div class="row ">
+                    <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Confirmed</h5>
-                          <h2 class="mb-3 font-18">98</h2>
+                          <h5 class="font-12 text-muted text-upper">PAID</h5>
+                          <h2 class="mb-3 font-18 text-white">98</h2>
                         </div>
                       </div>
                     </div>
@@ -56,15 +54,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Pending</h5>
-                          <h2 class="mb-3 font-18">2</h2>
+                          <h5 class="font-12 text-muted text-upper text-white">Confirmed</h5>
+                          <h2 class="mb-3 font-18 text-white">98</h2>
                         </div>
                       </div>
                     </div>
@@ -72,15 +70,31 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Rejected</h5>
-                          <h2 class="mb-3 font-18">0</h2>
+                          <h5 class="font-12 text-muted text-upper">Pending</h5>
+                          <h2 class="mb-3 font-18 text-white">2</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-muted text-upper">Rejected</h5>
+                          <h2 class="mb-3 font-18 text-white">0</h2>
                         </div>
                       </div>
                     </div>
@@ -139,45 +153,64 @@
                           </th>
                           <th>Order #</th>
                           <th>Product</th>
-                          <th>Quantity</th>
-                          <th>Price/kg</th>
-                          <th>Created</th>
+                          <th>Quantity<span class="font-12 text-muted ms-1">(Tonnes)</span></th>
+                          <th>Price<span class="font-12 text-muted ms-1">(/kg)</span></th>
+                          <th>Date</th>
                           <th>Agent Name</th>
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
-                          <td class="p-0 text-center">
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                                id="checkbox-1">
-                              <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </td>
-                          <td>T001</td>
-                          <td class="text-truncate">
-                          Maize
-                          </td>
-                          <td class="align-middle">
-                          10000
-                          </td>
-                          <td>
-                            <div class="">3500</div>
-                          </td>
-                          <td>
-                            <div class="">28 AUG 2022</div>
-                          </td>
-                          <td>Oluk Mark</td>
-                          <td>
-                            <div class="badge badge-success">CONFIRMED</div>
-                          </td>
-                          <td>
-                          <div class="d-flex flex-row">
-                              <div class="p-2 mx-1 bg-primary"><a href="single-order.php"><i class="fas fa-eye text-white"></i></a></div>
-                              <div class="p-2 mx-1 bg-secondary"><a href><span><i class="fas fa-download text-white"></i></span></a></div>
-                              <div class="p-2 mx-1 bg-danger"><a href=""><span><i class="fas fa-trash text-white"></i></span></a></div>
-                          </div
-                          </td>
-                        </tr>
+                                                <?php
+
+                        $jsonobj =  file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
+
+                        $PHPsalesObj = json_decode($jsonobj);
+
+                        if ($PHPsalesObj->success == 0) {
+                            $pdts_error = $PHPsalesObj->message;
+                        } elseif ($PHPsalesObj->success == 1) {
+
+                            $sales_orders = $PHPsalesObj->orders;
+                            // $pdts_total = $PHPpdtsObj->totalCount;
+
+                            for ($x = 0; $x < count($sales_orders); $x++) {
+
+                                echo '
+
+                                <tr>
+                                    <td class="p-0 text-center">
+                                        <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
+                                            id="checkbox-' . $sales_orders[$x]->sales_order_id . '">
+                                        <label for="checkbox-' . $sales_orders[$x]->sales_order_id . '" class="custom-control-label">&nbsp;</label>
+                                        </div>
+                                    </td>
+                                    <td>T001</td>
+                                    <td>' . $sales_orders[$x]->pdt_name . '</td>
+                                    <td class="text-truncate">
+                                    ' . $sales_orders[$x]->quantity . '
+                                    </td>
+                                    <td>3500</td>
+                                    <td>28 AUG 2022</td>
+                                    <td>Oluk Mark</td>
+                                    <td>
+                                        <div class="badge badge-success">CONFIRMED</div>
+                                    </td>
+                                    <td>
+                                    <div class="d-flex flex-row">
+                                        <a class="btn btn-info mx-1" href="single-order.php"><i class="fas fa-eye text-white"></i></a>
+                                        <a class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>
+                                        <button class="btn btn-danger mx-1" id="delete-order-btn" type="button"><span><i class="fas fa-trash text-white"></i></span></button>
+                                      </div>
+                                    </td>
+                                </tr>
+
+                                ';
+                            }
+                        }
+
+                        ?>
+
                       </table>
                     </div>
                   </div>

@@ -43,13 +43,9 @@
 
               </ul>
             </li> -->
-            <li class="menu-header">Sales Management</li>
+            <li class="menu-header">Sales Order Management</li>
               <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                    data-feather="shopping-bag"></i><span>Sales</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="sales.php">Sales Orders</a></li>
-                </ul>
+                <a href="sales.php" class="menu-toggle nav-link"><span>Sales Orders</span></a>
               </li>
             </li>
             <li class="menu-header">Agent Management</li>
@@ -65,7 +61,24 @@
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Store</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="stores.php">Stores</a></li>
-                <li><a class="nav-link" href="add-new-user.php">Add New</a></li>
+                <li><a class="nav-link" href="create_user.php">Add New</a></li>
+              </ul>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Products</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="stores.php">Products</a></li>
+                <li><a class="nav-link" href="products.php">Products</a></li>
+              </ul>
+            </li>
+            <li class="menu-header">Reports</li>
+              <li class="dropdown">
+                <a href="reports.php" class="menu-toggle nav-link"><span>Reports</span></a>
+              </li>
+            </li>
+            <li class="menu-header">User Management</li>
+            <li class="dropdown">
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Users</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="create_user.php">Manage Users</a></li>
               </ul>
             </li>
             <li class="menu-header">System</li>

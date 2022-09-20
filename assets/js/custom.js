@@ -86,7 +86,7 @@ $('#reject-btn').click(function() {
 			.then((willDelete) => {
 				if(willDelete) {
 					swal({
-						title: "Success",
+						title: "Rejected",
 						text: "You have rejected this user",
 						icon: "success",
 						button: false,
@@ -95,6 +95,27 @@ $('#reject-btn').click(function() {
 				}
 			})
 		});
+
+	// Sales order deletion confirmation
+	$('#delete-order-btn').click(function() {
+		swal({
+			title: 'Confirm Sales Order Deletion',
+			text: 'Are you sure you want to delete this order?',
+			buttons: ['Cancel', 'Confirm'],
+			icon: 'warning'
+		})
+		.then((willDelete) => {
+			if(willDelete) {
+				swal({
+					title: "Deleted",
+					text: "You have deleted this order",
+					icon: "success",
+					button: false,
+					timer: 2000
+				})
+			}
+		})
+	});
 
 
 /* --------------------------------
@@ -150,6 +171,20 @@ $(document).on('click', '.emp_checkbox', function() {
 
 
 
+/*----------------------------------------------------------------
+* CHECK BOX
+*----------------------------------------------------------------*/
 
+$(document).ready(function() {
+	$('#checkbox-all').select(function() {
+		alert( "Handler for .select() called." );
+		console.log('hELLO')
+	  });
+})
+
+
+/*----------------------------------------------------------------
+* CHECK BOX
+*----------------------------------------------------------------*/
 
 

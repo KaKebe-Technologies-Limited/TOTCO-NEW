@@ -1,3 +1,4 @@
+<?php include 'controllers/logout.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,7 +165,7 @@
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right end-0 pullDown">
                 <div class="dropdown-title">Hello
-                  <?php echo $user_data->firstname . ' '. $user_data->lastname; ?>
+                <?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " ) ?>
               </div>
               <a href="profile.html" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
@@ -174,9 +175,11 @@
                 Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="auth-login.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
-                Logout
-              </a>
+              <form method="post">
+                  <button name="submit-logout" type="submit" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                  </button>
+              </form>
             </div>
           </li>
         </ul>

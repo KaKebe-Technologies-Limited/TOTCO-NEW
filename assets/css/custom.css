@@ -1,6 +1,8 @@
 :root {
     --aqua: #808ca1;
     --agri: #293462;
+    --dark-salmon: #FA7070;
+    --prussian-blue: #182747;
 }
 
 .bg-aqua {
@@ -11,8 +13,16 @@
     background-color: var(--agri) !important;
 }
 
+.bg-prussian-blue {
+    background-color: var(--prussian-blue);
+}
+
 .bg-darkblue {
     background-color: darkblue;
+}
+
+.bg--dark-salmon {
+    background-color: var(--dark-salmon) !important;
 }
 
 .text-aqua {
@@ -66,8 +76,42 @@ Toast Notificaton
 
   }
 
+/* Buttons */
+.create-btn {
+    display: inline-flex;
+    font-size: 14px;
+    color: #fff;
+    fill: #fff;
+    padding: 8px 10px 8px 12px;
+}
 
+.create-btn-text {
+    display: flex;
+    margin-right: 6px;
+}
 
+.svg-container {
+    display: inline-flex;
+}
+.plus-icon {
+    font-size: 20px;
+}
 
+/* Layout */
 
+.main-content {
+    display: grid;
+    grid-template-areas:
+        "main right-bar"
+}
 
+.main {
+    display: grid;
+    grid-template-areas:
+        "section";
+}
+
+.right-bar {
+    display: grid;
+    grid-template-areas: "section";
+}

@@ -6,3 +6,5 @@
     </div>
   <?php include 'scripts.inc.php'; ?>
 </footer>
+</body>
+</html>

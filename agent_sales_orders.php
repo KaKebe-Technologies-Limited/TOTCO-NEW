@@ -1,5 +1,5 @@
 <!-- session -->
-<?php include ('includes/load_user.inc.php'); ?>
+<?php include ('controllers/load_user.php'); ?>
 
 <!-- Header -->
 <?php include('includes/header.inc.php'); ?>
@@ -121,4 +121,3 @@
       <?php include 'includes/footer.inc.php'; ?>
     </div>
   </div>
- 
