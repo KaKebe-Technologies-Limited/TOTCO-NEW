@@ -7,7 +7,7 @@ function check_login()
         return $user_data;
     } else {
         //redirect to login
-        header("Location:http://localhost/totco/login.php");
+        header("Location:login.php");
         die;
     }
 }
