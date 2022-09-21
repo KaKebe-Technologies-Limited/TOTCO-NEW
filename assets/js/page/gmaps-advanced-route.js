@@ -10,7 +10,7 @@ var map = new GMaps({
 // when the 'start travel' button is clicked
 $("#start-travel").click(function () {
   $(this).fadeOut();
-  $("#instructions").before("<div class='section-title'>Instructions</div>");
+  $("#instructions").before("<div class='section-header'>Instructions</div>");
   map.travelRoute({
     origin: [23.014711, 72.530810],
     destination: [23.0193733, 72.5069159],

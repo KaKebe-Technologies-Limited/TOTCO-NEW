@@ -29,7 +29,7 @@
                     <div class="row ">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper">Total sales Orders</h5>
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Total sales Orders</h5>
                           <h2 class="mb-3 font-18 text-white">100</h2>
                         </div>
                       </div>
@@ -45,7 +45,7 @@
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper">PAID</h5>
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">PAID</h5>
                           <h2 class="mb-3 font-18 text-white">98</h2>
                         </div>
                       </div>
@@ -61,7 +61,7 @@
                     <div class="row ">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper text-white">Confirmed</h5>
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">APPROVED</h5>
                           <h2 class="mb-3 font-18 text-white">98</h2>
                         </div>
                       </div>
@@ -77,7 +77,7 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper">Pending</h5>
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Pending</h5>
                           <h2 class="mb-3 font-18 text-white">2</h2>
                         </div>
                       </div>
@@ -93,7 +93,7 @@
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper">Rejected</h5>
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Rejected</h5>
                           <h2 class="mb-3 font-18 text-white">0</h2>
                         </div>
                       </div>
@@ -119,7 +119,7 @@
                           <select class="form-select form-control rounded" aria-label=".form-select-sm example">
                               <option selected>Sort By Status</option>
                               <option value="1">Paid</option>
-                              <option value="2">Confirmed</option>
+                              <option value="2">APPROVED</option>
                               <option value="3">Pending</option>
                               <option value="4">Rejected</option>
                           </select>
@@ -194,7 +194,7 @@
                                     <td>28 AUG 2022</td>
                                     <td>Oluk Mark</td>
                                     <td>
-                                        <div class="badge badge-success">CONFIRMED</div>
+                                        <div class="badge badge-success">APPROVED</div>
                                     </td>
                                     <td>
                                     <div class="d-flex flex-row">

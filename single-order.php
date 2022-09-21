@@ -61,7 +61,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-aqua text-upper">Order Status</h5>
-                          <div class="badge badge-success">CONFIRMED</div>
+                          <div class="badge badge-success">APPROVED</div>
                         </div>
                       </div>
                     </div>
@@ -99,7 +99,14 @@
                 <div class="card-header">
                   <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
-
+                    <button type="button" class="btn btn-outline-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                        <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
+                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
+                      </svg>
+                      Download
+                    </button>
+                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -165,13 +172,9 @@
                 </div>
                 <div class="card">
                   <div class="card-header">
-                    <h4 class="font-12 text-upper">Proforma Invoice</h4>
+                    <h4 class="font-12 text-upper">card</h4>
                   </div>
                   <div class="card-body">
-                  <div class="card-footer d-flex justify-content-content">
-                    <a class="btn btn-outline-primary mx-1" style="width: 120px;" target="_blank" title="">Download</a>
-                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
-                  </div>
                 </div>
               </div>
               </div>

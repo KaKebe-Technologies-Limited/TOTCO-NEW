@@ -84,7 +84,7 @@
                             <div class="">Oluk Mark</div>
                           </td>
                           <td>
-                            <div class="badge badge-success">CONFIRMED</div>
+                            <div class="badge badge-success">APPROVED</div>
                           </td>
                           <td>
                           <div class="d-flex flex-row">

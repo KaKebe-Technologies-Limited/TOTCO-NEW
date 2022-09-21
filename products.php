@@ -11,8 +11,89 @@
 
 <!-- Main Content -->
 <div class="main-content">
+        <section>
+          <div class="row">
+          <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Total sales Orders</h5>
+                          <h2 class="mb-3 font-18 text-white">100</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">PAID</h5>
+                          <h2 class="mb-3 font-18 text-white">98</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">APPROVED</h5>
+                          <h2 class="mb-3 font-18 text-white">98</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Pending</h5>
+                          <h2 class="mb-3 font-18 text-white">2</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-12">
+              <div class="card bg-prussian-blue">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-pale-sandy-brown text-upper">Rejected</h5>
+                          <h2 class="mb-3 font-18 text-white">0</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </section>
         <section class="section">
-
           <div class="row">
             <div class="col-12">
               <div class="card">

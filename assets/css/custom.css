@@ -3,10 +3,16 @@
     --agri: #293462;
     --dark-salmon: #FA7070;
     --prussian-blue: #182747;
+    --russet-green: #AD8B73;
+    --pale-sandy-brown: #E9A6A6;
 }
 
 .bg-aqua {
     background-color: var(--aqua) !important;
+}
+
+.bg-russet-green {
+    background-color: var(--russet-green) !important;
 }
 
 .bg-agri {
@@ -27,6 +33,10 @@
 
 .text-aqua {
     color: var(--aqua);
+}
+
+.text-pale-sandy-brown {
+    color: #E9A6A6;
 }
 
 a {
@@ -97,21 +107,6 @@ Toast Notificaton
     font-size: 20px;
 }
 
-/* Layout */
-
-.main-content {
-    display: grid;
-    grid-template-areas:
-        "main right-bar"
-}
-
-.main {
-    display: grid;
-    grid-template-areas:
-        "section";
-}
-
-.right-bar {
-    display: grid;
-    grid-template-areas: "section";
+.min-height-200 {
+    min-height: 200px;
 }

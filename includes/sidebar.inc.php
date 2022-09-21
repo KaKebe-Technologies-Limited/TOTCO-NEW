@@ -65,7 +65,6 @@
               </ul>
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Products</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="stores.php">Products</a></li>
                 <li><a class="nav-link" href="products.php">Products</a></li>
               </ul>
             </li>

@@ -104,7 +104,7 @@
                           <select class="form-select form-control rounded" aria-label=".form-select-sm example">
                               <option selected>Sort By Status</option>
                               <option value="1">Paid</option>
-                              <option value="2">Confirmed</option>
+                              <option value="2">APPROVED</option>
                               <option value="3">Pending</option>
                               <option value="4">Rejected</option>
                           </select>

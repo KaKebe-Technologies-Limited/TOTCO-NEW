@@ -11,129 +11,259 @@
 
 
       <!-- Main Content -->
-      <div class="main-content">
-        <div class="container main">
-          <section class="section">
+      <div class="main-content d-flex">
+        <div class="container main-grid col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <section class="section header">
             <div class="row">
               <div class="page-title col-12 mb-5">
                 <h4 id="welcome-title" class="" data-greeting="Good morning"></h4>
               </div>
               <script>
                 const greeting = document.querySelector('#welcome-title')
-                let today = new Date()
-                let now = today.getHours()
 
-                if ( now < 00 ) {
-                  greeting.innerHTML = "Good morning" + '<span class="ms-2"><?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " );?></span>'
-                } else if ( today < 12) {
-                  greeting.innerHTML = "Good afternoon" + '<span class="ms-2"><?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " );?></span>'
-                } else if ( today > 17 ) {
-                  greeting.innerHTML = "Good evening" + '<span class="ms-2"><?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " );?></span>'
+                var data = [
+                        [18, 'Good evening'],
+                        [12, 'Good afternoon'],
+                        [5,  'Good morning']
+                ],
+                hr = new Date().getHours();
+                for (var i = 0; i < data.length; i++) {
+                    if (hr >= data[i][0]) {
+                        greeting.innerHTML +=data[i][1] + ', ' + '<?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " ); ?>'
+                        break;
+                    }
                 }
               </script>
             </div>
           </section>
-          <section></section>
-          <section></section>
-          <section></section>
-        </div>
-        <div class="container right-bar">
-          <section></section>
-          <section></section>
-          <section></section>
-        </div>
-
-        <!-- Setting Sidebar -->
-        <div class="settingSidebar">
-          <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
-          </a>
-          <div class="settingSidebar-body ps-container ps-theme-default">
-            <div class=" fade show active">
-              <div class="setting-panel-header">Setting Panel
-              </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Select Layout</h6>
-                <div class="selectgroup layout-color w-50">
-                  <label class="selectgroup-item">
-                    <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
-                    <span class="selectgroup-button">Light</span>
-                  </label>
-                  <label class="selectgroup-item">
-                    <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
-                    <span class="selectgroup-button">Dark</span>
-                  </label>
+          <section>
+            <div class="section-header">
+              <h1 class="font-14">Purchase Overview</h1>
+            </div>
+            <div class="row">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                <div class="card bg-prussian-blue">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-10 text-pale-sandy-brown text-upper">Total Purchases</h5>
+                            <h2 class="mb-3 font-30 text-white">100,000,000<span class="text-pale-sandy-brown text-upper font-10 ms-1">UGX</span></h2>
+                            <h5 class="font-10 text-pale-sandy-brown text-upper">total payouts</h5>
+                            <h2 class="mb-3 font-18 text-white">90,000,000<span class="text-pale-sandy-brown text-upper font-10 ms-1">UGX</span></h2>
+                            <h5 class="font-10 text-pale-sandy-brown text-upper">total balance</h5>
+                            <h2 class="mb-3 font-18 text-white">10,000,000<span class="text-pale-sandy-brown text-upper font-10 ms-1">UGX</span></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Sidebar Color</h6>
-                <div class="selectgroup selectgroup-pills sidebar-color">
-                  <label class="selectgroup-item">
-                    <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
-                  </label>
-                  <label class="selectgroup-item">
-                    <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
-                  </label>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-12 text-muted text-upper">No. of Purchase</h5>
+                            <h2 class="mb-3 font-18 text-dark">100</h2>
+                            <h5 class="font-12 text-muted text-upper">returns</h5>
+                            <h2 class="mb-3 font-18 text-dark">03</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Color Theme</h6>
-                <div class="theme-setting-options">
-                  <ul class="choose-theme list-unstyled mb-0">
-                    <li title="white" class="active">
-                      <div class="white"></div>
-                    </li>
-                    <li title="cyan">
-                      <div class="cyan"></div>
-                    </li>
-                    <li title="black">
-                      <div class="black"></div>
-                    </li>
-                    <li title="purple">
-                      <div class="purple"></div>
-                    </li>
-                    <li title="orange">
-                      <div class="orange"></div>
-                    </li>
-                    <li title="green">
-                      <div class="green"></div>
-                    </li>
-                    <li title="red">
-                      <div class="red"></div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <div class="theme-setting-options">
-                  <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="mini_sidebar_setting">
-                    <span class="custom-switch-indicator"></span>
-                    <span class="control-label p-l-10">Mini Sidebar</span>
-                  </label>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <div class="theme-setting-options">
-                  <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="sticky_header_setting">
-                    <span class="custom-switch-indicator"></span>
-                    <span class="control-label p-l-10">Sticky Header</span>
-                  </label>
-                </div>
-              </div>
-              <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
-                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
-                  <i class="fas fa-undo"></i> Restore Default
-                </a>
               </div>
             </div>
-          </div>
+          </section>
+          <section>
+          <div class="section-header">
+              <h1 class="font-14">Sales Order Overview</h4>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-12 text-muted text-upper">total suppliers</h5>
+                            <h2 class="mb-3 font-22 text-dark">98</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-12 text-muted text-upper">total sales orders</h5>
+                            <h2 class="mb-3 font-22 text-dark">98</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card">
+                  <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                          <div class="card-content">
+                            <h5 class="font-12 text-muted text-upper">Total Overdue Amount</h5>
+                            <h2 class="mb-3 font-22 text-dark">20,000,000<span class="font-10 text-muted mx-1">UGX</span></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="section-header d-flex justify-content-between align-items-center">
+              <div class="title d-flex align-items-center pt-2">
+                <h1 class="font-14">Recent Orders</h1>
+              </div>
+              <div class="btn">
+                <a href="" class="btn btn-outline-primary btn-sm text-upper font-10">see all</a>
+              </div>
+            </div>
+          <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body p-0">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-hover">
+                        <tr>
+                          <th>Order #</th>
+                          <th>Product</th>
+                          <th>Quantity<span class="font-12 text-muted ms-1">(Tonnes)</span></th>
+                          <th>Price<span class="font-12 text-muted ms-1">(/kg)</span></th>
+                          <th>Date</th>
+                          <th>Status</th>
+                        </tr>
+                                                <?php
+
+                        $jsonobj =  file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
+
+                        $PHPsalesObj = json_decode($jsonobj);
+
+                        if ($PHPsalesObj->success == 0) {
+                            $pdts_error = $PHPsalesObj->message;
+                        } elseif ($PHPsalesObj->success == 1) {
+
+                            $sales_orders = $PHPsalesObj->orders;
+                            // $pdts_total = $PHPpdtsObj->totalCount;
+
+                            for ($x = 0; $x < count($sales_orders); $x++) {
+
+                                echo '
+
+                                <tr>
+                                    <td>T001</td>
+                                    <td>' . $sales_orders[$x]->pdt_name . '</td>
+                                    <td class="text-truncate">
+                                    ' . $sales_orders[$x]->quantity . '
+                                    </td>
+                                    <td>3500</td>
+                                    <td>28 AUG 2022</td>
+                                    <td>
+                                        <div class="badge badge-success">Pending</div>
+                                    </td>
+                                </tr>
+
+                                ';
+                            }
+                        }
+
+                        ?>
+
+                      </table>
+                    </div>
+                  </div>
+          </section>
+        </div>
+        <div class="container right-bar col-xl-4 col-lg-8 col-md-4 col-sm-4 col-xs-12">
+          <section>
+            <div class="section-header">
+              <h1 class="font-14">Chart</h1>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="summary">
+                    <div class="summary-chart active" data-tab-group="summary-tab" id="summary-chart">
+                      <div id="chart3" class="chartsh"></div>
+                    </div>
+                    <div data-tab-group="summary-tab" id="summary-text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="section-header d-flex justify-content-between align-items-center">
+              <div class="title d-flex align-items-center pt-2">
+                <h1 class="font-14">Transactions</h1>
+              </div>
+              <div class="btn">
+                <a href="" class="btn btn-outline-primary btn-sm text-upper font-10">see all</a>
+              </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="card min-height-200">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="section-header">
+              <h1 class="font-14">Chart</h1>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="card min-height-200">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-12 text-muted text-upper">PAID</h5>
+                          <h2 class="mb-3 font-18 text-dark">98</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
       <!-- footer -->
