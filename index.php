@@ -29,7 +29,7 @@
                 hr = new Date().getHours();
                 for (var i = 0; i < data.length; i++) {
                     if (hr >= data[i][0]) {
-                        greeting.innerHTML +=data[i][1] + ', ' + '<?php echo ($user_data->firstname ? $user_data->firstname : "User") . " " . ($user_data->lastname ?  $user_data->lastname : " " ); ?>'
+                        greeting.innerHTML +=data[i][1] + ', ' + '<?php echo ($user_data->firstname ? $user_data->firstname : $user_data->username) . " " . ($user_data->lastname ?  $user_data->lastname : " " ); ?>'
                         break;
                     }
                 }
