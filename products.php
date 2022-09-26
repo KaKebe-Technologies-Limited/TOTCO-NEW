@@ -11,6 +11,14 @@
 
 <!-- Main Content -->
 <div class="main-content">
+<section class="section">
+          <div class="row">
+            <div class="page-title col-12 mb-2">
+              <h6 class="">Products</h6>
+              <p class="font-12 text-aqua">All products overview</p>
+            </div>
+          </div>
+        </section>
         <section class="section">
           <div class="row">
             <div class="col-12">
@@ -34,7 +42,7 @@
                         <th>Quantity Available</th>
                         <th>Quantity Reserved</th>
                         <th>Quantity Picked</th>
-                        <th></th>
+                        <th>Status</th>
                       </tr>
 
                       <?php
@@ -72,7 +80,6 @@
                                     <td>
                                         <div class="badge badge-success">Low</div>
                                     </td>
-                                    <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
                                 </tr>
 
                                 ';

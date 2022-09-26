@@ -110,7 +110,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="billing-detail border border-primary p-4 d-flex justify-content-between mb-4">
+                  <div class="billing p-4 d-flex justify-content-between mb-4">
                     <div class="agent-detail">
                       <h5 class="font-14">Oluk Mark</h5>
                       <p class="m-0 p-0">Odokomit, Lira</span></p>
@@ -166,9 +166,6 @@
               </div>
             </div>
           </div>
-
-
-
         </section>
 
 

@@ -13,15 +13,9 @@
 <main class="main-content pt-5 mt-3">
             <div class="row">
                 <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h6>All Agents</h6>
-                    <p class="font-10">Overview of all registered agents </p>
-                    <div class="button create-btn control bg-primary">
-                      <div class="create-btn-text">Create agent</div>
-                      <div class="svg-container plus-icon">
-                        <svg width="1.00em" height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 4.5C10.5 4.22386 10.2761 4 10 4C9.72386 4 9.5 4.22386 9.5 4.5V9.5H4.5C4.22386 9.5 4 9.72386 4 10C4 10.2761 4.22386 10.5 4.5 10.5H9.5V15.5C9.5 15.7761 9.72386 16 10 16C10.2761 16 10.5 15.7761 10.5 15.5V10.5H15.5C15.7761 10.5 16 10.2761 16 10C16 9.72386 15.7761 9.5 15.5 9.5H10.5V4.5Z"></path>
-                        </svg>
-                      </div>
+                    <div>
+                      <h6>All Agents</h6>
+                      <p class="font-10">Overview of all registered agents </p>
                     </div>
                 </div>
             </div>
