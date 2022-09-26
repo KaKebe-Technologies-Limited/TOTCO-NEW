@@ -22,117 +22,23 @@
           </div>
         </section>
         <section class="section">
-          <div class="row d-flex flex-wrap-reverse">
-            <div class="row col-md-9 col-xs-12 d-flex gx-3">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4 bg-darkblue">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row">
-                      <div class="pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-12 text-muted text-upper">Total Sales</h5>
-                          <h2 class="mb-3 font-24 text-white">10,000,000<span class="font-12 text-muted ms-1">UGX</span></h2>
-                          <h5 class="font-12 text-aqua text-muted text-upper">Pending Sales Orders</h5>
-                          <h2 class="mb-3 font-18 text-white">0</h2>
-                          <h5 class="font-12 text-aqua text-muted text-upper">Rejected Sales Orders</h5>
-                          <h2 class="mb-3 font-18 text-white">0</h2>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!-- <div class="banner-img">
-                          <img src="assets/img/banner/delivery.png" alt="">
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row col">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Current Balance</h5>
-                          <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!--<div class="banner-img">
-                          <img src="assets/img/banner/return.png" alt="">
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Farm Input Orders</h5>
-                          <h2 class="mb-3 font-18">12</h2>
-                          <!--<a class="btn font-12 text-aqua text-upper" href="">View All</a> -->
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!-- <div class="banner-img">
-                          <img src="assets/img/banner/stock.png" alt="">
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Pending Payments</h5>
-                          <h2 class="mb-3 font-18">0<span class="font-12 text-muted ms-1">UGX</span></h2>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <!--<div class="banner-img">
-                          <img src="assets/img/banner/return.png" alt="">
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
-            <div class="col-md-3 col-xs-12">
+          <div class="row d-flex">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
             <div class="col">
-              <div class="card bg-agri">
+              <div class="card">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
-                    <div class="row">
-                      <div class="pr-0 pt-3">
-                        <div class="card-content">
-                          <div class="d-flex justify-content-center">
+                     <div class="row">
+                        <div class="card-content d-flex">
+                          <div class="profile-image d-flex px-1 me-4">
                             <img style="height: 80px; width: 80px" src="./assets/img/63475.jpg" class="card-img-top rounded-circle">
                           </div>
-                          <div class="card-body text-center">
-                            <h6 class="text-white"><span class="me-2"><i class="fas fa-user"></i></span>Oluk Mark</h6>
-                            <a href="tel:0771404884" class="font-12 text-white"><span class="me-2"><i class="fas fa-phone"></i></span>0771404884</a>
+                          <div class="bio d-flex flex-column">
+                            <h4>Oluk Mark</h4>
+                            <a href="http://">holmark5@gmail.com</a>
+                            <a class="text-muted" href="tel: +256771404884">O771404884</a>
                           </div>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -146,7 +52,7 @@
                 <div class="card-header">
                   <h4>Recent Sales Orders</h4>
                   <div class="card-header-form">
-                    <a href="agent_sales_orders.php" class="btn btn-primary">View All</a>
+                    <a href="agent_sales_orders" class="btn btn-outline-primary">Sell All</a>
                   </div>
                 </div>
                 <div class="card-body p-0">
@@ -202,7 +108,7 @@
                 <div class="card-header">
                   <h4>Recent Transactions</h4>
                   <div class="card-header-form">
-                    <a href="sales.php" class="btn btn-primary">View All</a>
+                    <a href="sales-orders" class="btn btn-outline-primary btn-sm">See All</a>
                   </div>
                 </div>
                 <div class="card-body p-0">
@@ -322,7 +228,7 @@
                 </div>
               </div>
               <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
-                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                <a href="#" class="btn btn-icon icon-left bg-dark-chessnut btn-restore-theme">
                   <i class="fas fa-undo"></i> Restore Default
                 </a>
               </div>

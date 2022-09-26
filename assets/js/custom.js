@@ -11,69 +11,80 @@
     Sales order approval dialog boxes
 /** -------------------------------- */
 
-// Confirmation
+// Confirmation & rejection
 $('#approve-btn').click(function() {
-    swal({
-        title: 'Confirm Sales Order Approval',
-        text: 'Are you sure you want to approve this sales order?',
-        buttons: ['Cancel', 'Confirm'],
-        icon: 'warning'
-    })
-    .then((willSubmit) => {
-        if(willSubmit) {
-            swal({
-                title: "Success",
-                text: "Generate a purchase order",
-                icon: "success",
-                button: false,
-                timer: 2000
-            })
-        }
-    })
-});
+    Swal.fire({
+		title: 'Do you want to accept this sales order?',
+		showCancelButton: true,
+		confirmButtonText: 'Confirm',
+		showDenyButton: true,
+		denyButtonText: 'Reject',
+		icon: 'warning',
+	  }).then(async (result) => {
+		const Toast = Swal.mixin({
+			toast: true,
+			position: 'top-right',
+			iconColor: 'white',
+			customClass: {
+			  popup: 'colored-toast',
+			  popout: 'anima'
+			},
+			showConfirmButton: false,
+			timer: 1500,
+			timerProgressBar: true
+		  })
+		if (result.isConfirmed) {
+			  await Toast.fire({
+				icon: 'success',
+				title: 'Sales order confirmed!',
+			  })
+		} else if (result.isDenied) {
 
-//Rejection
-$('#reject-btn').click(function() {
-        swal({
-            title: 'Confirm Sales Order Rejection',
-            text: 'Are you sure you want to reject this sales order?',
-            buttons: ['Cancel', 'Confirm'],
-            icon: 'warning'
-        })
-        .then((willDelete) => {
-            if(willDelete) {
-                swal({
-                    title: "Success",
-                    text: "Sales order successfully rejected",
-                    icon: "success",
-                    button: false,
-                    timer: 2000
-                })
-            }
-        })
-    });
+			await Toast.fire({
+				icon: 'info',
+				title: 'Sales order rejected.'
+			  })
+		}
+	  })
+})
 
-	// User registration approval
+// User registration approval
 
 	$('#approve-user-btn').click(function() {
-		swal({
-			title: 'Confirm User Registration',
-			text: 'Are you sure you want to approve this user?',
-			buttons: ['Cancel', 'Confirm'],
-			icon: 'warning'
-		})
-		.then((willSubmit) => {
-			if(willSubmit) {
-				swal({
-					title: "Success",
-					text: "New user approval successful",
-					icon: "success",
-					button: false,
-					timer: 2000
-				})
+		Swal.fire({
+			title: 'Do you want to confirm this new user?',
+			showCancelButton: true,
+			confirmButtonText: 'Confirm',
+			showDenyButton: true,
+			denyButtonText: 'Deny',
+			icon: 'warning',
+		  }).then(async (result) => {
+			const Toast = Swal.mixin({
+				toast: true,
+				position: 'top-right',
+				iconColor: 'white',
+				customClass: {
+				  popup: 'colored-toast',
+				  popout: 'anima'
+				},
+				showConfirmButton: false,
+				timer: 1500,
+				timerProgressBar: true
+			  })
+			if (result.isConfirmed) {
+				  await Toast.fire({
+					icon: 'success',
+					title: 'New user succesfully registered!',
+				  })
+			} else if (result.isDenied) {
+
+				await Toast.fire({
+					icon: 'info',
+					title: 'New user registration denied'
+				  })
 			}
-		})
-	});
+		  })
+	})
 
 	//user registration Rejection
 	$('#reject-user-btn').click(function() {
@@ -116,6 +127,11 @@ $('#reject-btn').click(function() {
 			}
 		})
 	});
+
+/* --------------------------------
+    login toast notification
+/** -------------------------------- */
+
 
 
 /* --------------------------------
@@ -186,5 +202,3 @@ $(document).ready(function() {
 /*----------------------------------------------------------------
 * CHECK BOX
 *----------------------------------------------------------------*/
-
-

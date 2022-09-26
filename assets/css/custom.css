@@ -2,9 +2,10 @@
     --aqua: #808ca1;
     --agri: #293462;
     --dark-salmon: #FA7070;
-    --prussian-blue: #182747;
     --russet-green: #AD8B73;
     --pale-sandy-brown: #E9A6A6;
+    --dark-chessnut: #dc9189;
+    --dark-electric-blue: #546A7B;
 }
 
 .bg-aqua {
@@ -19,10 +20,6 @@
     background-color: var(--agri) !important;
 }
 
-.bg-prussian-blue {
-    background-color: var(--prussian-blue);
-}
-
 .bg-darkblue {
     background-color: darkblue;
 }
@@ -31,13 +28,20 @@
     background-color: var(--dark-salmon) !important;
 }
 
+.bg-dark-chessnut {background-color: var(--dark-chessnut) !important;}
+.bg-dark-electric-blue {background-color: var(--dark-electric-blue) !important;}
+
+/* Typography color */
 .text-aqua {
     color: var(--aqua);
 }
 
+.text-dark-chessnut {color: var(--dark-chessnut);}
+.text-dark-electric-blue {color: var(--dark-electric-blue) !important;}
 .text-pale-sandy-brown {
     color: #E9A6A6;
 }
+
 
 a {
     text-decoration: none !important;
@@ -110,3 +114,99 @@ Toast Notificaton
 .min-height-200 {
     min-height: 200px;
 }
+
+/* Dialog Boxes */
+
+.colored-toast.swal2-icon-success {
+    background-color: var(--dark-chessnut)!important;
+  }
+
+  .colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+  }
+
+  .colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+  }
+
+  .colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+  }
+
+  .colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+  }
+
+  .colored-toast .swal2-title {
+    color: white;
+  }
+
+  .colored-toast .swal2-close {
+    color: white;
+  }
+
+  .colored-toast .swal2-html-container {
+    color: white;
+  }
+
+
+
+  /* Simple Bar */
+
+  .simplebar-content:before, .simplebar-content:after {
+    content: " ";
+    display: table;
+}
+
+.activity .activity-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 5px 0;
+    position: relative;
+    min-height: 60px;
+}
+
+.activity .activity-info::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 42px;
+    left: 18px;
+    border-left: 2px dotted #e8ebf3;
+}
+
+.activity .activity-info .icon-info-activity i {
+    width: 36px;
+    height: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #7081b9;
+    -webkit-box-shadow: 0px 0px 1px 0.25px;
+    box-shadow: 0px 0px 1px 0.25px;
+    font-size: 18px;
+    border: 2px solid white;
+    margin-left: 2px;
+}
+
+.ti-check:before {
+    content: "";
+}
+
+.activity .activity-info .activity-info-text {
+    margin-left: 16px;
+    width: 100%;
+}
+
+
+
+
+

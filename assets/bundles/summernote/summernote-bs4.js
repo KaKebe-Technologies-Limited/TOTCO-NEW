@@ -3750,7 +3750,7 @@ var Editor = /** @class */ (function () {
             })(idx);
             this.context.memo('help.formatH' + idx, this.lang.help['formatH' + idx]);
         }
-        
+
         this.insertParagraph = this.wrapCommand(function () {
             _this.typing.insertParagraph(_this.editable);
         });
@@ -5888,7 +5888,7 @@ var LinkDialog = /** @class */ (function () {
                 }).render()).html()
                 : ''
         ].join('');
-        var buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
+        var buttonClass = 'btn btn-primary note-btn note-bg-dark-chessnut note-link-btn';
         var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.link.insert + "</button>";
         this.$dialog = this.ui.dialog({
             className: 'link-dialog',
@@ -6096,7 +6096,7 @@ var ImageDialog = /** @class */ (function () {
             ' col-md-12" type="text" />',
             '</div>'
         ].join('');
-        var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
+        var buttonClass = 'btn btn-primary note-btn note-bg-dark-chessnut note-image-btn';
         var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.image.insert + "</button>";
         this.$dialog = this.ui.dialog({
             title: this.lang.image.insert,
@@ -6306,7 +6306,7 @@ var VideoDialog = /** @class */ (function () {
             '<input class="note-video-url form-control note-form-control note-input" type="text" />',
             '</div>'
         ].join('');
-        var buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
+        var buttonClass = 'btn btn-primary note-btn note-bg-dark-chessnut note-video-btn';
         var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.video.insert + "</button>";
         this.$dialog = this.ui.dialog({
             title: this.lang.video.insert,

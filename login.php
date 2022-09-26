@@ -1,4 +1,4 @@
-<?php include('controllers/loginAuth.php'); ?>
+<?php include('controllers/loginAuth'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>MPDS</title>
+  <title>TOTCO Inventory Management System</title>
 
 
   <!-- bootstrap -->
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='assets/img/movit_logo.png' />
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/totco-favicon.gif' />
 </head>
 
 <body>
@@ -84,7 +84,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="auth-register.php">Create One</a>
+              Don't have an account? <a href="register">Create One</a>
             </div>
           </div>
         </div>

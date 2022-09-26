@@ -22,14 +22,14 @@
         <section class="section">
           <div class="row ">
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card bg-dark-electric-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Order #</h5>
-                          <h2 class="mb-3 font-18">T001</h2>
+                          <h5 class="font-12 text-white text-upper">Order #</h5>
+                          <h2 class="text-white my-3 font-18">T001</h2>
                         </div>
                       </div>
                     </div>
@@ -38,14 +38,14 @@
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card bg-dark-electric-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Order Date</h5>
-                          <h2 class="mb-3 font-18">28 AUG 2022</h2>
+                          <h5 class="font-10 text-white text-upper">Order Date</h5>
+                          <h2 class="text-white font-18 my-3">28 AUG 2022</h2>
                         </div>
                       </div>
                     </div>
@@ -54,14 +54,14 @@
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card bg-dark-electric-blue">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-12 text-aqua text-upper">Order Status</h5>
-                          <div class="badge badge-success">APPROVED</div>
+                          <h5 class="font-10 text-white text-upper">Order Status</h5>
+                          <div class="badge badge-success text-white mt-3">Approved</div>
                         </div>
                       </div>
                     </div>
@@ -70,20 +70,20 @@
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <a href="single-agent.php">
+              <a href="single-agent">
                 <div class="card">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-12 text-aqua text-upper">Agent Name</h5>
-                            <p class="font-15 mb-0">Oluk Mark</p>
+                            <h5 class="font-10 text-dark text-upper">Agent Name</h5>
+                            <h1 class="font-15 text-dark mb-0">Oluk Mark</h1>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                           <div class="banner-img">
-                          <img src="assets/img/63475.jpg">
+                          <img  style="height: 78px;"src="assets/img/63475.jpg">
                           </div>
                         </div>
                       </div>
@@ -104,29 +104,23 @@
                         <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
                         <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
                       </svg>
-                      Download
+                      Proforma Invoice
                     </button>
                     <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="bg-prussian-blue rounded p-4 d-flex justify-content-between mb-4">
-                    <div>
-                      <h5 class="font-14 text-white">Invoice Number</h5>
-
-                      <p class="font-12 text-white m-0 p-0">AG001</p>
-
-                      <p class="font-12 text-white m-0 p-0">Issued Date: 28 Aug 2022</p>
-                      <p class="font-12 text-white m-0 p-0">Due Date: 28 Sept 2022</p>
+                  <div class="billing-detail border border-primary p-4 d-flex justify-content-between mb-4">
+                    <div class="agent-detail">
+                      <h5 class="font-14">Oluk Mark</h5>
+                      <p class="m-0 p-0">Odokomit, Lira</span></p>
+                      <p class="m-0 p-0">0771404884</p>
                     </div>
-                    <div>
-                      <h5 class="font-14 text-white">Billed To</h5>
-                      <p class="font-12 text-white m-0 p-0">TOTCO Uganda LTD</p>
-                      <p class="font-12 text-white m-0 p-0">Odokomit, Lira City</p>
+                    <div class="buyer-detail">
+                      <h5 class="font-14 text-dark">Billed To</h5>
+                      <p class="font-12 text-dark m-0 p-0">TOTCO Uganda LTD</p>
+                      <p class="font-12 text-dark m-0 p-0">Odokomit, Lira City</p>
                     </div>
-                  </div>
-                  <div class="row py-4">
-                    <h5 class="font-12 text-upper">Order Detail</h5>
                   </div>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover">
@@ -167,24 +161,6 @@
                   </div>
                   <div class="card-footer d-flex justify-content-center">
                     <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Approve</button>
-                    <button id="reject-btn" class="btn btn-outline-primary data-bs-toggle="modal" data-bs-target="#reject-modal" mx-1" style="width: 120px;">Reject</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h4 class="font-12 text-upper">card</h4>
-                  </div>
-                  <div class="card-body">
-                </div>
-              </div>
-              </div>
-              <div class="">
-                <div class="card">
-                  <div class="card-header">
-                    <img style="height: 24px; width: 24px"src="./assets/fonts/fonts/webfonts/icons8-chat-48.png">
-                  </div>
-                  <div class="card-body bg-agri">
-
                   </div>
                 </div>
               </div>
@@ -283,7 +259,7 @@
                 </div>
               </div>
               <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
-                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                <a href="#" class="btn btn-icon icon-left bg-dark-chessnut btn-restore-theme">
                   <i class="fas fa-undo"></i> Restore Default
                 </a>
               </div>

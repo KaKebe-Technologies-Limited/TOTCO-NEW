@@ -13,7 +13,8 @@
 <main class="main-content pt-5 mt-3">
             <div class="row">
                 <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h4>All Agents</h4>
+                    <h6>All Agents</h6>
+                    <p class="font-10">Overview of all registered agents </p>
                     <div class="button create-btn control bg-primary">
                       <div class="create-btn-text">Create agent</div>
                       <div class="svg-container plus-icon">

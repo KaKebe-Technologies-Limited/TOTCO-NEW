@@ -29,11 +29,11 @@ $('.follow-btn, .following-btn').each(function () {
     if (me.hasClass('following-btn')) {
       me.removeClass('btn-danger');
       me.removeClass('following-btn');
-      me.addClass('btn-primary');
+      me.addClass('bg-dark-chessnut');
       me.html(follow_text);
 
     } else {
-      me.removeClass('btn-primary');
+      me.removeClass('bg-dark-chessnut');
       me.addClass('btn-danger');
       me.addClass('following-btn');
       me.html(unfollow_text);

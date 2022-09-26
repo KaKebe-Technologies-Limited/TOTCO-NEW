@@ -23,7 +23,7 @@
         <div class="row ">
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <a href="#pending-users">
-                <div class="card bg-blue-grey">
+                <div class="card bg-dark-electric-blue">
                     <div class="card-statistic-4">
                       <div class="align-items-center justify-content-between">
                           <div class="row ">
@@ -120,7 +120,7 @@
                 <div class="d-flex flex-row">
                     <button id="approve-user-btn" type="button" class="btn btn-primary mx-1">Approve</button>
                     <button id="reject-user-btn" type="button" class="btn btn-danger mx-1">Reject</button>
-                </div
+                </div>
               </td>
             </tr>
           </table>
