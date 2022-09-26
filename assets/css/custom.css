@@ -24,9 +24,6 @@
     background-color: darkblue;
 }
 
-.bg--dark-salmon {
-    background-color: var(--dark-salmon) !important;
-}
 
 .bg-dark-chessnut {background-color: var(--dark-chessnut) !important;}
 .bg-dark-electric-blue {background-color: var(--dark-electric-blue) !important;}

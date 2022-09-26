@@ -46,7 +46,7 @@
             </div>
             <div class="row">
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-                <div class="card bg-dark-chessnut">
+                <div class="card bg-primary">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row">
