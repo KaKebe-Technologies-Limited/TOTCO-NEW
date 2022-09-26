@@ -1,4 +1,4 @@
-<?php include('controllers/loginAuth'); ?>
+<?php include('controllers/loginAuth.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
