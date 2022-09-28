@@ -52,7 +52,7 @@
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Users</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="create_user">Manage Users</a></li>
+                <li><a class="nav-link" href="users">Manage Users</a></li>
               </ul>
             </li>
             <li class="menu-header">System</li>

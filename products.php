@@ -14,8 +14,8 @@
 <section class="section">
           <div class="row">
             <div class="page-title col-12 mb-2">
-              <h6 class="">Products</h6>
-              <p class="font-12 text-aqua">All products overview</p>
+              <h1 class="font-20">Products</h1>
+              <p class="font-10 text-aqua">All products overview</p>
             </div>
           </div>
         </section>

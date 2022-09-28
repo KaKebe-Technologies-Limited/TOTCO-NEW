@@ -8,6 +8,8 @@
     --dark-electric-blue: #546A7B;
 }
 
+/* Background Color */
+
 .bg-aqua {
     background-color: var(--aqua) !important;
 }
@@ -24,9 +26,12 @@
     background-color: darkblue;
 }
 
-
-.bg-dark-chessnut {background-color: var(--dark-chessnut) !important;}
-.bg-dark-electric-blue {background-color: var(--dark-electric-blue) !important;}
+.bg-dark-chessnut {
+    background-color: var(--dark-chessnut);
+}
+.bg-dark-electric-blue {
+    background-color: var(--dark-electric-blue);
+}
 
 /* Typography color */
 .text-aqua {
@@ -148,7 +153,7 @@ Toast Notificaton
 
 
 
-  /* Simple Bar */
+/* Simple Bar */
 
   .simplebar-content:before, .simplebar-content:after {
     content: " ";
@@ -204,6 +209,71 @@ Toast Notificaton
 }
 
 
+/* Profile */
+.met-profile .met-profile-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 
+.met-profile .met-profile-main .met-profile-main-pic {
+    position: relative;
+    max-width: 128px;
+    max-height: 128px;
+    margin-right: 24px;
+}
 
+.met-profile .met-profile-main .met-profile-main-pic .met-profile_main-pic-change {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(250 251 251 / 5%);
+    box-shadow: 0px 0px 20px 0px rgb(250 251 251 / 5%);
+    border: 3px solid #ffffff;
+}
 
+.met-profile .met-profile-main .met-profile_user-detail .met-user-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.dark-editable-element {
+    border-bottom: dashed 1px #0088cc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.met-profile .met-profile-main .met-profile_user-detail .met-user-name-post {
+    color: #7081b9;
+    font-size: 14px;
+}

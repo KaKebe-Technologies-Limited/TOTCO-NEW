@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>TOTCO Inventory Management System</title>
+  <!-- App favicon -->
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/totco-favicon.gif' />
+
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -14,20 +17,27 @@
   <!-- Fontawesome -->
    <script src="https://kit.fontawesome.com/994b1ffb84.js" crossorigin="anonymous"></script>
 
+  <!-- Int'l Telephone Input -->
+  <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
+
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
+
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='assets/img/totco-favicon.gif' />
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
   <!-- Animate.css -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <!-- International Telephone input -->
+  <script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
 </head>
 <body>
   <div class="loader"></div>
@@ -161,7 +171,7 @@
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right end-0 pullDown">
               <a href="profile" class="dropdown-item has-icon"> <i class="far
-										fa-user"></i> Profile
+										fa-user"></i> My Profile
               </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Activities
               </a>

@@ -16,41 +16,62 @@
         <section class="section">
           <div class="row">
             <div class="page-title col-12 mb-2">
-              <h6 class="">Agent</h6>
-              <p class="font-12 text-aqua">Overview of an agent</p>
+              <h1 class="font-20">Agent</h1>
+              <p class="font-10 text-aqua">Overview of an agent</p>
             </div>
           </div>
         </section>
         <section class="section">
           <div class="row d-flex">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
-            <div class="col">
+            <div class="col-12">
               <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                     <div class="row">
-                        <div class="card-content d-flex">
-                          <div class="profile-image d-flex px-1 me-4">
-                            <img style="height: 80px; width: 80px" src="./assets/img/63475.jpg" class="card-img-top rounded-circle">
+              <div class="card-body">
+                  <div class="met-profile">
+                      <div class="row">
+                          <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                              <div class="met-profile-main">
+                                  <div class="met-profile-main-pic">
+                                      <img src="assets/img/63475.jpg" alt="" height="100" width="100" class="rounded-circle">
+                                      <span class="met-profile_main-pic-change">
+                                          <i class="fas fa-camera"></i>
+                                      </span>
+                                  </div>
+                                  <div class="met-profile_user-detail">
+                                      <h5 class="met-user-name">Oluk Mark</h5>
+                                      <p class="mb-0 met-user-name-post">Agent</p>
+                                  </div>
+                              </div>
                           </div>
-                          <div class="bio d-flex flex-column">
-                            <h4>Oluk Mark</h4>
-                            <a href="http://">holmark5@gmail.com</a>
-                            <a class="text-muted" href="tel: +256771404884">O771404884</a>
+                          <div class="col-lg-4 ms-auto align-self-center">
+                              <ul class="list-unstyled personal-detail mb-0">
+                                  <li class=""><i class="bi bi-telephone text-dark font-16 align-middle me-2"></i> <b>Phone</b>: +256771404884</li>
+                                  <li class="mt-2"><i class="bi bi-envelope text-dark font-16 align-middle me-2"></i><b>Email</b>: holmark5@gmail.com</li>
+                                  <li class="mt-2"><i class="bi bi-clock text-dark font-16 align-middle me-2"></i> <b>Added</b>: 25th Aug 2022</li>
+                              </ul>
+
                           </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
+                          <div class="col-lg-4 align-self-center">
+                              <div class="row">
+                                  <div class="col-auto border-start">
+                                      <p class="mb-0 fw-semibold">Status</p>
+                                      <p>
+                                              <i class="fas fa-circle me-1 text-success" style="font-size: 9px;"></i>
+                                              <span class="font-12 text-muted">Active</span>
+                                      </p>
+                                  </div><!--end col-->
+                              </div><!--end row-->
+                          </div>
+                      </div><!--end row-->
+                  </div><!--end f_profile-->
               </div>
-            </div>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Recent Sales Orders</h4>
+                  <h4 class="font-12">Recent Sales Orders</h4>
                   <div class="card-header-form">
                     <a href="agent_sales_orders" class="btn btn-outline-primary">Sell All</a>
                   </div>
@@ -106,7 +127,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Recent Transactions</h4>
+                  <h4 class="font-12">Recent Transactions</h4>
                   <div class="card-header-form">
                     <a href="sales-orders" class="btn btn-outline-primary btn-sm">See All</a>
                   </div>

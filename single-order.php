@@ -14,8 +14,8 @@
         <section class="section">
           <div class="row">
             <div class="page-title col-12 mb-2">
-              <h6 class="">Single Sales Order</h6>
-              <p class="font-12 text-aqua">A single sales order overview</p>
+              <h6 class="font-20">Sales Order</h6>
+              <p class="font-10 text-aqua">A single sales order overview</p>
             </div>
           </div>
         </section>
@@ -99,20 +99,19 @@
                 <div class="card-header">
                   <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
-                    <button type="button" class="btn btn-outline-primary">
+                    <button type="button" class="btn btn-outline-primary btn-sm">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                         <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
                         <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
                       </svg>
                       Proforma Invoice
                     </button>
-                    <a class="btn btn-outline-primary mx-1" style="width: 120px;">Export</a>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="billing p-4 d-flex justify-content-between mb-4">
+                  <div class="billing p-4 d-flex justify-content-between mb-4 border">
                     <div class="agent-detail">
-                      <h5 class="font-14">Oluk Mark</h5>
+                      <h5 class="font-14 text-dark">Oluk Mark</h5>
                       <p class="m-0 p-0">Odokomit, Lira</span></p>
                       <p class="m-0 p-0">0771404884</p>
                     </div>

@@ -16,7 +16,7 @@
         <section class="section header">
             <div class="row">
               <div class="page-title col-12 mb-5">
-                <h1 id="welcome-title" class="font-32 animate-greetings" data-greeting="Good morning"></h1>
+                <h1 id="welcome-title" class="font-20 animate-greetings" data-greeting=""></h1>
               </div>
               <script>
                 const welcomeTitle = document.querySelector('#welcome-title')
@@ -25,7 +25,8 @@
                 var phrase = [
                         [18, 'Good evening'],
                         [12, 'Good afternoon'],
-                        [5,  'Good morning']
+                        [5,  'Good morning'],
+                        [0, 'Wow! Working late']
                 ],
 
                 hr = new Date().getHours();
@@ -46,22 +47,21 @@
             </div>
             <div class="row">
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-                <div class="card bg-primary">
+                <div class="card bg-dark-chessnut">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
-                          <div class="card-content">
-                            <h5 class="font-10 text-white text-upper">Total Purchase Amount</h5>
-                            <h2 class="mb-3 font-30 text-white">100,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
-                            <h5 class="font-10 text-white text-upper">total payouts</h5>
-                            <h2 class="mb-3 font-18 text-white">90,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
-                            <h5 class="font-10 text-white text-upper">total balance</h5>
-                            <h2 class="mb-3 font-18 text-white">10,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
-                          </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0 pt-3 d-flex align-items-center border-end">
+                            <hgroup class="">
+                              <h5 class="font-10 text-white text-upper">Total Purchase Amount</h5>
+                              <h2 class="mb-3 font-30 text-white">100,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
+                            </hgroup>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-
+                        <h5 class="font-10 text-white text-upper">total payouts</h5>
+                            <h2 class="mb-3 font-22 text-white">90,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
+                            <h5 class="font-10 text-white text-upper">total balance</h5>
+                            <h2 class="mb-3 font-22 text-white">10,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
                         </div>
                       </div>
                     </div>
@@ -77,9 +77,7 @@
                           <div class="card-content">
                             <h5 class="font-10 text-white text-upper">No. of Purchase</h5>
                             <h2 class="mb-3 font-22 text-white">100</h2>
-                            <h5 class="font-10 text-white text-upper">returns</h5>
-                            <h2 class="mb-3 font-22 text-white">03</h2>
-                            <h5 class="font-10 text-white text-upper">returns</h5>
+                            <h5 class="font-10 text-white text-upper">REJECTED</h5>
                             <h2 class="mb-3 font-22 text-white">03</h2>
                           </div>
                         </div>

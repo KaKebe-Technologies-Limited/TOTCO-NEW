@@ -14,18 +14,49 @@
           <main class="main-content pt-5 mt-3">
             <div class="row">
                 <div class="header d-flex justify-content-between  py-4 my-3">
-                    <h4>Stores</h4>
-                    <a href="#" class="btn create-btn control bg-primary">
-                      <div class="create-btn-text">Create store</div>
-                      <div class="svg-container plus-icon">
-                        <svg width="1.00em" height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 4.5C10.5 4.22386 10.2761 4 10 4C9.72386 4 9.5 4.22386 9.5 4.5V9.5H4.5C4.22386 9.5 4 9.72386 4 10C4 10.2761 4.22386 10.5 4.5 10.5H9.5V15.5C9.5 15.7761 9.72386 16 10 16C10.2761 16 10.5 15.7761 10.5 15.5V10.5H15.5C15.7761 10.5 16 10.2761 16 10C16 9.72386 15.7761 9.5 15.5 9.5H10.5V4.5Z"></path>
-                        </svg>
+                    <div class="page-title">
+                      <h1 class="font-20">Stores</h1>
+                      <p class="font-10">An overview of Totco stores & warehouses</p>
+                    </div>
+                    <div class="float-end">
+                      <ol class="breadcrumb d-flex align-items-center">
+                          <li class="breadcrumb-item">
+                              <a href="#" class="btn btn-round btn-primary offcanvas-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight role="button" aria-controls="Rightbar">Add a new store</a>
+                          </li>
+                      </ol>
+                    </div>
+
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-body">
+                      <div class="offcanvas-header border-none">
+                        <div class="col">
+                            <h5 class="mt-1">Create a new store</h5>
+                        </div>
+                        <div class="col-auto me-4">
+                            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
                       </div>
-                    </a>
+                      <div>
+                        <form>
+                          <div class="mb-3">
+                            <label for="store-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="store-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="store-location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="store-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="store-manager" class="form-label">Manager</label>
+                            <input type="text" class="form-control" id="store-manager">
+                          </div>
+                          <button type="submit" class="btn btn-primary offset-lg-5">Save</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
-
             <section class="section">
             <div class="row ">
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -102,7 +133,7 @@
                 <div class="accordion" id="accordionExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="store-one">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Totco Lira
                       </button>
                     </h2>

@@ -12,12 +12,12 @@
 <!-- MAIN -->
 <div class="main-content">
     <section class="section">
-        <div class="row">
-            <div class="page-title col-12 mb-2">
-            <h6 class="">New User Approval Dashboard</h6>
-            <p class="font-12 text-aqua"></p>
-            </div>
-        </div>
+      <div class="row">
+          <div class="page-title col-12 mb-2">
+          <h1 class="font-20">New User Approval Dashboard</h1>
+          <p class="font-10 text-aqua"></p>
+          </div>
+      </div>
     </section>
     <section class="section">
         <div class="row ">
@@ -29,8 +29,8 @@
                           <div class="row ">
                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                               <div class="card-content">
-                              <h5 class="font-12 text-white">Pending</h5>
-                              <h2 class="mb-3 font-20 text-white">5</h2>
+                              <h5 class="font-10 text-white text-upper">Pending</h5>
+                              <h2 class="mb-3 font-22 text-white">5</h2>
                               </div>
                           </div>
                           </div>
@@ -41,14 +41,14 @@
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <a href="#approved-users">
-                <div class="card">
+                <div class="card bg-dark-electric-blue">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-12 text-aqua">Approved</h5>
-                            <h2 class="mb-3 font-20">100</h2>
+                            <h5 class="font-10 text-white text-upper">Approved</h5>
+                            <h2 class="mb-3 font-22 text-white">100</h2>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -64,14 +64,14 @@
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <a href="#rejected-users">
-                <div class="card">
+                <div class="card bg-dark-electric-blue">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-12 text-aqua">Rejected</h5>
-                            <h2 class="mb-3 font-20">0</h2>
+                            <h5 class="font-10 text-white text-upper">Rejected</h5>
+                            <h2 class="mb-3 font-22 text-white">0</h2>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">

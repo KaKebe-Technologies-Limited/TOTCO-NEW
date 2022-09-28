@@ -15,7 +15,7 @@
           <div class="d-flex justify-content-between my-5">
             <div class="">
               <div class="page-title">
-                <h6 class="">Sales Orders</h6>
+                <h1 class="font-20">Sales Orders</h1>
                 <p class="font-10">All sales order request by agents</p>
               </div>
             </div>
@@ -61,7 +61,7 @@
                     <div class="row ">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-10 text-white text-upper">APPROVED</h5>
+                          <h5 class="font-10 text-white text-upper">approved</h5>
                           <h2 class="mb-3 font-22 text-white" data-number="">98</h2>
                         </div>
                       </div>
@@ -110,7 +110,7 @@
                     <div class="bulk-action col-md-3 mx-3 d-flex">
                         <select id="bulk-action"" class="form-select form-control rounded" aria-label=".form-select-sm example">
                             <option selected>Bulk Action</option>
-                            <option value="2">Delete</option>
+                            <option value="2">Move To Trash</option>
                         </select>
                         <button id="apply-btn" class="btn btn-outline-primary rounded mx-2" type="submit" data-id="<?=$orderResult[0]['id'];?>">Apply</button>
                     </div>
@@ -119,7 +119,7 @@
                           <select class="form-select form-control rounded" aria-label=".form-select-sm example">
                               <option selected>Sort By Status</option>
                               <option value="1">Paid</option>
-                              <option value="2">APPROVED</option>
+                              <option value="2">Approved</option>
                               <option value="3">Pending</option>
                               <option value="4">Rejected</option>
                           </select>
@@ -198,8 +198,8 @@
                                     </td>
                                     <td>
                                     <div class="d-flex flex-row">
-                                        <a class="btn btn-primary mx-1" href="single-order?id= ". $sales_orders[$x]["id"]"><i class="fas fa-eye text-white"></i></a>
-                                        <a class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>
+                                        <a title="View sales order" class="btn btn-primary mx-1" href="single-order?id= ". $sales_orders[$x]["id"]"><i class="fas fa-eye text-white"></i></a>
+                                        <a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>
                                         <button class="btn btn-danger mx-1" id="delete-order-btn" type="button"><span><i class="fas fa-trash text-white"></i></span></button>
                                       </div>
                                     </td>
