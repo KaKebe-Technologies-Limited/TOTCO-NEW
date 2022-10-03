@@ -9,9 +9,8 @@
 <!-- End Sidebar -->
 
 
-
       <!-- Main Content -->
-      <div class="main-content d-flex">
+      <div class="main-content d-flex flex-wrap">
         <div class="container main-grid col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12">
         <section class="section header">
             <div class="row">
@@ -43,7 +42,7 @@
           </section>
           <section class="my-3">
             <div class="section-header">
-              <h1 class="font-14">Purchase Overview</h1>
+              <h1 class="font-14">Purchase overview</h1>
             </div>
             <div class="row">
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
@@ -51,7 +50,7 @@
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
                       <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0 pt-3 d-flex align-items-center border-end">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0 pt-3 d-flex align-items-center border-end-xl-lg-md">
                             <hgroup class="">
                               <h5 class="font-10 text-white text-upper">Total Purchase Amount</h5>
                               <h2 class="mb-3 font-30 text-white">100,000,000<span class="text-white text-upper font-10 ms-1">UGX</span></h2>
@@ -77,7 +76,7 @@
                           <div class="card-content">
                             <h5 class="font-10 text-white text-upper">No. of Purchase</h5>
                             <h2 class="mb-3 font-22 text-white">100</h2>
-                            <h5 class="font-10 text-white text-upper">REJECTED</h5>
+                            <h5 class="font-10 text-white text-upper">Declined</h5>
                             <h2 class="mb-3 font-22 text-white">03</h2>
                           </div>
                         </div>
@@ -246,7 +245,7 @@
                       <div class="activity">
                         <div class="activity-info">
                           <div class="icon-info-activity">
-                          <i class="bi bi-check2"></i>
+                          <i class="bi bi-check2 bg-soft-primary"></i>
                           </div>
                           <div class="activity-info-text">
                               <div class="d-flex justify-content-between align-items-center">
@@ -259,7 +258,7 @@
                         </div>
                         <div class="activity-info">
                             <div class="icon-info-activity">
-                              <i class="bi bi-check2"></i>
+                              <i class="bi bi-check2 bg-soft-primary"></i>
                             </div>
                             <div class="activity-info-text">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -272,7 +271,7 @@
                         </div>
                         <div class="activity-info">
                             <div class="icon-info-activity">
-                              <i class="bi bi-x"></i>
+                              <i class="bi bi-x bg-soft-primary" ></i>
                             </div>
                             <div class="activity-info-text">
                                 <div class="d-flex justify-content-between align-items-center">

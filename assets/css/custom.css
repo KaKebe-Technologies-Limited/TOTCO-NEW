@@ -33,6 +33,11 @@
     background-color: var(--dark-electric-blue);
 }
 
+.bg-soft-primary:hover {
+    background-color: #0b51b7 !important;
+    color: #ffffff !important;
+}
+
 /* Typography color */
 .text-aqua {
     color: var(--aqua);
@@ -276,4 +281,12 @@ Toast Notificaton
 .met-profile .met-profile-main .met-profile_user-detail .met-user-name-post {
     color: #7081b9;
     font-size: 14px;
+}
+
+/* Borders */
+
+@media screen and (min-width: 768px) {
+    .border-end-xl-lg-md {
+        border-right: 1px solid #dee2e6 !important;
+    }
 }

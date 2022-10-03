@@ -1,10 +1,10 @@
 <?php
-use Totcoclass\Config;
+
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-require_once __DIR__ . '/../lib/Config.php';
+require_once __DIR__ . '/../lib/Config.class.php';
 $config = new Config();
 
 class PDFService {

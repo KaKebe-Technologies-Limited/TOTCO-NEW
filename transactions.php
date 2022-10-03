@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <!-- Page title -->
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-5">
                 <div class="page-title-box">
                     <h4 class="page-title">Transactions</h4>
                 </div>
@@ -36,48 +36,44 @@
                     <div class="col-md-3">
                         <label for="inputEmail4">Transaction</label>
                         <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
-                        <div class="selectr-selected" disabled="undefined" tabindex="0" aria-expanded="false">
-                            <span class="selectr-label">All</span>
-                            <div class="selectr-placeholder">Select an option...</div>
+                            <div class="selectr-options-container">
+                                <div class="selectr-input-container">
+                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search" tabindex="-1">
+                                    <button class="btn btn-primary selectr-input-clear" type="button"></button>
+                                </div>
+                                <div class="selectr-notice">
+                                </div>
+                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false">
+                                </ul>
+                            </div>
+                            <select id="transaction-category" name="transaction-category" style="border-color: #fff !important;" class="custom-select selectr-hidden" placeholder="Transaction Category" tabindex="-1" aria-hidden="true">
+                                    <option value="ALL" selected="">All</option>
+                                    <option value="transaction 1">transaction 1</option>
+                                    <option value="transaction 2">transaction 2</option>
+
+                            </select>
                         </div>
-                        <div class="selectr-options-container">
-                            <div class="selectr-input-container">
-                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search" tabindex="-1">
-                                <button class="btn btn-primary selectr-input-clear" type="button"></button>
-                            </div>
-                            <div class="selectr-notice">
-                            </div>
-                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false">
-                            </ul></div>
-                            <select id="productCategory" name="productCategory" style="border-color: #fff !important;" class="custom-select selectr-hidden" placeholder="Transaction Category" tabindex="-1" aria-hidden="true">
-                            <option value="ALL" selected="">All</option>
-                            <option value="AIRTIME">Airtime</option>
-                            <option value="DATA">Internet</option>
-                            <option value="INVOICE">Invoices</option>
-                            <option value="MOBILEMONEYPAYOUT">Mobile Money Payout</option>
-                            <option value="REHIVEWALLETTOPUPUG">Wallet Topup</option>
-                            <option value="CORPORATECARDS">Corporate Cards</option>
-                            <option value="UTILITIES">Utilities</option>
-                            <option value="CREATEVIRTUALCARDS">Virtual Card Creation</option>
-                            <option value="CREATEPHYSICALCARDS">Physical Card creation</option>
-                            <option value="CARDWALLETTRANSFER">Wallet to  Card Transfer</option>
-                            <option value="CARDWALLETREVERT">Card to Wallet Transfer</option>
-                            <option value="WALLETTRANSFER">Wallet to Wallet Transfer</option>
-                            <option value="BANKTRANSFERS">Bank to Bank Transfer</option>
-                        </select>
-                    </div>
                     </div>
                     <div class="col-md-3">
                         <label for="inputEmail4">Status</label>
-                        <div class="selectr-container selectr-desktop has-selected" style="width: 100%;"><div class="selectr-selected" disabled="undefined" tabindex="0" aria-expanded="false"><span class="selectr-label">All</span><div class="selectr-placeholder">Select an option...</div></div><div class="selectr-options-container"><div class="selectr-input-container"><input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search" tabindex="-1"><button class="selectr-input-clear" type="button"></button></div><div class="selectr-notice"></div><ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul></div><select id="transactionStatus" name="transactionStatus" style="border-color: #fff !important;" class="custom-select selectr-hidden" placeholder="Status" tabindex="-1" aria-hidden="true">
-                            <option value="ALL" selected="">All</option>
-                            <option value="PROCESSING">Processing</option>
-                            <option value="PROCESSED">Successful</option>
-                            <option value="PENDING">Pending</option>
-                            <option value="DECLINED">Declined</option>
-                            <option value="FAILED">Failed</option>
-
-                        </select></div>
+                        <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                            <div class="selectr-options-container">
+                                <div class="selectr-input-container">
+                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search" tabindex="-1">
+                                    <button class="selectr-input-clear" type="button"></button>
+                                </div>
+                                <div class="selectr-notice"></div>
+                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                            </div>
+                            <select id="transaction-status" name="transactionStatus" style="border-color: #fff !important;" class="custom-select selectr-hidden" placeholder="Status" tabindex="-1" aria-hidden="true">
+                                <option value="ALL" selected="">All</option>
+                                <option value="PROCESSING">Processing</option>
+                                <option value="PROCESSED">Successful</option>
+                                <option value="PENDING">Pending</option>
+                                <option value="DECLINED">Declined</option>
+                                <option value="FAILED">Failed</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <label for=""></label>
@@ -92,6 +88,49 @@
                     <button class="btn btn-light" id="custom_excel_export"><i class="far fa-file-excel text-success me-2"></i> Excel</button>
                 </div>
             </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div id="all-product-report_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table id="transactions-table" class="table table-striped dataTable no-footer" aria-describedby="all-product-report_info" style="width: 1245px;">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report" style="">Date</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report" style="">Transaction</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report"  style="">Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report" style="">Account Number</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report" style="">Reason</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="all-product-report" style="">Amount</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        <div id="all-product-report_processing" class="dataTables_processing card" style="display: none;">
+                                            <div class="d-flex align-items-center justify-content-center" style="width:100%;height:100%;">
+                                                <div class="spinner-border text-primary" role="status"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="all-product-report_info" role="status" aria-live="polite"></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_full_numbers" id="all-product-report_paginate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end card-body-->
+                </div>
+            </div> <!-- end col -->
         </div>
     </div>
 </main>

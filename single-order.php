@@ -9,13 +9,21 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
+<?php
+require_once __DIR__ . '/Model/API.class.php';
+
+$singleModel = new Api();
+$singleOrder = $singleModel->getSingleOrder();
+
+?>
+
  <!-- Main Content -->
  <div class="main-content">
         <section class="section">
           <div class="row">
             <div class="page-title col-12 mb-2">
               <h6 class="font-20">Sales Order</h6>
-              <p class="font-10 text-aqua">A single sales order overview</p>
+              <p class="font-10 text-aqua"><?php echo $singleOrder[0]['sales_order_id']; ?></p>
             </div>
           </div>
         </section>
@@ -29,7 +37,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-white text-upper">Order #</h5>
-                          <h2 class="text-white my-3 font-18">T001</h2>
+                          <h2 class="text-white my-3 font-18"><?php echo $singleOrder[0]['order_vs_pdt_id'] ?></h2>
                         </div>
                       </div>
                     </div>
@@ -99,13 +107,13 @@
                 <div class="card-header">
                   <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
-                    <button type="button" class="btn btn-outline-primary btn-sm">
+                    <a class="btn btn-outline-primary btn-sm" role="button" href="./invoice.php?id=<?php echo $order_data["sales_order_id"];?>">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                         <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
                         <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
                       </svg>
                       Proforma Invoice
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="card-body">

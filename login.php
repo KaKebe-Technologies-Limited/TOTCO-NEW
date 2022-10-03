@@ -84,7 +84,7 @@
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <!-- Custom JS File -->
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/index.js"></script>
   <script src="assets/js/account.js"></script>
 </body>
 

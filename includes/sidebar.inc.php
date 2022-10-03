@@ -15,7 +15,7 @@
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Sales Orders</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="sales-orders">All Sales Orders</a></li>
+                <li><a class="nav-link" href="sales-orders">Sales Orders</a></li>
               </ul>
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Purchase Orders</span></a>
               <ul class="dropdown-menu">
@@ -26,7 +26,7 @@
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Agents</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="agents">All Agents</a></li>
+                <li><a class="nav-link" href="agents">Agents</a></li>
                 <li><a class="nav-link" href="add-new-user">Add New</a></li>
               </ul>
             </li>
@@ -43,12 +43,12 @@
                 <li><a class="nav-link" href="reorder-stock">Reorder Stock</a></li>
               </ul>
             </li>
-            <li class="menu-header">Reports</li>
+            <li class="menu-header">Accountability</li>
               <li class="dropdown">
-                <a href="reports" class="menu-toggle nav-link"><span>Reports</span></a>
+                <a href="transactions" class="menu-toggle nav-link"><span>Transactions</span></a>
               </li>
             </li>
-            <li class="menu-header">User Management</li>
+            <li class="menu-header">Manage</li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Users</span></a>
               <ul class="dropdown-menu">

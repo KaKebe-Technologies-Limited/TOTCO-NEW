@@ -38,7 +38,18 @@
 
   <!-- International Telephone input -->
   <script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+
+  <!-- Selectr -->
+  <link href="https://unpkg.com/mobius1-selectr@latest/dist/selectr.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Datatables css -->
+  <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+  <!-- Datepicker -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 </head>
+
 <body>
   <div class="loader"></div>
   <div id="app">

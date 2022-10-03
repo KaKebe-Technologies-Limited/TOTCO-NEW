@@ -150,33 +150,6 @@
             <div class="col-lg-6 col-xl-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title font-14">Theme Preferences</h4>
-                    </div><!--end card-header-->
-                    <div class="card-body">
-                        <form name="them_form">
-                            <div class="row mb-3">
-                                <label class="col-md-3 my-1 control-label">Select a Theme</label>
-                                <div class="col-md-9">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="theme" id="light_theme" value="light_theme" checked="checked">
-                                        <label class="form-check-label label-link" for="light_theme">Light</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="theme" id="dark_theme" value="dark_theme">
-                                        <label class="form-check-label label-link" for="dark_theme">Dark</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="theme" id="system_theme" value="system_theme">
-                                        <label class="form-check-label label-link" for="system_theme">Use System's</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-                <div class="card">
-                    <div class="card-header">
                         <h4 class="card-title font-14">Change Password</h4>
                     </div><!--end card-header-->
                     <div class="card-body">
