@@ -15,7 +15,10 @@ require_once __DIR__ . '/Model/API.class.php';
 $singleModel = new Api();
 $singleOrder = $singleModel->getSingleOrder();
 
+
+
 ?>
+
 
  <!-- Main Content -->
  <div class="main-content">
@@ -23,7 +26,9 @@ $singleOrder = $singleModel->getSingleOrder();
           <div class="row">
             <div class="page-title col-12 mb-2">
               <h6 class="font-20">Sales Order</h6>
-              <p class="font-10 text-aqua"><?php echo $singleOrder[0]['sales_order_id']; ?></p>
+              <!-- <p class="font-10 text-aqua"><?php //print_r($singleOrder[0]['order_status']['sales_order_id']); ?></p> -->
+              <!-- <p class="font-10 text-aqua"><?php //echo $singleOrder->orders[0]->order_status->sales_order_id; ?></p> -->
+              <p class="font-10 text-aqua"><?php //print_r($_GET["id"]); ?></p>
             </div>
           </div>
         </section>
@@ -37,7 +42,7 @@ $singleOrder = $singleModel->getSingleOrder();
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-white text-upper">Order #</h5>
-                          <h2 class="text-white my-3 font-18"><?php echo $singleOrder[0]['order_vs_pdt_id'] ?></h2>
+                          <h2 class="text-white my-3 font-18"><?php print_r($singleOrder); ?></h2>
                         </div>
                       </div>
                     </div>

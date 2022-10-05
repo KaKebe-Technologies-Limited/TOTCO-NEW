@@ -1,68 +1,59 @@
 <?php
-//$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 
 ?>
 
+
 <script>
-$(document).ready(function () {
-    $('#example').DataTable({
-        //processing: true,
-        //serverSide: true,
-        ajax: 'data.json',
-        columns: [
-            {
-                data: 'checkbox',
-                className: 'text-center',
-                orderable: false,
-                render: function (data, type, full, meta){
-                    return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
-                }
-            },
-            {
-                data: 'orderid',
-            },
-            {
-                data: 'product',
-            },
-            {
-                data: 'quantity',
-            },
-            {
-                data: 'price',
-            },
-            {
-                data: 'date',
-            },
-            {
-                data: 'agent name',
-            },
-            {
-                data: 'orderstatus',
-                width: '150px',
-                render: function(data, type, full, meta) {
-                    return `<div class="badge badge-success">${full.orderstatus}</div>`;
-                }
+let datatable;
 
+
+var xmlhttp = new XMLHttpRequest();
+var url = "https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php";
+xmlhttp.open('GET', url, true);
+xmlhttp.send();
+xmlhttp.onreadystatechange = function() {
+    if(this.readyState == 4 && xmlhttp.status == 200) {
+        var dataset = JSON.parse(xmlhttp.responseText);
+        //console.log(data);
+        datatable = $('#order-table').DataTable({
+
+            language: {
+                processing: '<div class="d-flex align-items-center justify-content-center" style="width:100%;height:100%;"><div class="spinner-border text-primary" role="status"></div></div>',
+                emptyTable: "No sales orders available at the moment",
             },
-            {
-                data: 'action',
-                render: function(data, type, full, meta){
-                    if(type === 'display'){
-                    data = data + `<a title="View sales order" class="btn btn-primary mx-1" href="single-order?id=${full.orderid} "><i class="fas fa-eye text-white"></i></a>`+
-                    `<a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>` +
-                                        `<button class="btn btn-danger mx-1" id="delete-order-btn" type="button"><span><i class="fas fa-trash text-white"></i></span></button>`
+
+            "data": dataset.orders,
+            columns: [
+                { data: 'order_items[0].pdt_name',
+                    width: '150px',
+                    render: function(data, type, full, meta) {
+                        return `<td>
+                        <div class="custom-checkbox custom-checkbox-table custom-control">
+                                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
+                                    class="custom-control-input emp_checkbox" data-emp-id="" name="select-all" value="1" id="checkbox-all">
+                                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                </div>
+                        </td>`;
                     }
-
-                    return data;
-                }
-            }
-
-        ],
-    });
-});
+                },
+                { data: 'order_status.sales_order_id',},
+                { data: 'order_items[0].pdt_name',
+                    width: '150px',
+                    render: function(data, type, full, meta) {
+                        return `<div class="badge badge-success">success</div>`;
+                    }
+                },
+                { data: 'order_items[0].quantity',},
+                { data: 'order_status.createdAt',},
+                { data: 'order_status.createdBy',},
+            ],
+        });
+    }
+}
 
 $(function() {
-
+    var startdate;
+    var enddate;
     var start = moment().subtract(29, 'days');
     var end = moment();
 
@@ -81,9 +72,12 @@ $(function() {
            'This Month': [moment().startOf('month'), moment().endOf('month')],
            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
-    }, cb); //compare by
+    },  function (start, end, label) {
+            document.getElementById('start_date').value = start.format('YYYY-MM-DD');
+            document.getElementById('end_date').value = end.format('YYYY-MM-DD');
 
-    cb(start, end);
+            datatable.ajax.url(`sales-table?startdate=${start.format('YYYY-MM-DD')}&enddate=${end.format('YYYY-MM-DD')}`).load();
+        }); //compare by
 
 });
 

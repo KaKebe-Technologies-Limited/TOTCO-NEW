@@ -12,14 +12,14 @@
 <?php
 require_once __DIR__ . '/Model/API.class.php';
 
-$orderModel = new Api();
+/*$orderModel = new Api();
 $allOrders = $orderModel->getAllSales();
 $i = 0;
 $order_id = array();
 foreach($allOrders['orders'] as $order_data) {
   $order_id[$i] = $order_data['sales_order_id']; // save the value in the array by an index
-    $i++;
-}
+  $i++;
+} */
 
 ?>
 
@@ -168,7 +168,7 @@ foreach($allOrders['orders'] as $order_data) {
                     </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                        <table id="example" class="table table-striped table-hover display select" cellspacing="0" width="100%">
+                        <table id="order-table" class="table table-striped table-hover display select" cellspacing="0" width="100%">
                           <thead>
                             <tr>
                               <th class="text-center">
