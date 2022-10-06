@@ -112,7 +112,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
                             <h5 class="font-10 text-dark text-upper">Agent Name</h5>
-                            <h1 class="font-15 text-dark mb-0">Oluk Mark</h1>
+                            <h1 class="font-15 text-dark mb-0"><?php echo $singleOrder->order_status->Agent_Name; ?></h1>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
