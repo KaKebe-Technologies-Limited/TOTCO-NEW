@@ -13,7 +13,8 @@
 require_once __DIR__ . '/Model/API.class.php';
 
 $singleModel = new Api();
-$singleOrder = $singleModel->getSingleOrder();
+// $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
+$singleOrder = $singleModel->getSingleOrderID(1);
 
 
 
@@ -42,7 +43,7 @@ $singleOrder = $singleModel->getSingleOrder();
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-12 text-white text-upper">Order #</h5>
-                          <h2 class="text-white my-3 font-18"><?php print_r($singleOrder); ?></h2>
+                          <h2 class="text-white my-3 font-18"><?php echo $singleOrder->order_status->sales_order_id; ?></h2>
                         </div>
                       </div>
                     </div>
@@ -58,7 +59,10 @@ $singleOrder = $singleModel->getSingleOrder();
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-10 text-white text-upper">Order Date</h5>
-                          <h2 class="text-white font-18 my-3">28 AUG 2022</h2>
+                          <h2 class="text-white font-18 my-3">
+                           <?php echo date("D, d M Y H:i:s", strtotime($singleOrder->order_status->createdAt)); ?>
+                           
+                          </h2>
                         </div>
                       </div>
                     </div>
@@ -74,7 +78,24 @@ $singleOrder = $singleModel->getSingleOrder();
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-10 text-white text-upper">Order Status</h5>
-                          <div class="badge badge-success text-white mt-3">Approved</div>
+                          <?php 
+                              if ($singleOrder->order_status->isPending == 1) {
+                                echo '<div class="badge badge-primary text-white mt-3">Pending</div>';
+                              } else {
+                                if ($singleOrder->order_status->isApproved == 1 ) {
+                                  echo '<div class="badge badge-success text-white mt-3">Approved</div>';
+                                } else {
+                                  if ($singleOrder->order_status->isRejected == 1) {
+                                    echo '<div class="badge badge-danger text-white mt-3">isRejected</div>';
+                                  } else {
+                                    echo '<div class="badge badge-Warning text-white mt-3">----</div>';
+                                  }
+                                }
+                                
+                              }
+                              
+                          ?>
+                          
                         </div>
                       </div>
                     </div>
