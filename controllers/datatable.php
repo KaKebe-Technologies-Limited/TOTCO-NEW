@@ -24,28 +24,70 @@ xmlhttp.onreadystatechange = function() {
 
             "data": dataset.orders,
             columns: [
-                { data: 'order_items[0].pdt_name',
-                    width: '150px',
+                { 
+                    // width: '150px',
                     render: function(data, type, full, meta) {
-                        return `<td>
-                        <div class="custom-checkbox custom-checkbox-table custom-control">
-                                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                    class="custom-control-input emp_checkbox" data-emp-id="" name="select-all" value="1" id="checkbox-all">
-                                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                </div>
-                        </td>`;
+                        return `
+                        <td class="p-0 text-center">
+                          <div class="custom-checkbox custom-control">
+                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
+                              id="checkbox-${full.order_status.sales_order_id}">
+                            <label for="checkbox-${full.order_status.sales_order_id}" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </td>
+                        
+                        `;
+                        
                     }
                 },
                 { data: 'order_status.sales_order_id',},
-                { data: 'order_items[0].pdt_name',
-                    width: '150px',
+                { data: 'order_items[0].pdt_name',},
+                { data: 'order_items[0].quantity',},
+                { 
                     render: function(data, type, full, meta) {
-                        return `<div class="badge badge-success">success</div>`;
+                        return `<div >Price...</div>`;
                     }
                 },
-                { data: 'order_items[0].quantity',},
                 { data: 'order_status.createdAt',},
-                { data: 'order_status.createdBy',},
+                { 
+                    data: 'order_status.createdBy',
+                    render: function(data, type, full, meta) {
+                        return `<div >Agent name...</div>`;
+                    }
+                },
+                { 
+                    data: 'order_status.isPending',
+                    width: '150px',
+                    render: function(data, type, full, meta) {
+                        return `
+                            ${full.order_status.isPending == 1 ? '<div class="badge badge-primary">Pending</div>'
+                                : (full.order_status.isApproved == 1 ? '<div class="badge badge-success">Approved</div>' 
+                                    : '<div class="badge badge-success">NOT Pending</div>')
+                            }
+                            `;
+                    }
+                },
+                { 
+                    data: 'order_status.sales_order_id',
+                    render: function(data, type, full, meta){
+                        if(type === 'display'){
+                            data =  `
+                            <a title="View sales order" class="btn btn-primary mx-1" href="single-order?id=${full.order_status.sales_order_id} ">
+                            <i class="fas fa-eye text-white"></i>
+                            </a>
+                            <a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span>
+                            <i class="fas fa-download text-white"></i></span>
+                            </a>
+                            <button class="btn btn-danger mx-1" id="delete-order-btn" type="button">
+                            <span><i class="fas fa-trash text-white"></i></span>
+                            </button>
+                            `
+                        }
+                        
+                        return data;
+                    }
+                },
+                
             ],
         });
     }

@@ -15,6 +15,13 @@ class Api
         
         return $data;
     }
+    function getAllSales()
+    {
+        $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
+        $this->api_data = json_decode($this->json_data);
+        $data = $this->api_data->orders;
+        return $data;
+    }
 
 }
 
