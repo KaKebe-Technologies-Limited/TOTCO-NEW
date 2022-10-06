@@ -13,8 +13,8 @@
 require_once __DIR__ . '/Model/API.class.php';
 
 $singleModel = new Api();
-// $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
-$singleOrder = $singleModel->getSingleOrderID(1);
+$singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
+// $singleOrder = $singleModel->getSingleOrderID(1);
 
 
 

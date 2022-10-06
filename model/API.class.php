@@ -17,7 +17,7 @@ class Api
     }
     function getSingleOrderID($id)
     {
-        $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/viewSingleSalesOrder.php?id=2");
+        $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/viewSingleSalesOrder.php?id=$id");
         $this->api_data = json_decode($this->json_data);
         $data = $this->api_data;
         
