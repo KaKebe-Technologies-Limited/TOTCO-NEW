@@ -9,14 +9,6 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
-<?php
-require_once __DIR__ . '/Model/API.class.php';
-
-$orderModel = new Api();
-$allOrders = $orderModel->getAllSales();
-
-
-?>
 
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
@@ -128,11 +120,11 @@ $allOrders = $orderModel->getAllSales();
                 </div>
               </div>
             </div>
-          </div>
+            </div>
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-header py-4 d-flex justify-content-between">
+                  <div class="card-header py-4 d-flex">
                     <div class="bulk-action col-md-3 mx-3 d-flex">
                         <select id="bulk-action"" class="form-select form-control rounded" aria-label=".form-select-sm example">
                             <option selected>Bulk Action</option>
@@ -151,90 +143,40 @@ $allOrders = $orderModel->getAllSales();
                           </select>
                         </div>
                         <div id="sort-date" class="col-md-6 ms-2">
-                          <select class="form-select form-control rounded" aria-label=".form-select-sm example">
-                              <option selected>Sort By Date</option>
-                              <option value="2">Today</option>
-                              <option value="2">Yesterday</option>
-                              <option value="2">Last 7 Days</option>
-                              <option value="2">Last 30 Days</option>
-                              <option value="2">Custom Range</option>
-                          </select>
+                          <div class="input-group">
+                            <input id="DateRange" type="text" name="DateRange" class="form-control" style="border-color: #fff !important;" id="initial_date" placeholder="select period">
+                            <input type="hidden" id="start_date" value="2022-08-29">
+                            <input type="hidden" id="end_date" value="2022-09-27">
+                            <span class="input-group-text" ><i class="far fa-calendar-alt"></i></span>
+                          </div>
                         </div>
-                        <button type="button" class="btn btn-outline-primary rounded mx-2">Filter</button>
-                      </div>
-                      <div class="col-md-2">
-                          <input type="search" class="form-control rounded" placeholder="Search">
                       </div>
                     </div>
-                  <div class="card-body p-0">
+                  <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table table-striped table-hover">
-                        <tr>
-                          <th class="text-center">
-                            <div class="custom-checkbox custom-checkbox-table custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                class="custom-control-input emp_checkbox" data-emp-id="" id="checkbox-all">
-                              <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </th>
-                          <th>Order #</th>
-                          <th>Product</th>
-                          <th>Quantity<span class="font-10 text-muted ms-1">(Tonnes)</span></th>
-                          <th>Price<span class="font-10 text-muted ms-1">(/kg)</span></th>
-                          <th>Date</th>
-                          <th>Agent Name</th>
-                          <th>Status</th>
-                          <th>Action</th>
-                        </tr>
-
-                        <?php foreach($allOrders['orders'] as $order_data): ?>
-                                <tr>
-                                    <td class="p-0 text-center">
-                                        <div class="custom-checkbox custom-control">
-                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                                            id="checkbox-' . $sales_orders[$x]->sales_order_id . '">
-                                        <label for="checkbox-' . $sales_orders[$x]->sales_order_id . '" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td><?php echo $order_data['sales_order_id']; ?></td>
-                                    <td><?php echo $order_data['pdt_name']; ?></td>
-
-                                    <td><?php echo $order_data['quantity']; ?></td>
-                                    <td><?php echo $order_data['unit_price']; ?></td>
-                                    <td>28 AUG 2022</td>
-                                    <td>Oluk Mark</td>
-                                    <td>
-                                        <div class="badge badge-success">Approved</div>
-                                    </td>
-                                    <td>
-                                    <div class="d-flex flex-row">
-                                        <a title="View sales order" class="btn btn-primary mx-1" href="single-order?id=<?php echo $order_data['sales_order_id']; ?>><i class="fas fa-eye text-white"></i></a>
-                                        <a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>
-                                        <button class="btn btn-danger mx-1" id="delete-order-btn" type="button"><span><i class="fas fa-trash text-white"></i></span></button>
-                                      </div>
-                                    </td>
-                                </tr>
-
-                        <?php endforeach; ?>
-
-                      </table>
+                        <table id="order-table" class="table table-striped table-hover display select" cellspacing="0" width="100%">
+                          <thead>
+                            <tr>
+                              <th class="text-center">
+                                <div class="custom-checkbox custom-checkbox-table custom-control">
+                                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
+                                    class="custom-control-input emp_checkbox" data-emp-id="" name="select-all" value="1" id="checkbox-all">
+                                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                </div>
+                              </th>
+                              <th>Order #</th>
+                              <th>Product</th>
+                              <th>Quantity<span class="font-10 text-muted ms-1">(Tonnes)</span></th>
+                              <th>Price<span class="font-10 text-muted ms-1">(/kg)</span></th>
+                              <th>Date</th>
+                              <th>Agent Name</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                        </table>
                     </div>
                   </div>
-                  <nav aria-label="...">
-                    <ul class="pagination pagination-sm justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
                 </div>
             </div>
           </div>

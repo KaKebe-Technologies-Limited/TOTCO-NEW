@@ -19,7 +19,7 @@ xmlhttp.onreadystatechange = function() {
             "data": dataset.orders,
             columns: [
                 {
-                    // width: '150px',
+                    data: null,
                     render: function(data, type, full, meta) {
                         return `
                         <td class="p-0 text-center">
@@ -34,16 +34,12 @@ xmlhttp.onreadystatechange = function() {
 
                     }
                 },
-                { data: 'order_status.sales_order_id',},
-                { data: 'order_items[0].pdt_name',},
-                { data: 'order_items[0].quantity',},
-                {
-                    data: 'order_items[0].selling_price',
-                },
-                { data: 'order_status.createdAt',},
-                {
-                    data: 'order_status.Agent_Name',
-                },
+                { data: 'order_status.sales_order_id'},
+                { data: 'order_items[0].pdt_name'},
+                { data: 'order_items[0].quantity'},
+                { data: 'order_items[0].selling_price'},
+                { data: 'order_status.createdAt'},
+                { data: 'order_status.Agent_Name'},
                 {
                     data: 'order_status.isPending',
                     width: '150px',
