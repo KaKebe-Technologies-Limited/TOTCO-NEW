@@ -15,7 +15,7 @@
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Sales Orders</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="sales-table.php">Sales Orders</a></li>
+                <li><a class="nav-link" href="sales-orders.php">Sales Orders</a></li>
               </ul>
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="package"></i><span>Purchase Orders</span></a>
               <ul class="dropdown-menu">
