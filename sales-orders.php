@@ -158,11 +158,7 @@
                           <thead>
                             <tr>
                               <th class="text-center">
-                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                    class="custom-control-input emp_checkbox" data-emp-id="" name="select-all" value="1" id="checkbox-all">
-                                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                </div>
+                                
                               </th>
                               <th>Order #</th>
                               <th>Product</th>

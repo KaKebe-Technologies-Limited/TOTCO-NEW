@@ -19,21 +19,22 @@ xmlhttp.onreadystatechange = function() {
             "data": dataset.orders,
             columns: [
                 {
-                    data: null,
-                    render: function(data, type, full, meta) {
-                        return `
-                        <td class="p-0 text-center">
-                          <div class="custom-checkbox custom-control">
-                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
-                              id="checkbox-${full.order_status.sales_order_id}">
-                            <label for="checkbox-${full.order_status.sales_order_id}" class="custom-control-label">&nbsp;</label>
-                          </div>
-                        </td>
+                    data: 'order_status.sales_order_id',
+                    'select': 'multi',
+                    'orderable': false,
+                    'render': function(data, type, row, meta){
+                        if(type === 'display'){
+                            data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
+                        }
 
-                        `;
-
+                        return data;
+                    },
+                    'checkboxes': {
+                        'selectRow': true,
+                        'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
                     }
                 },
+
                 { data: 'order_status.sales_order_id'},
                 { data: 'order_items[0].pdt_name'},
                 { data: 'order_items[0].quantity'},
@@ -78,6 +79,8 @@ xmlhttp.onreadystatechange = function() {
     }
 }
 
+
+
 $(function() {
     var startdate;
     var enddate;
@@ -103,7 +106,7 @@ $(function() {
             document.getElementById('start_date').value = start.format('YYYY-MM-DD');
             document.getElementById('end_date').value = end.format('YYYY-MM-DD');
 
-            datatable.ajax.url(`sales-table?startdate=${start.format('YYYY-MM-DD')}&enddate=${end.format('YYYY-MM-DD')}`).load();
+            datatable.ajax.url(`sales-orders?startdate=${start.format('YYYY-MM-DD')}&enddate=${end.format('YYYY-MM-DD')}`).load();
         }); //compare by
 
 });
