@@ -17,6 +17,9 @@
   <script src="assets/js/transactions.js"></script>
   <script src="assets/js/data.js"></script>
 
+  <!-- Tabledata -->
+  <script src="assets/js/tabledata.js"></script>
+
   <!-- Datatables JS -->
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -24,8 +27,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-  <script src="//cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
-  <script src="//cdn.datatables.net/buttons/2.1.0/js/buttons.bootstrap5.js"></script>
-  <script src="//cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
-  <script src="//cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
-  <script src="//cdn.datatables.net/buttons/2.1.0/js/buttons.colVis.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.colVis.min.js"></script>

@@ -1,11 +1,5 @@
-<?php
 
-?>
-
-
-<script>
 let datatable;
-
 
 var xmlhttp = new XMLHttpRequest();
 var url = "https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php";
@@ -24,28 +18,36 @@ xmlhttp.onreadystatechange = function() {
 
             "data": dataset.orders,
             columns: [
-                { data: 'order_items[0].pdt_name',
-                    width: '150px',
-                    render: function(data, type, full, meta) {
-                        return `<td>
-                        <div class="custom-checkbox custom-checkbox-table custom-control">
-                                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                    class="custom-control-input emp_checkbox" data-emp-id="" name="select-all" value="1" id="checkbox-all">
-                                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                </div>
-                        </td>`;
+                { data: null,
+                    render: function(data, full) {
+                        return `<div class="custom-checkbox custom-control">
+                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
+                            id="checkbox-' . $sales_orders[$x]->sales_order_id . '">
+                        <label for="checkbox-' . $sales_orders[$x]->sales_order_id . '" class="custom-control-label">&nbsp;</label>
+                        </div>`;
                     }
                 },
-                { data: 'order_status.sales_order_id',},
-                { data: 'order_items[0].pdt_name',
-                    width: '150px',
-                    render: function(data, type, full, meta) {
-                        return `<div class="badge badge-success">success</div>`;
+                { data: 'order_status.sales_order_id'},
+                { data: 'order_items[0].pdt_name'},
+                { data: 'order_items[0].quantity'},
+                { data: 'order_items[0].quantity'},
+                { data: 'order_status.createdAt'},
+                { data: 'order_status.Agent_Name'},
+                { data: 'order_status',
+                    render: function(data, full, row) {
+                        return `<div class="badge badge-success">${full.order_status}</div>`;
                     }
                 },
-                { data: 'order_items[0].quantity',},
-                { data: 'order_status.createdAt',},
-                { data: 'order_status.createdBy',},
+                { data: null,
+                    render: function(data, type, full, meta){
+                        return `<a title="View sales order" class="btn btn-primary mx-1" href="single-order?id=${full.order_status.sales_order_id} "><i class="fas fa-eye text-white"></i></a>`+
+                        `<a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span><i class="fas fa-download text-white"></i></span></a>` +
+                                            `<button class="btn btn-danger mx-1" id="delete-order-btn" type="button"><span><i class="fas fa-trash text-white"></i></span></button>`
+
+
+
+                    }
+                },
             ],
         });
     }
@@ -81,4 +83,3 @@ $(function() {
 
 });
 
-</script>

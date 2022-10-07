@@ -5,7 +5,6 @@
     <div class="footer-right">
     </div>
   <?php include 'scripts.inc.php'; ?>
-  <?php include 'controllers/datatable.php'; ?>
 </footer>
 </body>
 </html>

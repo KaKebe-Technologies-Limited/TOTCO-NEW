@@ -1,30 +1,93 @@
 {
-  "success": 1,
-  "orders": [
+    "success": 1,
+    "totalOrders": 3,
+    "orders": [
       {
-          "order_status": {
-              "sales_order_id": "1",
-              "uuid": null,
-              "createdBy": "0",
-              "createdAt": "2022-09-14 02:38:38",
-              "updatedAt": "2022-10-03 10:17:14",
-              "isApproved": "1",
-              "approvedBy": null,
-              "isDeleted": "0",
-              "isCancelled": "0",
-              "isPending": "0",
-              "isRejected": "0",
-              "action": ""
-          },
-          "order_items": [
-              {
-                  "order_vs_pdt_id": "1",
-                  "sales_order_id": "1",
-                  "product_id": "1",
-                  "quantity": "100",
-                  "pdt_name": "Simsim"
-              }
-          ]
+        "order_status": {
+          "sales_order_id": "3",
+          "uuid": null,
+          "createdBy": "1",
+          "createdAt": "2022-10-06 05:27:59",
+          "updatedAt": null,
+          "isApproved": "0",
+          "approvedBy": null,
+          "isDeleted": "0",
+          "isCancelled": "0",
+          "isPending": "1",
+          "isRejected": "0",
+          "user_id": "1",
+          "Agent_Name": "matia",
+          "firstname": null,
+          "lastname": null
+        },
+        "order_items": [
+          {
+            "order_vs_pdt_id": "3",
+            "sales_order_id": "3",
+            "product_id": "2",
+            "quantity": "2147483647",
+            "selling_price": "2147483647",
+            "pdt_name": "beans"
+          }
+        ]
+      },
+      {
+        "order_status": {
+          "sales_order_id": "4",
+          "uuid": null,
+          "createdBy": "7",
+          "createdAt": "2022-10-06 05:34:31",
+          "updatedAt": null,
+          "isApproved": "0",
+          "approvedBy": null,
+          "isDeleted": "0",
+          "isCancelled": "0",
+          "isPending": "1",
+          "isRejected": "0",
+          "user_id": "7",
+          "Agent_Name": "kato",
+          "firstname": null,
+          "lastname": null
+        },
+        "order_items": [
+          {
+            "order_vs_pdt_id": "4",
+            "sales_order_id": "4",
+            "product_id": "3",
+            "quantity": "764000",
+            "selling_price": "37000",
+            "pdt_name": "maize"
+          }
+        ]
+      },
+      {
+        "order_status": {
+          "sales_order_id": "5",
+          "uuid": null,
+          "createdBy": "8",
+          "createdAt": "2022-10-06 07:32:05",
+          "updatedAt": null,
+          "isApproved": "0",
+          "approvedBy": null,
+          "isDeleted": "0",
+          "isCancelled": "0",
+          "isPending": "1",
+          "isRejected": "0",
+          "user_id": "8",
+          "Agent_Name": "Joseph",
+          "firstname": null,
+          "lastname": null
+        },
+        "order_items": [
+          {
+            "order_vs_pdt_id": "5",
+            "sales_order_id": "5",
+            "product_id": "3",
+            "quantity": "657800",
+            "selling_price": "85200",
+            "pdt_name": "maize"
+          }
+        ]
       }
-  ]
-}
+    ]
+  }
