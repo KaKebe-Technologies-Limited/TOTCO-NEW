@@ -290,3 +290,16 @@ Toast Notificaton
         border-right: 1px solid #dee2e6 !important;
     }
 }
+
+/* checkbox */
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 60px !important;
+}
+
+.details-control:before {
+    font-family:'Bootstrap-icons';
+    content: '\F4FA';
+    color: var(--dark-chessnut);
+    font-size: 20px;
+}
