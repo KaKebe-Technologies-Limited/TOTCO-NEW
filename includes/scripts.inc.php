@@ -1,5 +1,5 @@
-<!-- General JS Scripts -->
-<script src="assets/js/app.min.js"></script>
+  <!-- General JS Scripts -->
+  <script src="assets/js/app.min.js"></script>
   <!-- JS Libraies -->
   <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
   <!-- Page Specific JS File -->

@@ -32,7 +32,7 @@ xmlhttp.onreadystatechange = function() {
                     'checkboxes': {
                         'selectRow': true,
                         'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
-                    }
+                    },
                 },
 
                 { data: 'order_status.sales_order_id'},

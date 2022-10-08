@@ -24,8 +24,7 @@
                 var phrase = [
                         [18, 'Good evening'],
                         [12, 'Good afternoon'],
-                        [5,  'Good morning'],
-                        [0, 'Wow! Working late']
+                        [5,  'Good morning']
                 ],
 
                 hr = new Date().getHours();

@@ -61,7 +61,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                           <h5 class="font-10 text-white text-upper">Order Date</h5>
                           <h2 class="text-white font-18 my-3">
                            <?php echo date("D, d M Y H:i:s", strtotime($singleOrder->order_status->createdAt)); ?>
-                           
+
                           </h2>
                         </div>
                       </div>
@@ -78,7 +78,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-10 text-white text-upper">Order Status</h5>
-                          <?php 
+                          <?php
                               if ($singleOrder->order_status->isPending == 1) {
                                 echo '<div class="badge badge-primary text-white mt-3">Pending</div>';
                               } else {
@@ -91,11 +91,11 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                                     echo '<div class="badge badge-Warning text-white mt-3">----</div>';
                                   }
                                 }
-                                
+
                               }
-                              
+
                           ?>
-                          
+
                         </div>
                       </div>
                     </div>
@@ -193,7 +193,8 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                     </div>
                   </div>
                   <div class="card-footer d-flex justify-content-center">
-                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Approve</button>
+                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
+                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
                   </div>
                 </div>
               </div>

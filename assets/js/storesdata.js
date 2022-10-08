@@ -55,13 +55,13 @@ function format ( d ) {
             '</div>';
 
 }
-var xmlhttp = new XMLHttpRequest();
+var req = new XMLHttpRequest();
 var url = "https://totco.kakebe.com/api/api/branch/listAllBranches.php";
-xmlhttp.open('GET', url, true);
-xmlhttp.send();
-xmlhttp.onreadystatechange = function() {
-    if(this.readyState == 4 && xmlhttp.status == 200) {
-        var dataset = JSON.parse(xmlhttp.responseText);
+req.open('GET', url, true);
+req.send();
+req.onreadystatechange = function() {
+    if(this.readyState == 4 && req.status == 200) {
+        var dataset = JSON.parse(req.responseText);
 
    var table = $('#stores-table').DataTable({
         paging: false,
