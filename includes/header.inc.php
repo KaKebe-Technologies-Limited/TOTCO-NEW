@@ -1,4 +1,5 @@
 <?php include 'controllers/logout.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

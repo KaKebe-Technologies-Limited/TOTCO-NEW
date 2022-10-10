@@ -27,8 +27,6 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
           <div class="row">
             <div class="page-title col-12 mb-2">
               <h6 class="font-20">Sales Order</h6>
-              <!-- <p class="font-10 text-aqua"><?php //print_r($singleOrder[0]['order_status']['sales_order_id']); ?></p> -->
-              <!-- <p class="font-10 text-aqua"><?php //echo $singleOrder->orders[0]->order_status->sales_order_id; ?></p> -->
               <p class="font-10 text-aqua"><?php //print_r($_GET["id"]); ?></p>
             </div>
           </div>
@@ -60,7 +58,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                         <div class="card-content">
                           <h5 class="font-10 text-white text-upper">Order Date</h5>
                           <h2 class="text-white font-18 my-3">
-                           <?php echo date("D, d M Y H:i:s", strtotime($singleOrder->order_status->createdAt)); ?>
+                           <?php echo date("d M", strtotime($singleOrder->order_status->createdAt)); ?>
 
                           </h2>
                         </div>
@@ -193,8 +191,8 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                     </div>
                   </div>
                   <div class="card-footer d-flex justify-content-center">
-                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
-                    <button id="approve-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
+                    <button id="confirm-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
+                    <button id="reject-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
                   </div>
                 </div>
               </div>

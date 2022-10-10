@@ -4,13 +4,11 @@
 /** -------------------------------- */
 
 // Confirmation & rejection
-$('#approve-btn').click(function() {
+$('#confirm-btn').click(function() {
     Swal.fire({
 		title: 'Do you want to accept this sales order?',
 		showCancelButton: true,
 		confirmButtonText: 'Confirm',
-		showDenyButton: true,
-		denyButtonText: 'Reject',
 		icon: 'warning',
 	  }).then(async (result) => {
 		const Toast = Swal.mixin({
@@ -38,6 +36,34 @@ $('#approve-btn').click(function() {
 			  })
 		}
 	  })
+})
+
+$('#reject-btn').click(function() {
+    Swal.fire({
+		title: 'Do you want to reject this sales order?',
+		showCancelButton: true,
+		confirmButtonText: 'Confirm',
+		icon: 'warning',
+	  }).then(async (result) => {
+		const Toast = Swal.mixin({
+			toast: true,
+			position: 'top-right',
+			iconColor: 'white',
+			customClass: {
+			  popup: 'colored-toast',
+			  popout: 'anima'
+			},
+			showConfirmButton: false,
+			timer: 1500,
+			timerProgressBar: true
+		  })
+		if (result.isConfirmed) {
+			  await Toast.fire({
+				icon: 'success',
+				title: 'Sales order rejected!',
+			  })
+		}
+	})
 })
 
 // User registration approval

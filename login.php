@@ -85,9 +85,6 @@
   <script src="assets/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="assets/js/index.js"></script>
-  <script src="assets/js/account.js"></script>
+  <script src="assets/js/accounts.js"></script>
 </body>
-
-
-<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 </html>
