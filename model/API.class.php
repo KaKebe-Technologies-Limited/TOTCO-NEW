@@ -12,22 +12,42 @@ class Api
         $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
         $this->api_data = json_decode($this->json_data);
         $data = $this->api_data->orders[0]->order_items;
-        
+
         return $data;
     }
+    
     function getSingleOrderID($id)
     {
         $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/viewSingleSalesOrder.php?id=$id");
         $this->api_data = json_decode($this->json_data);
         $data = $this->api_data;
-        
+
         return $data;
     }
+
     function getAllSales()
     {
         $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
         $this->api_data = json_decode($this->json_data);
         $data = $this->api_data->orders;
+        return $data;
+    }
+
+    function getOrderCount()
+    {
+        $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
+        $this->api_data = json_decode($this->json_data);
+        $data = $this->api_data->totalOrders;
+        return $data;
+    }
+
+    //Users
+    function getAllUsers()
+    {
+        $this->json_data = file_get_contents("https://totco.kakebe.com/api/api/users/listAllUsers.php");
+        $this->api_data = json_decode($this->json_data);
+        $data = $this->api_data;
+
         return $data;
     }
 

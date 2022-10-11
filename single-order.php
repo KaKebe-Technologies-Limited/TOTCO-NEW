@@ -14,7 +14,7 @@ require_once __DIR__ . '/Model/API.class.php';
 
 $singleModel = new Api();
 $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
-// $singleOrder = $singleModel->getSingleOrderID(1);
+//$singleOrder = $singleModel->getSingleOrderID(1);
 
 
 
@@ -131,7 +131,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                 <div class="card-header">
                   <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
-                    <a class="btn btn-outline-primary btn-sm" role="button" href="./invoice.php?id=<?php echo $order_data["sales_order_id"];?>">
+                    <a class="btn btn-outline-primary btn-sm" role="button" href="model/invoice.php?id=<?php echo $singleOrder->order_status->sales_order_id; ?>">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                         <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
                         <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
@@ -162,15 +162,15 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                         <th>Total<span class="font-12 text-muted ms-1">(UGX)</span></th>
                       </tr>
                       <tr>
-                        <td>Maize</td>
+                        <td><?php echo $singleOrder->order_items[0]->pdt_name; ?></td>
                         <td class="">
-                          10000
+                          <?php echo $singleOrder->order_items[0]->quantity; ?>
                         </td>
                         <td class="align-middle">
-                            3500<span class="font-12 ps-1 text-muted">UGX</span>
+                          <?php echo $singleOrder->order_items[0]->selling_price; ?><span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                         <td class="fw-bold">
-                          35000000<span class="font-12 ps-1 text-muted">UGX</span>
+                        <?php echo $singleOrder->order_items[0]->selling_price * $singleOrder->order_items[0]->quantity; ?><span class="font-12 ps-1 text-muted">UGX</span>
                         </td>
                       </tr>
                     </table>
@@ -185,7 +185,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                     <h4 class="font-12 text-upper">Amount Due</h4>
                   </div>
                   <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="font-28 text-center">35,000,000<span class="font-12 text-muted ms-1">UGX</span></h4>
+                    <h4 class="font-28 text-center"> <?php echo $singleOrder->order_items[0]->selling_price * $singleOrder->order_items[0]->quantity; ?><span class="font-12 text-muted ms-1">UGX</span></h4>
                     <div class="border border-info rounded w-50 text-center bg-info">
                       <h5 class="font-10 text-info mt-2 text-white">Due on <span>28 Sept 2022</span></h5>
                     </div>
@@ -296,6 +296,8 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
           </div>
         </div>
       </div>
+      <!-- Freshchat -->
+  <script src='//fw-cdn.com/2113961/2827147.js' chat='true'></script>
 <!-- footer -->
 <?php include 'includes/footer.inc.php'; ?>
     </div>

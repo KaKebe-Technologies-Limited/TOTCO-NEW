@@ -8,8 +8,22 @@ $('#confirm-btn').click(function() {
     Swal.fire({
 		title: 'Do you want to accept this sales order?',
 		showCancelButton: true,
-		confirmButtonText: 'Confirm',
+		confirmButtonText: 'Yes, Confirm',
 		icon: 'warning',
+		reverseButtons: true, preConfirm: () => {
+			return fetch(`https://totco.kakebe.com/api/api/sales_orders/updateSalesOrder.php?id=${id}`)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error(response.statusText)
+					}
+					return response.json()
+				})
+				.catch(error => {
+					Swal.showValidationMessage(
+						`Request failed: ${error}`
+					)
+				})
+		},
 	  }).then(async (result) => {
 		const Toast = Swal.mixin({
 			toast: true,

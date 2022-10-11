@@ -8,6 +8,16 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
+<?php
+require_once __DIR__ . '/Model/API.class.php';
+
+$orderModel = new Api();
+$salesModel = $orderModel->getAllSales();
+$countOrdersModel = $orderModel->getOrderCount();
+$userModel = $orderModel->getAllUsers();
+
+?>
+
 
       <!-- Main Content -->
       <div class="main-content d-flex flex-wrap">
@@ -99,7 +109,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
                             <h5 class="font-10 text-muted text-upper">total suppliers</h5>
-                            <h2 class="mb-3 font-22 text-dark-electric-blue">98</h2>
+                            <h2 class="mb-3 font-22 text-dark-electric-blue"><?= $userModel->totalCount; ?></h2>
                           </div>
                         </div>
                       </div>
@@ -115,7 +125,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
                             <h5 class="font-10 text-muted text-upper">total sales orders</h5>
-                            <h2 class="mb-3 font-22 text-dark-electric-blue">98</h2>
+                            <h2 class="mb-3 font-22 text-dark-electric-blue"><?= $countOrdersModel; ?></h2>
                           </div>
                         </div>
                       </div>
@@ -164,45 +174,19 @@
                           <th>Date</th>
                           <th>Status</th>
                         </tr>
-                                                <?php
-
-                        $jsonobj =  file_get_contents("https://totco.kakebe.com/api/api/sales_orders/listAllSalesOrders.php");
-
-                        $PHPsalesObj = json_decode($jsonobj);
-
-                        if ($PHPsalesObj->success == 0) {
-                            $pdts_error = $PHPsalesObj->message;
-                        } elseif ($PHPsalesObj->success == 1) {
-
-                            $sales_orders = $PHPsalesObj->orders;
-                            // $pdts_total = $PHPpdtsObj->totalCount;
-
-                            for ($x = 0; $x < count($sales_orders); $x++) {
-
-                                echo '
-
-
-                                  <tr>
-
-                                    <td>T001</td>
-                                    <td>' . $sales_orders[$x]->pdt_name . '</td>
-                                    <td class="text-truncate">
-                                    ' . $sales_orders[$x]->quantity . '
-                                    </td>
-                                    <td>3500</td>
-                                    <td>28 AUG 2022</td>
-                                    <td>
-                                        <div class="badge badge-success">Pending</div>
-                                    </td>
-                                </tr>
-
-
-                                ';
-                            }
-                        }
-
-                        ?>
-
+                          <?php foreach ($salesModel as $order): ?>
+                            <?php $status = array($salesModel[0]->order_status); ?>
+                            <tr>
+                              <td><?= $order->order_status->sales_order_id; ?></td>
+                              <td><?= $order->order_items[0]->pdt_name; ?></td>
+                              <td class="text-truncate"><?= $order->order_items[0]->quantity; ?></td>
+                              <td><?= $order->order_items[0]->selling_price; ?></td>
+                              <td><?= $order->order_status->createdAt; ?></td>
+                              <td>
+                                  <div class="badge badge-success"><?= $order->order_status->isPending; ?></div>
+                              </td>
+                            </tr>
+                          <?php endforeach; ?>
                       </table>
                     </div>
                   </div>

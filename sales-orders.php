@@ -145,8 +145,8 @@
                         <div id="sort-date" class="col-md-6 ms-2">
                           <div class="input-group">
                             <input id="DateRange" type="text" name="DateRange" class="form-control" style="border-color: #fff !important;" id="initial_date" placeholder="select period">
-                            <input type="hidden" id="start_date" value="2022-08-29">
-                            <input type="hidden" id="end_date" value="2022-09-27">
+                            <input type="hidden" id="start_date" value="">
+                            <input type="hidden" id="end_date" value="">
                             <span class="input-group-text" ><i class="far fa-calendar-alt"></i></span>
                           </div>
                         </div>
@@ -180,5 +180,4 @@
         </main>
        <!-- footer -->
       <?php include './includes/footer.inc.php'; ?>
-    </div>
-  </div>
+    
