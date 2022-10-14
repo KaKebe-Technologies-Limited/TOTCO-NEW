@@ -20,7 +20,7 @@
   <!-- Tabledata -->
   <script src="assets/js/tabledata.js"></script>
   <script src="assets/js/storesdata.js"></script>
-  
+
 
   <!-- Datatables JS -->
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
@@ -35,3 +35,7 @@
   <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.colVis.min.js"></script>
 
+  <!-- PDFmake -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.1/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.1/fonts/Roboto.min.js"></script>
+  <script src="assets/js/invoice.js"></script>

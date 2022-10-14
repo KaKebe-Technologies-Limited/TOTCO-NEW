@@ -44,9 +44,10 @@
                     </div><!--end col-->
                     <div class="col-lg-7 ml-auto">
                         <ul class="list-unstyled personal-detail">
-                            <li class=""><i class="dripicons-phone mr-2 text-info font-18"></i> <b> Phone </b> : +256771404884</li>
-                            <li class="mt-2"><i class="dripicons-mail text-info font-18 mt-2 mr-2"></i> <b> Email </b> : holmark5@gmail.com</li>
-                            <li class="mt-2"><i class="dripicons-mail text-info font-18 mt-2 mr-2"></i> <b> Location </b> : Lira</li>
+                            <li class="mt-2"><i class="bi bi-telephone me-2 text-info font-18"></i> <b> Phone </b> : +256771404884</li>
+                            <li class="mt-2"><i class="bi bi-envelope text-info font-18 mt-2 me-2"></i> <b> Email </b> : holmark5@gmail.com</li>
+                            <li class="mt-2"><i class="bi bi-geo-alt text-info font-18 mt-2 me-2"></i> <b> Location </b> : Lira</li>
+                            <li class="my-2"><i class="bi bi-briefcase text-info font-18 mt-2 me-2"></i> <b> Job Title </b> : Sales Manager</li>
                         </ul>
                     </div><!--end col-->
                 </div><!--end row-->

@@ -1,3 +1,5 @@
+// Delete sales order
+
 function deleteOrder(id) {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -43,7 +45,6 @@ function deleteOrder(id) {
                 result.value.message,
                 result.value.code == -1 ? 'error' : 'success'
             );
-
 
         } else if (
             result.dismiss === Swal.DismissReason.cancel
@@ -119,7 +120,7 @@ function salesTabledata() {
                                 <a title="Download sales order invoice" class="btn btn-secondary mx-1" href="#"><span>
                                 <i class="fas fa-download text-white"></i></span>
                                 </a>
-                                <a href="javascript:deleteOrder('${full.order_status.sales_order_id}')"class="btn btn-danger mx-1" id="delete-order-btn" role ="button">
+                                <a href="javascript:deleteOrder('${full.order_status.sales_order_id}')" class="btn btn-danger mx-1" id="delete-order-btn" role ="button">
                                 <span><i class="fas fa-trash text-white"></i></span>
                                 </a >
                                 `

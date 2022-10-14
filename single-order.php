@@ -14,11 +14,16 @@ require_once __DIR__ . '/Model/API.class.php';
 
 $singleModel = new Api();
 $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
-//$singleOrder = $singleModel->getSingleOrderID(1);
-
-
-
 ?>
+
+<script type="text/javascript">
+
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const orderId = urlParams.get('id')
+  console.log(orderId)
+
+</script>
 
 
  <!-- Main Content -->
@@ -131,13 +136,13 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                 <div class="card-header">
                   <h4 class="card-title font-12 text-upper">Sales Order</h4>
                   <div class="card-header-form">
-                    <a class="btn btn-outline-primary btn-sm" role="button" href="model/invoice.php?id=<?php echo $singleOrder->order_status->sales_order_id; ?>">
+                    <button onclick="generateProforma(orderId)"class="btn btn-outline-primary btn-sm">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                         <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"></path>
                         <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
                       </svg>
                       Proforma Invoice
-                    </a>
+                            </button>
                   </div>
                 </div>
                 <div class="card-body">
@@ -191,8 +196,8 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                     </div>
                   </div>
                   <div class="card-footer d-flex justify-content-center">
-                    <button id="confirm-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
-                    <button id="reject-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
+                    <button onclick="confirmOrder(orderId)" id="confirm-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
+                    <button onclick="rejectOrder(orderId)" id="reject-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
                   </div>
                 </div>
               </div>

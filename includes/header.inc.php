@@ -45,8 +45,6 @@
 
   <!-- Datatables css -->
   <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
   <link type="text/css" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
 
   <!-- Datepicker -->
@@ -71,66 +69,9 @@
           </ul>
         </div>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="messages" data-toggle="dropdown"
-              class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
-              <span class="badge headerBadge1">
-                6 </span> </a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown end-0">
-              <div class="dropdown-header">
-                Messages
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
-											text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
-                      Deo</span>
-                    <span class="time messege-text">Please check your mail !!</span>
-                    <span class="time">2 Min Ago</span>
-                  </span>
-                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
-                      Smith</span> <span class="time messege-text">Request for leave
-                      application</span>
-                    <span class="time">5 Min Ago</span>
-                  </span>
-                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
-                      Ryan</span> <span class="time messege-text">Your payment invoice is
-                      generated.</span> <span class="time">12 Min Ago</span>
-                  </span>
-                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
-                      Smith</span> <span class="time messege-text">hii John, I have upload
-                      doc
-                      related to task.</span> <span class="time">30
-                      Min Ago</span>
-                  </span>
-                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
-                      Joshi</span> <span class="time messege-text">Please do as specify.
-                      Let me
-                      know if you have any query.</span> <span class="time">1
-                      Days Ago</span>
-                  </span>
-                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
-                      Smith</span> <span class="time messege-text">Client Requirements</span>
-                    <span class="time">2 Days Ago</span>
-                  </span>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+          <li class="">
+            <a href="https://totco.myfreshworks.com/crm/messaging/a/666676385749144/inbox/0/0"
+              class="nav-link nav-link-lg"><i data-feather="mail"></i></a>
           </li>
           <li class="dropdown dropdown-list-toggle"><a href="notifications" data-toggle="dropdown"
               class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
