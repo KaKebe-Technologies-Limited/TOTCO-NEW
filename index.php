@@ -18,7 +18,6 @@ $userModel = $orderModel->getAllUsers();
 
 ?>
 
-
       <!-- Main Content -->
       <div class="main-content d-flex flex-wrap">
         <div class="container main-grid col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -51,7 +50,7 @@ $userModel = $orderModel->getAllUsers();
           </section>
           <section class="my-3">
             <div class="section-header">
-              <h1 class="font-14">Purchase overview</h1>
+              <h1 class="font-14">Purchase Overview</h1>
             </div>
             <div class="row">
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
@@ -169,13 +168,14 @@ $userModel = $orderModel->getAllUsers();
                         <tr>
                           <th>Order #</th>
                           <th>Product</th>
-                          <th>Quantity<span class="font-12 text-muted ms-1">(Tonnes)</span></th>
+                          <th>Quantity<span class="font-12 text-muted ms-1">(Kgs)</span></th>
                           <th>Price<span class="font-12 text-muted ms-1">(/kg)</span></th>
                           <th>Date</th>
                           <th>Status</th>
                         </tr>
-                          <?php foreach ($salesModel as $order): ?>
-                            <?php $status = array($salesModel[0]->order_status); ?>
+
+
+                              <?php foreach (array_slice($salesModel, 0, 3) as $order): ?>
                             <tr>
                               <td><?= $order->order_status->sales_order_id; ?></td>
                               <td><?= $order->order_items[0]->pdt_name; ?></td>
@@ -186,7 +186,8 @@ $userModel = $orderModel->getAllUsers();
                                   <div class="badge badge-success"><?= $order->order_status->isPending; ?></div>
                               </td>
                             </tr>
-                          <?php endforeach; ?>
+                            <?php endforeach ?>
+                       
                       </table>
                     </div>
                   </div>

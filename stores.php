@@ -261,6 +261,8 @@
           <section class="my-3">
           </section>
         </main>
+        <!-- script -->
+        <script src="assets/js/tables/storesdata.js"></script>
        <!-- footer -->
       <?php include './includes/footer.inc.php'; ?>
     </div>

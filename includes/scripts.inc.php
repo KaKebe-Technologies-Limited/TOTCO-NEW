@@ -17,10 +17,10 @@
   <script src="assets/js/transactions.js"></script>
   <script src="assets/js/data.js"></script>
 
-  <!-- Tabledata -->
-  <script src="assets/js/tabledata.js"></script>
-  <script src="assets/js/storesdata.js"></script>
-
+  <!-- tables -->
+ 
+  <script src="assets/js/tables/storesdata.js"></script>
+  <script src="assets/js/tables/agentdata.js"></script>
 
   <!-- Datatables JS -->
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>

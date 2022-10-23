@@ -10,31 +10,34 @@
 <!-- End Sidebar -->
 
 <!-- API Instantiations -->
+
 <?php
 require_once __DIR__ . '/Model/API.class.php';
 
 $orderModel = new Api();
 $salesModel = $orderModel->getAllSales();
 $countOrdersModel = $orderModel->getOrderCount();
+$countApprovedOrders = $orderModel->countApprovedOrders();
+$countPendingOrders = $orderModel->countPendingOrders();
+$countRejectedOrders = $orderModel->countDeclinedOrders();
 
 ?>
+
 <!-- End API Instantiations -->
 
 <!-- Main Content -->
 <main class="main-content pt-5 mt-3">
   <!-- Page title -->
-  <div class="d-flex justify-content-between my-5">
-    <div class="">
+  <div class="d-flex justify-content-between my-3">
       <div class="page-title">
         <h1 class="font-20">Sales Orders</h1>
         <p class="font-10">All sales order request by agents</p>
       </div>
-    </div>
   </div>
   <!-- end page title -->
   <section class="section">
     <div class="row flex-wrap">
-      <div class="col col-lg-2 col-md-6 col-sm-12">
+      <div class="col col-lg-4 col-md-6 col-sm-12">
         <div class="card bg-dark-electric-blue">
           <div class="card-statistic-4">
             <div class="align-items-center justify-content-between">
@@ -42,7 +45,7 @@ $countOrdersModel = $orderModel->getOrderCount();
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                   <div class="card-content">
                     <h5 class="font-10 text-white text-upper">Total sales Orders</h5>
-                    <h2 class="mb-3 font-22 text-white" data-number=""><?= $countOrdersModel; ?></h2>
+                    <h2 class="mb-3 font-22 text-white" data-number=""><?php echo $countOrdersModel;  ?></h2>
                   </div>
                 </div>
               </div>
@@ -74,7 +77,7 @@ $countOrdersModel = $orderModel->getOrderCount();
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                   <div class="card-content">
                     <h5 class="font-10 text-white text-upper">approved</h5>
-                    <h2 class="mb-3 font-22 text-white" data-number="">98</h2>
+                    <h2 class="mb-3 font-22 text-white" data-number="">3</h2>
                   </div>
                 </div>
               </div>
@@ -90,7 +93,7 @@ $countOrdersModel = $orderModel->getOrderCount();
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                   <div class="card-content">
                     <h5 class="font-10 text-white text-upper">Pending</h5>
-                    <h2 class="mb-3 font-22 text-white" data-number="">02</h2>
+                    <h2 class="mb-3 font-22 text-white" data-number="">4</h2>
                   </div>
                 </div>
               </div>
@@ -106,23 +109,7 @@ $countOrdersModel = $orderModel->getOrderCount();
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
                   <div class="card-content">
                     <h5 class="font-10 text-white text-upper">Declined</h5>
-                    <h2 class="mb-3 font-22 text-white" data-number="">0</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2 col-sm-12">
-        <div class="card bg-dark-electric-blue">
-          <div class="card-statistic-4">
-            <div class="align-items-center justify-content-between">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
-                  <div class="card-content">
-                    <h5 class="font-10 text-white text-upper">Declined</h5>
-                    <h2 class="mb-3 font-22 text-white" data-number="">0</h2>
+                    <h2 class="mb-3 font-22 text-white" data-number="">4</h2>
                   </div>
                 </div>
               </div>
@@ -172,7 +159,7 @@ $countOrdersModel = $orderModel->getOrderCount();
                     </th>
                     <th>Order #</th>
                     <th>Product</th>
-                    <th>Quantity<span class="font-10 text-muted ms-1">(Tonnes)</span></th>
+                    <th>Quantity<span class="font-10 text-muted ms-1">(Kgs)</span></th>
                     <th>Price<span class="font-10 text-muted ms-1">(/kg)</span></th>
                     <th>Date</th>
                     <th>Agent Name</th>
@@ -189,4 +176,6 @@ $countOrdersModel = $orderModel->getOrderCount();
   </section>
 </main>
 <!-- footer -->
+  <!-- script -->
+  <script src="assets/js/tables/salesdata.js"></script>
 <?php include './includes/footer.inc.php'; ?>

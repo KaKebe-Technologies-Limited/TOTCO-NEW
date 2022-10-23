@@ -2,7 +2,7 @@
 const generateProforma = (id) => {
 
     var invoiceXML = new XMLHttpRequest();
-    var url = `https://totco.kakebe.com/api/api/sales_orders/viewSingleSalesOrder.php?id=${id}`;
+    var url = `https://totco.kakebe.com/api/api/sales_orders/viewSingleSalesOrder.php?id=${orderId}`;
     invoiceXML.open('GET', url, true);
     invoiceXML.send();
     invoiceXML.onreadystatechange = function() {
@@ -60,7 +60,7 @@ const generateProforma = (id) => {
                                 alignment: 'right',
                                 },
                                 {
-                                text: dataset.orders[0].order_status.createdAt,
+                                text: dataset.order_status.createdAt,
                                 bold: true,
                                 color: '#333333',
                                 fontSize: 12,
@@ -117,7 +117,7 @@ const generateProforma = (id) => {
                 {
                     columns: [
                     {
-                        text: dataset.orders[0].order_status.Agent_Name,
+                        text: dataset.order_status.Agent_Name,
                         bold: true,
                         color: '#333333',
                         alignment: 'left',
@@ -162,7 +162,7 @@ const generateProforma = (id) => {
                 {
                     width: '100%',
                     alignment: 'center',
-                    text: 'Invoice No. 123',
+                    text: 'Invoice No.' + dataset.order_status.sales_order_id,
                     bold: true,
                     margin: [0, 10, 0, 10],
                     fontSize: 15,
@@ -244,26 +244,26 @@ const generateProforma = (id) => {
                         ],
                         [
                         {
-                            text: dataset.orders[0].order_items[0].pdt_name,
+                            text: dataset.order_items[0].pdt_name,
                             border: [false, false, false, true],
                             margin: [0, 5, 0, 5],
                             alignment: 'left',
                         },
                         {
-                            text: dataset.orders[0].order_items[0].quantity,
+                            text: dataset.order_items[0].quantity,
                             border: [false, false, false, true],
                             margin: [0, 5, 0, 5],
                             alignment: 'left',
                         },
                         {
-                            text: dataset.orders[0].order_items[0].selling_price,
+                            text: dataset.order_items[0].selling_price,
                             border: [false, false, false, true],
                             margin: [0, 5, 0, 5],
                             alignment: 'left',
                         },
                         {
                             border: [false, false, false, true],
-                            text: dataset.orders[0].order_items[0].quantity * dataset.orders[0].order_items[0].selling_price ,
+                            text: dataset.order_items[0].quantity * dataset.order_items[0].selling_price ,
                             fillColor: '#f5f5f5',
                             alignment: 'right',
                             margin: [0, 5, 0, 5],
@@ -325,7 +325,7 @@ const generateProforma = (id) => {
                         },
                         {
                             border: [false, true, false, true],
-                            text: dataset.orders[0].order_items[0].quantity * dataset.orders[0].order_items[0].selling_price,
+                            text: dataset.order_items[0].quantity * dataset.order_items[0].selling_price,
                             alignment: 'right',
                             fillColor: '#f5f5f5',
                             margin: [0, 5, 0, 5],
@@ -341,7 +341,7 @@ const generateProforma = (id) => {
                             margin: [0, 5, 0, 5],
                         },
                         {
-                            text: dataset.orders[0].order_items[0].quantity * dataset.orders[0].order_items[0].selling_price,
+                            text: dataset.order_items[0].quantity * dataset.order_items[0].selling_price,
                             bold: true,
                             fontSize: 20,
                             alignment: 'right',

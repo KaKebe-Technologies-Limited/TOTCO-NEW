@@ -8,23 +8,29 @@
 <!-- Main-Sidebar -->
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
-
+<!-- API instantiation -->
 <?php
 require_once __DIR__ . '/Model/API.class.php';
 
 $singleModel = new Api();
 $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
+
+//get user
+$userId = $singleOrder->order_status->user_id;
+
 ?>
 
+<!-- End API instantiation -->
+
+<!-- Query Params -->
 <script type="text/javascript">
 
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
   const orderId = urlParams.get('id')
-  console.log(orderId)
 
 </script>
-
+<!-- end query param -->
 
  <!-- Main Content -->
  <div class="main-content">
@@ -83,22 +89,20 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                           <h5 class="font-10 text-white text-upper">Order Status</h5>
                           <?php
                               if ($singleOrder->order_status->isPending == 1) {
-                                echo '<div class="badge badge-primary text-white mt-3">Pending</div>';
+                                echo '<div id="status" class="badge badge-primary text-white mt-3">Pending</div>';
                               } else {
                                 if ($singleOrder->order_status->isApproved == 1 ) {
-                                  echo '<div class="badge badge-success text-white mt-3">Approved</div>';
+                                  echo '<div id="status" class="badge badge-success text-white mt-3">Approved</div>';
                                 } else {
                                   if ($singleOrder->order_status->isRejected == 1) {
-                                    echo '<div class="badge badge-danger text-white mt-3">isRejected</div>';
+                                    echo '<div id="status" class="badge badge-danger text-white mt-3">Rejected</div>';
                                   } else {
-                                    echo '<div class="badge badge-Warning text-white mt-3">----</div>';
+                                    echo '<div id="status" class="badge badge-Warning text-white mt-3">----</div>';
                                   }
                                 }
 
                               }
-
                           ?>
-
                         </div>
                       </div>
                     </div>
@@ -107,7 +111,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <a href="single-agent">
+              <a href="single-agent.php?user_id=<?= $userId; ?>">
                 <div class="card">
                   <div class="card-statistic-4">
                     <div class="align-items-center justify-content-between">
@@ -148,7 +152,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                 <div class="card-body">
                   <div class="billing p-4 d-flex justify-content-between mb-4 border">
                     <div class="agent-detail">
-                      <h5 class="font-14 text-dark">Oluk Mark</h5>
+                      <h5 class="font-14 text-dark"><?= $singleOrder->order_status->Agent_Name; ?></h5>
                       <p class="m-0 p-0">Odokomit, Lira</span></p>
                       <p class="m-0 p-0">0771404884</p>
                     </div>
@@ -162,7 +166,7 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                     <table class="table table-striped table-hover">
                       <tr>
                         <th>Item Name</th>
-                        <th>Quantity<span class="font-12 text-muted ms-1">(Tonnes)</span></th>
+                        <th>Quantity<span class="font-12 text-muted ms-1">(Kgs)</span></th>
                         <th>Price<span class="font-12 text-muted ms-1">(/kg)</span></th>
                         <th>Total<span class="font-12 text-muted ms-1">(UGX)</span></th>
                       </tr>
@@ -195,114 +199,108 @@ $singleOrder = $singleModel->getSingleOrderID($_GET["id"]);
                       <h5 class="font-10 text-info mt-2 text-white">Due on <span>28 Sept 2022</span></h5>
                     </div>
                   </div>
-                  <div class="card-footer d-flex justify-content-center">
-                    <button onclick="confirmOrder(orderId)" id="confirm-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Confirm</button>
-                    <button onclick="rejectOrder(orderId)" id="reject-btn" class="btn btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#approval-modal" style="width: 120px;">Reject</button>
+                  <div id="approveSwitch" class="card-footer d-flex justify-content-center">
+                    <button id="approve-btn" class="btn btn-outline-primary mx-1" style="width: 120px;" role="button">Confirm</button>
+                    <button id="reject-btn" class="btn btn-outline-primary mx-1" style="width: 120px;" role="button">Reject</button>
                   </div>
                 </div>
               </div>
+              <script>
+                let status = document.getElementById('status');
+                let approvalBtns = document.getElementById('approvalSwitch');
+
+                if (status.textContent == 'Approved') {
+                  approvalBtns.style.display = 'none'
+                }
+              </script>
             </div>
           </div>
         </section>
 
-
-
-
-        <!-- Setting Sidebar -->
-        <div class="settingSidebar">
-          <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
-          </a>
-          <div class="settingSidebar-body ps-container ps-theme-default">
-            <div class=" fade show active">
-              <div class="setting-panel-header">Setting Panel
-              </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Select Layout</h6>
-                <div class="selectgroup layout-color w-50">
-                  <label class="selectgroup-item">
-                    <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
-                    <span class="selectgroup-button">Light</span>
-                  </label>
-                  <label class="selectgroup-item">
-                    <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
-                    <span class="selectgroup-button">Dark</span>
-                  </label>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Sidebar Color</h6>
-                <div class="selectgroup selectgroup-pills sidebar-color">
-                  <label class="selectgroup-item">
-                    <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
-                  </label>
-                  <label class="selectgroup-item">
-                    <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
-                  </label>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <h6 class="font-medium m-b-10">Color Theme</h6>
-                <div class="theme-setting-options">
-                  <ul class="choose-theme list-unstyled mb-0">
-                    <li title="white" class="active">
-                      <div class="white"></div>
-                    </li>
-                    <li title="cyan">
-                      <div class="cyan"></div>
-                    </li>
-                    <li title="black">
-                      <div class="black"></div>
-                    </li>
-                    <li title="purple">
-                      <div class="purple"></div>
-                    </li>
-                    <li title="orange">
-                      <div class="orange"></div>
-                    </li>
-                    <li title="green">
-                      <div class="green"></div>
-                    </li>
-                    <li title="red">
-                      <div class="red"></div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <div class="theme-setting-options">
-                  <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="mini_sidebar_setting">
-                    <span class="custom-switch-indicator"></span>
-                    <span class="control-label p-l-10">Mini Sidebar</span>
-                  </label>
-                </div>
-              </div>
-              <div class="p-15 border-bottom">
-                <div class="theme-setting-options">
-                  <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="sticky_header_setting">
-                    <span class="custom-switch-indicator"></span>
-                    <span class="control-label p-l-10">Sticky Header</span>
-                  </label>
-                </div>
-              </div>
-              <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
-                <a href="#" class="btn btn-icon icon-left bg-dark-chessnut btn-restore-theme">
-                  <i class="fas fa-undo"></i> Restore Default
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Freshchat -->
-  <script src='//fw-cdn.com/2113961/2827147.js' chat='true'></script>
+      <script src='//fw-cdn.com/2136961/2841591.js' chat='true'></script>
+      <script>
+  window.fcWidgetMessengerConfig = {
+    config: {
+      hideFileUpload: false,
+      fullscreen: false,
+      disableEvents: true,
+      cssNames: {
+        widget: 'fc_frame',
+        open: 'fc_open',
+        expanded: 'fc_expanded'
+      },
+      showFAQOnOpen: true,
+      hideFAQ: true,
+      agent: {
+        hideName: false,
+        hidePic: false,
+        hideBio: false,
+      },
+      headerProperty: {
+	      //If you have multiple sites you can use the appName and appLogo to overwrite the values.
+      	appName: 'Gadget God',
+        appLogo: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/2473-2c38490d8e4c91660d86ff54ba5391ea-medium_jpg.jpg?buster=1518574527',
+        backgroundColor: '#dc9189',
+        foregroundColor: '#fff',
+        backgroundImage: 'https://wchat.freshchat.com/assets/images/texture_background_1-bdc7191884a15871ed640bcb0635e7e7.png'
+      },
+      content: {
+        placeholders: {
+          search_field: 'Search',
+          reply_field: 'Reply',
+          csat_reply: 'Add your comments here'
+        },
+        actions: {
+          csat_yes: 'Yes',
+          csat_no: 'No',
+          push_notify_yes: 'Yes',
+          push_notify_no: 'No',
+          csat_submit: 'Submit'
+        },
+        headers: {
+          chat: 'Chat with Us',
+          faq: 'Solution Articles',
+          faq_search_not_available: 'No articles were found for {{query}}',
+          faq_useful: 'Was this article helpful?',
+          faq_thankyou: 'Thank you for your feedback',
+          faq_message_us: 'Message Us',
+          push_notification: 'Don\'t miss out on any replies! Allow push notifications?',
+          csat_question: 'Did we address your concerns??',
+          csat_yes_question: 'How would you rate this interaction?',
+          csat_no_question: 'How could we have helped better?',
+          csat_thankyou: 'Thanks for the response',
+          csat_rate_here: 'Submit your rating here',
+          channel_response: {
+            offline: 'We are currently away. Please leave us a message',
+            online: {
+              minutes: {
+                one: "Currently replying in {!time!} minutes ",
+                more: "Typically replies in {!time!} minutes"
+              },
+              hours: {
+                one: "Currently replying in under an hour",
+                more: "Typically replies in {!time!} hours",
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  window.fcWidget.init({
+    token: "WEB_CHAT_TOKEN",
+    host: "https://wchat.freshchat.com",
+    externalId: <?php echo $singleOrder->order_status->createdBy; ?>,     // user’s id unique to your system
+    firstName: "John",              // user’s first name
+    lastName: "Doe",                // user’s last name
+    email: "john.doe@gmail.com",    // user’s email address
+    phone: "8668323090",            // phone number without country code
+    phoneCountryCode: "+1"          // phone’s country code
+  });
+</script>
+
 <!-- footer -->
 <?php include 'includes/footer.inc.php'; ?>
     </div>

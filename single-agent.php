@@ -9,7 +9,13 @@
 <?php include('includes/sidebar.inc.php'); ?>
 <!-- End Sidebar -->
 
+<?php
+require_once __DIR__ . '/Model/API.class.php';
 
+$singleUserModel = new Api();
+$singleUser = $singleUserModel->getSingleUser($_GET["user_id"]);
+
+?>
 
  <!-- Main Content -->
  <div class="main-content">
@@ -37,7 +43,7 @@
                                       </span>
                                   </div>
                                   <div class="met-profile_user-detail">
-                                      <h5 class="met-user-name">Oluk Mark</h5>
+                                      <h5 class="met-user-name"><?= $singleUser; ?></h5>
                                       <p class="mb-0 met-user-name-post">Agent</p>
                                   </div>
                               </div>

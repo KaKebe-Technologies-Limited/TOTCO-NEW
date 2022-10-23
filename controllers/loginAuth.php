@@ -4,7 +4,7 @@ session_start(); // Start the session
 $user_name = $error = $password = "";
 
 if (isset($_SESSION['user_data'])) {
-    //already logged in, redirect to products page
+    //already logged in, redirect to index page
     header("Location:index.php");
     die;
 } else {
@@ -32,6 +32,7 @@ if (isset($_SESSION['user_data'])) {
         } else {
             $error = "Please fill all fields";
         }
+        
     } else {
         //$error = "Please hit the submit button";
     }
